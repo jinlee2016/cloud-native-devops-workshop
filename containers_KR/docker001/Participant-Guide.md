@@ -1,119 +1,119 @@
-# Intro to Containers Hands On Lab
+# 용기 실험실에 소개
 
-This Hands on Lab (HOL) will take the participant through the basics of containerization, explore its advantages and introduce Docker technology with entry level exercises.  The topics to be covered in this 2 hour session are:
+이 Hands on Lab (Hands on Lab)은 참가자들에게 컨테이너 화의 기초를 배우고 그 장점을 탐색하며 초보 수준의 연습으로 Docker 기술을 소개합니다. 이 2 시간 세션에서 다룰 주제는 다음과 같습니다. 
 
-1.  [Intro to Basic Container Concepts](Participant-Guide.md#intro-to-basic-container-concepts)
-2.  [Verify Docker Engine Hands on Lab Environment](Participant-Guide.md#verify-docker-engine-hands-on-lab-environment)
-3.  [Hello Helloworld](Participant-Guide.md#hello-helloworld)
-5.  [Create a Dockerfile and Docker Image](Participant-Guide.md#create-a-dockerfile-and-docker-image)
-6.  [Push an Image to your Docker Hub Account](Participant-Guide.md#push-an-image-to-your-docker-hub-account)
-7.  [Install Docker Compose](Participant-Guide.md#install-docker-compose)
-8.  [Create Wordpress "stack"](Participant-Guide.md#create-a-wordpress-stack)
-9.  [Basics of Persistent storage](Participant-Guide.md#basics-of-persistent-storage)
-10. [Use Github and Docker Hub together to build an Image and Run the Container](Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container)
-11. [Demo of Oracle Container Cloud Service Showing Participant's Containers](Participant-Guide.md#demo-of-oracle-container-cloud-service-showing-participants-containers)
+1. [기본 컨테이너 개념 소개] (Participant-Guide.md # 기본 컨테이너 개념 소개) 
+2. [실험실 환경에서 Docker Engine이 작동하는지 확인] (Participant-Guide.md # verify-docker-engine-hands-on-lab-environment) 
+3. [안녕하세요 헬로우 월드] (참여자 - 가이드 .md # hello-helloworld) 
+5. [Dockerfile 및 도커 이미지 만들기] (Participant-Guide.md # dockerfile 및 docker 이미지 만들기) 
+6. [도커 허브 계정으로 이미지 푸쉬하기] (Participant-Guide.md # 도커 허브 계정 푸시 - 이미지) 
+7. [Docker Compose 설치] (Participant-Guide.md # install-docker-compose) 
+8. [Wordpress &quot;스택&quot;만들기] (Participant-Guide.md # create-a-wordpress-stack) 
+9. [영구 저장소의 기본 사항] (Participant-Guide.md # 영구 저장소의 기본 사항) 
+10. [Github와 Docker Hub를 함께 사용하여 이미지를 만들고 컨테이너를 실행] (Participant-Guide.md # github-and-docker-hub-a-image-and-run-the-image -컨테이너) 
+11. [참가자의 컨테이너를 보여주는 Oracle Container Cloud Service 데모] (Participant-Guide.md # 데모 오브 오라클 컨테이너 클라우드 서비스 표시 참가자 컨테이너) 
 
 
-### Requirements to Complete this HOL:
+### 이 HOL을 완료하기위한 요구 사항 :
 
-* A pre-configured Docker-Engine environment - See [Prerequisites](Prerequisites.md)
+사전 구성된 Docker-Engine 환경 - [필수 구성 요소] (Prerequisites.md)를 참조하십시오. 
 
-* Access to the Internet
+*인터넷 접속 
 
-* A laptop
+*노트북 
 
-* A text editor to keep notes and snippets as you go along
+*메모 및 스 니펫을 계속 유지하는 텍스트 편집기 
 
-* A Docker Hub account
+*Docker 허브 계정 
 
-* A Github account
+*Github 계정 
 
 ***
 
-## Intro to Basic Container Concepts
+## 기본 컨테이너 개념 소개
 
-A container is a runtime instance of a Docker image.
+컨테이너는 Docker 이미지의 런타임 인스턴스입니다. 
 
-[https://docs.docker.com/engine/reference/glossary/#/container](https://docs.docker.com/engine/reference/glossary/#/container)
+[https://docs.docker.com/engine/reference/glossary/#/container](https://docs.docker.com/engine/reference/glossary/#/container) 
 
-Docker is the company and containerization technology.
+Docker는 회사 및 컨테이너 화 기술입니다. 
 
-[https://docs.docker.com/engine/reference/glossary/#/docker](https://docs.docker.com/engine/reference/glossary/#/docker)  
+[https://docs.docker.com/engine/reference/glossary/#/docker](https://docs.docker.com/engine/reference/glossary/#/docker) 
 
-Containers have been around for many years.  Docker created a technology that was usable by mere humans, and was much easier to understand than before.  Thus, has enjoyed a tremendous amount of support for creating a technology for packaging applications to be **portable and lightweight.**
+컨테이너는 오랫동안 사용되어 왔습니다. Docker는 단순한 인간이 사용할 수있는 기술을 개발했으며 이전보다 훨씬 쉽게 이해할 수있었습니다. 따라서**휴대용 및 경량 응용 프로그램을 패키징하기위한 기술을 개발하는 데 엄청난 지원을 얻었습니다.**
 
-However, there have been and still are variations on container technology.  Here are some of the technologies we have seen through the years.
+그러나 컨테이너 기술의 변형이 여전히 존재합니다. 몇 년 동안 우리가 본 몇 가지 기술이 있습니다. 
 
-History of Linux Containers:
+리눅스 컨테이너의 역사 : 
 
 <img src=images/002-container-history.png />
 
 
-Now, let's look at how a virtual machine (VM) is different from a container.
+이제 가상 머신 (VM)이 컨테이너와 어떻게 다른지 살펴 보겠습니다. 
 
-While containers may sound like a VM, the two are distinct technologies. With VMs each virtual machine includes the application, the necessary binaries and libraries and the **entire guest operating system.**
+컨테이너는 VM처럼 들릴 수 있지만 두 기술은 서로 다른 기술입니다. VM을 사용하면 각 가상 시스템에 응용 프로그램, 필요한 바이너리 및 라이브러리 및 전체 게스트 운영 체제가 포함됩니다.**
 
-Whereas, Containers include the application, all of its dependencies, but share the kernel with other containers and are not tied to any specific infrastructure, other than having the Docker engine installed on its host – allowing containers to run on almost any computer, infrastructure and cloud.  
+반면에 컨테이너는 응용 프로그램과 모든 종속성을 포함하지만 커널을 다른 컨테이너와 공유하며 호스트에 Docker 엔진을 설치하는 것 이외의 특정 인프라에 묶이지 않습니다. 거의 모든 컴퓨터, 인프라 및 시스템에서 컨테이너를 실행할 수 있습니다. 구름. 
 
 <img src=images/002-vm-vs-container.png />
 
 
-> *Note - at this time, Windows and Linux containers require that they run on their respective kernel base, therefore, Windows containers cannot run on Linux hosts and vice versa.*
+>*참고 - 현재 Windows 및 Linux 컨테이너는 해당 커널 기반에서 실행해야하므로 Windows 컨테이너는 Linux 호스트에서 실행될 수 없으며 그 반대의 경우도 가능합니다.*
 
-Docker images are a collection of files, which have everything needed to run the software application inside the container.  However, they are ephemeral, meaning that any data that is written inside the container, while it is running, will not be retained.  
+Docker 이미지는 컨테이너 내부에서 소프트웨어 응용 프로그램을 실행하는 데 필요한 모든 것을 가진 파일 모음입니다. 그러나 컨테이너가 실행되는 동안 컨테이너 내부에 작성된 모든 데이터는 유지되지 않습니다. 
 
-If the container is stopped and restarted from its image, the container will run exactly the same as the first time, absent of any changes made during the last run cycle.  Changes to the container either have to be made during the image creation process, using the Dockerfile that become part of the image, or data can be retained by mounting a persistent storage volume, from inside the container to the outside.  This will be explored further in the HOL exercises below. 
+컨테이너가 이미지에서 중지되었다가 다시 시작되면 컨테이너는 마지막 실행주기 동안 변경된 내용이없는 처음과 완전히 동일하게 실행됩니다. 컨테이너의 변경 사항은 이미지 작성 프로세스 중에 이미지의 일부가되는 Dockerfile을 사용하여 작성하거나 컨테이너 내부에서 외부로 영구 저장 볼륨을 마운트하여 데이터를 유지할 수 있습니다. 이것은 아래의 HOL 연습에서 더 자세히 살펴볼 것입니다. 
 
 <img src=images/004-docker-images.jpg />
 
 
-Jumping back a bit, there is a new nomenclature that Docker introduces, here are terms that you will need to be familiar with.  
+약간 뒤로 돌아 가면 Docker가 소개하는 새로운 명명법이 있습니다. 여기에 익숙해 져야 할 용어가 있습니다. 
 
-Each of these Docker technologies will be explored in this HOL.  It's important to note that this core technology is open source.  There are other technologies in the greater ecosystem, that could be open source, or licensed or even a hybrid, with a paid support option.
+이 Docker 기술 각각은이 HOL에서 탐구 될 것입니다. 이 핵심 기술은 오픈 소스라는 점에 유의해야합니다. 더 큰 생태계에는 유료 지원 옵션이있는 오픈 소스, 라이센스 또는 하이브리드 일 수있는 다른 기술이 있습니다. 
 
 <img src=images/005-docker-terms.jpg />
 
 
-The Docker Engine is THE core piece of technology that allows you to run containers.  In order for a container to run on any Linux host, at a minimum, the Docker Engine needs to be installed.  Then the container can run on any Linux host where Docker Engine is installed, providing the benefit of portability, without doing any application specific configuration changes on each host.
+Docker 엔진은 컨테이너를 실행할 수있는 핵심 기술입니다. 최소한 Linux 컨테이너에서 컨테이너를 실행하려면 Docker Engine을 설치해야합니다. 그런 다음 Docker Engine이 설치된 모든 Linux 호스트에서 컨테이너를 실행할 수 있으므로 각 호스트에서 응용 프로그램 별 구성 변경 없이도 이식성의 이점을 얻을 수 있습니다. 
 
 <img src=images/004-docker-engine.jpg />
 
 
-Ok, so those are some of the mechanics of the technology, but why is Docker popular among all types of IT people?  Let's look at these proof points from Developers and IT Ops.
+좋습니다, 그것들은 기술의 메커니즘 중 일부입니다 만, Docker가 모든 유형의 IT 사람들에게 인기가있는 이유는 무엇입니까? Developers 및 IT Ops의 이러한 증명 포인트를 살펴 보겠습니다. 
 
 <img src=images/004-why-containers.jpg />
 
 
-Additionally, in speaking with hundreds of organizations that are exploring and using Docker, these are the core advantages that Docker brings.  
+또한 Docker를 탐색하고 사용하는 수백 개의 조직과 이야기 할 때 Docker가 제공하는 핵심 이점이 있습니다. 
 
 <img src=images/005-docker-usage.jpg />
 
 
-All of this is part of a transformation of technologies along a number of fronts, and is the basis for modern agile application development.
+이 모든 것은 여러 가지 측면에서 기술 혁신의 일부이며 현대 민첩한 애플리케이션 개발의 기초입니다. 
 
 <img src=images/006-evolution.jpg />
 
 ***
 
-## Verify Docker Engine Hands on Lab Environment
+## Docker 엔진이 랩 환경에서 작동하는지 확인
 
-In this first section you are going to verify that you are able to connect to your Docker Engine environment as requested in the [Prerequisites document](Prerequisites.md).  Please access the environment now, and execute the following commands at the terminal.
+이 첫 번째 섹션에서는 [필수 구성 요소 문서] (Prerequisites.md)에서 요청한대로 Docker 엔진 환경에 연결할 수 있는지 확인합니다. 지금 환경에 액세스하여 터미널에서 다음 명령을 실행하십시오. 
 
-> *Note - if you are using one of the Worker Nodes in an Oracle Container Cloud Service instance, as your Docker Engine environment, [access it via SSH per these instructions](supplemental/Access-OCCS-VM-SSH.md)
+>*참고 - Oracle Container Cloud Service 인스턴스에서 Docker Engine 환경으로 [이 지침에 따라 SSH를 통해 액세스] (supplemental / Access-OCCS-VM-SSH.md) 작업자 노드 중 하나를 사용하는 경우, 
 
-**Optional** - for convenience, run as root, so that you do not have to preface everything with sudo (not applicable if you are running Docker for Windows):
+**선택 사항**- 편의상 root로 실행하므로 sudo로 모든 것을 시작하지 않아도됩니다 (Windows 용 Docker를 실행하는 경우에는 적용되지 않음). 
 
 ```
 $ sudo -s
 ```
 
-Now, here is the Docker specific command to check what version is installed:
+다음은 설치된 버전을 확인하는 Docker 전용 명령입니다. 
 
 ```
 $ docker --version
 ```
 
-If Docker is installed and running, you should see an output of something like this:
+Docker가 설치되어 실행 중이면 다음과 같은 출력이 표시됩니다. 
 
 ```
 Docker version 1.1x.x, build 57bf6fd
@@ -121,128 +121,128 @@ Docker version 1.1x.x, build 57bf6fd
 
 ***
 
-## Hello Helloworld
+## 안녕하세요 헬로우 월드
 
-Run Docker’s Hello-world example:
+Docker의 Hello world 예제를 실행합니다. 
 
 	
 ```
 $ docker run hello-world
 ```
 
-Since the "hello-world" image is not available locally on the host, the command automatically pulls the hello-world image from the public Docker Hub image repository and runs the container in the foreground.
+&quot;hello-world&quot;이미지는 호스트에서 로컬로 사용할 수 없으므로 명령은 공용 Docker 허브 이미지 저장소에서 hello-world 이미지를 자동으로 가져 와서 포 그라운드에서 컨테이너를 실행합니다. 
 
 <img src=images/2017-03-16_13-40-42.jpg />
 
 ***
 
-**Congratulations, you have just run your first Docker container!**
+**축하합니다. 첫 번째 Docker 컨테이너를 실행했습니다!**
 
-List all containers: 
+모든 용기를 나열하십시오 : 
 
-> *Note - the "- a" option = running **and** stopped*
+>*참고 - &quot;- a&quot;옵션 = 달리기**및**중지됨*
 
 ```
 $ docker ps -a
 ```
-Notice that the hello-world container ran once and then exited:
+hello-world 컨테이너가 한 번 실행 된 다음 종료되었습니다. 
 
 <img src=images/2017-03-16_14-46-49.jpg />
 
 ***
 
-In this exercise you will explore another Docker image from Docker Hub.
+이 연습에서는 Docker Hub에서 다른 Docker 이미지를 탐색합니다. 
 
-**Browse to another public image Helloworld example on Docker Hub.  Run it.**
+**Docker Hub에서 공개 이미지 Helloworld 예제를 찾아보십시오. 그것을 실행하십시오.**
 
-Use this Docker Hub image:
+이 Docker 허브 이미지 사용 : 
 
-[https://hub.docker.com/r/karthequian/helloworld](https://hub.docker.com/r/karthequian/helloworld)
+[https://hub.docker.com/r/karthequian/helloworld](https://hub.docker.com/r/karthequian/helloworld) 
 
-Pull the image from the Docker Hub Registry:
+Docker Hub Registry에서 이미지를 당겨 : 
 
->  *Note - observe how the layers are pulled individually.  Docker image files are composed of multiple layers, for more information, read the [Docker docs here about images and layers](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)*
+>*참고 - 레이어가 개별적으로 어떻게 당겨 지는지 관찰하십시오. Docker 이미지 파일은 여러 레이어로 구성되어 있습니다. 자세한 내용은 이미지 및 레이어에 대한 Docker 문서 (https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/)를 참조하십시오. 
 
 ```
 $ docker pull karthequian/helloworld:latest
 ```
 
-Copy/Paste the Docker Run command from the Docker Hub page and add a "-d" option so the container runs in "detached" mode:
+Docker Hub 페이지에서 Docker Run 명령을 복사 / 붙여 넣기하고 &quot;-d&quot;옵션을 추가하여 컨테이너가 &quot;detached&quot;모드로 실행되도록하십시오 : 
 
-> *Note - the "-d" option run the container in detached mode, as opposed to the foreground mode that you saw in the last exercise.  The benefit of this is that for longer running containers, it frees up your terminal window.*
+>*주 - &quot;-d&quot;옵션은 마지막 연습에서 보았던 전경 모드와 달리 분리 모드로 컨테이너를 실행합니다. 이것의 이점은 더 이상 실행중인 컨테이너의 경우 터미널 창을 비울 수 있다는 것입니다.*
 
 ```
 $ docker run -d -p 80:80/tcp "karthequian/helloworld:latest"
 ```
 
-Explore this Helloworld app in the browser.  Navigate to the IP of the Docker Host where it is running and note the number of visits: 
+브라우저에서 Helloworld 앱을 탐색하십시오. 실행중인 Docker Host의 IP로 이동하여 방문수를 기록하십시오. 
 
-> *Note - the IP is the same as the Host that you are SSH’d into http://host_ip or on your localhost http://localhost (for the rest of this document, it may just be referred to as host IP or Docker host IP for simplicity)*
+>*참고 - IP는 http : // host_ip 또는 로컬 호스트의 http : // localhost에 SSH 할 호스트와 동일합니다 (이 문서의 나머지 부분에서는 호스트 IP 또는 Docker 호스트 IP)*
 
 
 <img src=images/004-hello-world.png />
 
 ***
 
-You are now actually using an application that is in the Docker container.  Refresh the browser and observe how the visits count increments.  This is a live application. A simple example, but an example of the experience of using an application running in a container, which is no different than if it was not running in a container.
+이제 Docker 컨테이너에있는 응용 프로그램을 실제로 사용하고 있습니다. 브라우저를 새로 고침하고 방문수가 어떻게 증가하는지 관찰합니다. 이것은 실제 응용 프로그램입니다. 간단한 예이지만 컨테이너에서 실행중인 응용 프로그램 사용 경험의 예입니다. 컨테이너에서 실행되지 않는 경우와 다를 바 없습니다. 
 
-> *Makes you wonder about how many apps that you are using on a day to day basis, may indeed be running in a Docker container?*
+>*매일 매일 얼마나 많은 앱을 사용하고 있는지, 실제로 Docker 컨테이너에서 실행 중인지 궁금합니다.*
 
-Now, look at the name that Docker has assigned the Helloworld container that is running.  
+이제 Docker가 실행중인 Helloworld 컨테이너를 할당 한 이름을 살펴보십시오. 
 
-List all running containers:
+실행중인 모든 컨테이너 나열 : 
 
 ```
 $ docker ps
 ```
 
-Notice that Docker has assigned a container name, something like "ecstatic_lamport" in the below?  What name did Docker give your container?  Remember this name, as we will use it in a bit.
+Docker가 아래에 &quot;ecstatic_lamport&quot;와 같은 컨테이너 이름을 지정했는지 확인하십시오. Docker가 컨테이너에 어떤 이름을 지었습니까? 이 이름을 기억해 두십시오. 조금만 사용하겠습니다. 
 
 <img src=images/2017-03-16_13-49-25.jpg />
 
 ***
 
-> *Note - unless you specify a container name, Docker will assign a similar 2 part name automatically*
+>*참고 - 컨테이너 이름을 지정하지 않으면 Docker는 비슷한 2 부분 이름을 자동으로 할당합니다*
 
-**Stop and Re-run Your Container with a More Descriptive Name**
+**더 구체적인 이름으로 컨테이너를 중지하고 다시 실행하십시오**
 
-Now, go back to the terminal window, stop the container and give it a more descriptive name, so that we could find it easier if there were many containers running.
+이제 터미널 창으로 돌아가서 컨테이너를 멈추고 더 많은 설명이 포함 된 이름을 지정하면 실행중인 컨테이너가 많은 경우 더 쉽게 찾을 수 있습니다. 
 
-Stop the Running Container - Replace **your_container** below with an actual name of your running container:
+실행중인 컨테이너 중지 - 아래**your_container**를 실행중인 컨테이너의 실제 이름으로 바꿉니다. 
 
 ```
 $ docker stop your_container
 ```
 
-Now, remove the container with the "rm" command:
+이제 &quot;rm&quot;명령을 사용하여 컨테이너를 제거하십시오. 
 
 ```
 $ docker rm your_container
 ```
 
-Check to be sure that the container has been removed:
+컨테이너가 제거되었는지 확인하십시오. 
 
 ```
 $ docker ps -a
 ```
 
-> *Note - containers can be stopped and removed by using their name **(if there are no dependent image layers)**, their long id or their short id*
+> 주 - 컨테이너는 이름**(종속 이미지 레이어가없는 경우)**, 긴 ID 또는 짧은 ID*를 사용하여 중지하고 제거 할 수 있습니다. 
 
-Now run the container with a more descriptive name, such as "helloworld_app":
+이제 &quot;helloworld_app&quot;와 같이 더 알기 쉬운 이름으로 컨테이너를 실행하십시오. 
 
 ```
 $ docker run -d --name helloworld_app -p 80:80/tcp "karthequian/helloworld:latest"
 ```
 
-List all running containers again:
+실행중인 모든 컨테이너를 다시 나열하십시오. 
 
 ```
 $ docker ps
 ```
 
-> *Is the container easier to find now, especially that there is context to the name of the container?  Especially if there were many containers running?*
+>*컨테이너를 쉽게 찾을 수 있습니까? 특히 컨테이너 이름의 컨텍스트가 있습니까? 특히 많은 컨테이너가 실행되고 있다면?*
 
-Stop and Remove the container:
+컨테이너를 중지하고 제거하십시오. 
 
 ```
 $ docker stop helloworld_app
@@ -250,27 +250,27 @@ $ docker stop helloworld_app
 $ docker rm helloworld_app
 ```
 
-We are done with this part of the HOL.
+우리는 HOL의이 부분을 완성합니다. 
 
 ***
 
-## Create a Dockerfile and Docker Image
+## Dockerfile 및 Docker 이미지 만들기
 
-In this exercise you will build your own image from a Dockerfile.
+이 연습에서는 Dockerfile에서 자신의 이미지를 빌드합니다. 
 
-**About DockerFiles**
+**DockerFiles 정보**
 
-A Dockerfile is a recipe that starts with a base image, typically a thin Linux OS distribution such as Alpine Linux, and then layers on an app and configuration.  [According to Docker](https://docs.docker.com/engine/reference/builder/): 
+Dockerfile은 기본 이미지 (일반적으로 Alpine Linux와 같은 씬 Linux OS 배포판)로 시작한 다음 응용 프로그램 및 구성에 레이어를 작성하는 방법입니다. [Docker에 따르면] (https://docs.docker.com/engine/reference/builder/) : 
 
-*"Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession."*
+*&quot;Dockerfile은 사용자가 이미지를 어셈블하기 위해 명령 줄에서 호출 할 수있는 모든 명령을 포함하는 텍스트 문서입니다 .Docker 빌드 사용자는 여러 명령 줄 명령을 연속적으로 실행하는 자동화 된 빌드를 만들 수 있습니다.&quot;*
 
-**Build the Docker image**
+**도커 이미지 만들기**
 
-Use the [Docker Whalesay](https://hub.docker.com/r/docker/whalesay/) example to build your first image.  
+[Docker Whalesay] (https://hub.docker.com/r/docker/whalesay/) 예제를 사용하여 첫 번째 이미지를 만듭니다. 
 
-Follow these steps:
+다음 단계를 따르십시오. 
 
-From your home directory, make a directory to store your Dockerfile:
+홈 디렉토리에서 Dockerfile을 저장할 디렉토리를 만드십시오. 
 
 ```
 $ cd ~ 
@@ -278,25 +278,25 @@ $ cd ~
 $ mkdir mydockerbuild
 ```
 
-Change to the new directory:
+새 디렉토리로 변경하십시오. 
 
 ```
 $ cd mydockerbuild
 ```
 
-In Step 1.3, use VI or editor of your choice, like nano.  
+1.3 단계에서 VI 또는 nano와 같이 선택한 편집기를 사용하십시오. 
 
-Use VI, if you are on Oracle Linux:
+Oracle Linux를 사용하는 경우 VI를 사용하십시오. 
 
-> *Note - case is important in the file name "Dockerfile".  Use a capital D and lower case for the rest of the letters.*
+>*주 - 대문자는 파일 이름 &quot;Dockerfile&quot;에서 중요합니다. 나머지 문자는 대문자 D와 소문자를 사용하십시오.*
 
 ```
 $ vi Dockerfile
 ```
 
-Create a text file named Dockerfile with these 3 lines:
+다음 세 줄의 Dockerfile이라는 텍스트 파일을 만듭니다. 
 
-> *Note - if you are using VI, press the "i" key first to enter insert mode, before you paste.
+>*주 - VI를 사용하는 경우 붙여 넣기 전에 먼저 삽입 모드로 들어가기 위해 &quot;i&quot;키를 누르십시오. 
 
 ```
 FROM docker/whalesay:latest
@@ -306,28 +306,28 @@ RUN apt-get -y update && apt-get install -y fortunes
 CMD /usr/games/fortune -a | cowsay
 ```
 
-In Step 1.8, after you are done adding the 3 lines to your Dockerfile with VI, save the file by typing the Esc key - colon - w (for write) - q (for quit):
+1.8 단계에서 VI가있는 Dockerfile에 3 줄을 추가 한 후에는 Esc 키 - 콜론 -w (쓰기) - q (종료)를 입력하여 파일을 저장하십시오. 
 
 	
 ```
 esc : w q 
 ```
 
-Verify the Dockerfile has the correct content:
+Dockerfile의 내용이 올바른지 확인하십시오. 
 
 ```
 $ cat Dockerfile
 ```
 
-> *Note - the docs for VI are here: [https://www.cs.colostate.edu/helpdocs/vi.html](https://www.cs.colostate.edu/helpdocs/vi.html)*
+>*참고 - VI 용 문서는 다음과 같습니다. [https://www.cs.colostate.edu/helpdocs/vi.html](https://www.cs.colostate.edu/helpdocs/vi.html )*
 
-Then per section 2, build your Docker image, be sure to include the "." at the end of the command:
+그런 다음 섹션 2에서 Docker 이미지를 작성하고 &quot;.&quot; 명령의 끝에서 : 
 
 ```
 $ docker build -t docker-whale .
 ```
 
-Then per section 4, list the images on your host and run the docker-whale image as a container:
+그런 다음 섹션 4에서 호스트의 이미지를 나열하고 도커 - 고래 이미지를 컨테이너로 실행하십시오. 
 
 ```
 $ docker images
@@ -337,95 +337,95 @@ $ docker images
 $ docker run docker-whale
 ```
 
-Notice the output in the terminal, the container will run once, then stop.
+터미널에서 출력을 확인하면 컨테이너가 한 번 실행 된 다음 중지됩니다. 
 
 <img src=images/2017-03-16_14-10-47.jpg /> 
 
 ***
 
-## Push an Image to your Docker Hub Account
+## 이미지를 도커 허브 계정에 푸시
 
-**Registries**
+**레지스트리**
 
-Registries store Docker images.  Using a registry is the first step towards moving Docker off the laptop.  The most widely used registry is the Docker Hub: [https://hub.docker.com](https://hub.docker.com) 
+레지스트리는 Docker 이미지를 저장합니다. Docker를 노트북에서 떼어내는 첫 번째 단계는 레지스트리를 사용하는 것입니다. 가장 널리 사용되는 레지스트리는 Docker Hub입니다 : [https://hub.docker.com] (https://hub.docker.com) 
 
-> *Note - in this exercise you will need a Docker Hub account to use the public Docker registry.  If you do not have one already, you can sign up for free, navigate to: [https://hub.docker.com/](https://hub.docker.com/)*
+>*참고 -이 연습에서는 공용 Docker 레지스트리를 사용하기 위해 Docker 허브 계정이 필요합니다. 이미 가지고 있지 않다면 무료로 등록 할 수 있습니다 : [https://hub.docker.com/](https://hub.docker.com/)*
 
-**Tag and Push your new image to the Docker Hub registry.  In this exercise username will be your Docker Hub account name.**
+**태그를 달고 새 이미지를 Docker 허브 레지스트리에 푸시하십시오. 이 연습에서 사용자 이름은 Docker 허브 계정 이름입니다.**
 
-First, log into your Docker Hub account from the terminal:
+먼저 터미널에서 Docker 허브 계정에 로그인하십시오. 
 
 ```
 $ docker login
 ```
 
-When prompted, enter your Docker account username (lowercase), password and email
+메시지가 나타나면 Docker 계정 사용자 이름 (소문자), 비밀번호 및 이메일을 입력하십시오. 
 
-Now, tag and push your new docker-whale image to your account on Docker Hub
+이제 Docker Hub에서 새 docker-whale 이미지에 태그를 달고 계정에 푸시하십시오. 
 
-Substitute your Docker **username** below
+Docker**사용자 이름**을 다음으로 대체하십시오. 
 
 ```
 $ docker tag docker-whale:latest username/docker-whale:latest
 ```
 
-Push the Docker image to your account.  This will create a new repository called "docker-whale" for this image.
+Docker 이미지를 계정으로 푸시합니다. 그러면이 이미지에 대해 &quot;도커 - 고래&quot;라는 새 저장소가 만들어집니다. 
 
 ```
 $ docker push username/docker-whale:latest
 ```
 
-Navigate to your account page in Docker Hub via this URL, substituting your **username**:
+Docker 허브의 계정 페이지로 이동하여**사용자 이름**을 대체하십시오. 
 
-[https://hub/docker.com/r/username](https://hub.docker.com/r/username)
+[https : //hub/docker.com/r/username] (https://hub.docker.com/r/username) 
 
-Do you see the image that you pushed?
+당신이 밀어 넣은 이미지가 보이나요? 
 
 <img src=images/010-docker-hub.png />
 
 ***
 
-Now, remove the local image and force the image to be pulled and run from the Docker Hub registry.
+이제 로컬 이미지를 제거하고 Docker Hub 레지스트리에서 이미지를 가져 와서 실행하십시오. 
 
-To do this, you must first remove the stopped container by using its short id, not its name.  Find the short id:
+이렇게하려면 중지 된 컨테이너를 이름이 아닌 짧은 ID를 사용하여 먼저 제거해야합니다. 짧은 ID 찾기 : 
 
 ```
 $ docker ps -a 
 ```
 
-Copy the short id for the appropriate container, it will be similar to this format: ee31fe1dd8f8 and use the "rm" command to remove the container: 
+해당 컨테이너의 짧은 ID를 복사하면 ee31fe1dd8f8 형식과 유사하게되며 &quot;rm&quot;명령을 사용하여 컨테이너를 제거하십시오. 
 
 ```
 $ docker rm short_id
 ```
 
-Now that the container is removed, you can remove the image locally on the host, and force the container to be run from the image on the Docker Hub.  Use the "rmi" command to remove an image.
+컨테이너가 제거되었으므로 이미지를 호스트에서 로컬로 제거하고 Docker 허브의 이미지에서 컨테이너를 강제로 실행할 수 있습니다. &quot;rmi&quot;명령을 사용하여 이미지를 제거하십시오. 
 
-Remove the image locally that you pushed to the Docker Hub:
+Docker 허브에 푸시 한 이미지를 로컬에서 제거하십시오. 
 
 ```
 $ docker rmi username/docker-whale
 ```
 
-Verify the images are removed from your host.  View all Docker images with the images command:
+이미지가 호스트에서 제거되었는지 확인하십시오. images 명령을 사용하여 모든 Docker 이미지를 봅니다. 
 
 ```
 $ docker images
 ```
 
-Now, run the image directly from your repository on Docker Hub, and force a new pull of the image, because the image does not exist locally:
+이제 Docker Hub의 리포지토리에서 이미지를 직접 실행하고 이미지가 로컬에 존재하지 않기 때문에 이미지를 새로 가져 오게하십시오. 
 
 ```
 $ docker run username/docker-whale
 ```
 
-> *Note - if no tag is used, the default tag is "latest", and it is pulled from your registry*
+> 참고 - 태그가 사용되지 않으면 기본 태그는 &quot;latest&quot;이며 레지스트리에서 가져옵니다*
 
 <img src=images/2017-03-16_14-17-38-2.jpg />
 
 ***
 
-**At this point please stop and remove all containers.  To do this for all containers, use these commands:**
+**이 시점에서 모든 용기를 중지하고 제거하십시오. 모든 컨테이너에서이 작업을 수행하려면 다음 명령을 사용하십시오.**
 
 ```
 $ docker stop $(docker ps -a -q)
@@ -435,77 +435,77 @@ $ docker rm $(docker ps -a -q)
 
 ***
 
-## Install Docker Compose
+## Docker 설치 Compose
 
 
-**Introduction to Docker Compose**
+**Docker 소개 Compose**
 
-What is Docker Compose, why use it?
+Docker Compose 란 무엇입니까? 왜 사용합니까? 
 
-According to Docker: *Docker Compose is a tool for defining and running multi-container Docker applications. With Compose, you use a Compose file to configure your application’s services. Then, using a single command, you create and start all the services from your configuration.*
+Docker에 따르면*Docker Compose는 다중 컨테이너 Docker 응용 프로그램을 정의하고 실행하기위한 도구입니다. 작성을 사용하면 작성 파일을 사용하여 응용 프로그램의 서비스를 구성 할 수 있습니다. 그런 다음 단일 명령을 사용하여 구성에서 모든 서비스를 만들고 시작하십시오.*
 
-**Install Docker Compose.**
+**Docker Compose 설치**
 
-> *For simplicity, you will install Docker Compose v1.12 in a directory called "compose", under the root home directory to avoid any path issues with the variety of Linux environments that may be used in this HOL.  This is also where you will run Docker Compose locally in that directory and create your first docker-compose.yml file.*
+>*이 HOL에서 사용할 수있는 다양한 Linux 환경에서 경로 문제가 발생하지 않도록 루트 홈 디렉토리 아래에 &quot;compose&quot;라는 디렉토리에 Docker Compose v1.12를 설치합니다. 또한 Docker Compose를 해당 디렉토리에서 로컬로 실행하고 첫 번째 docker-compose.yml 파일을 만듭니다. 
 
-Change to root home directory:
+루트 홈 디렉토리로 변경하십시오. 
 
 ```
 $ cd ~
 ```
 
-Verify that you are in the root home directory:
+루트 홈 디렉토리에 있는지 확인하십시오. 
 
 ```
 $ pwd
 ```
 
-Make a new directory called "compose":
+&quot;compose&quot;라는 새 디렉토리를 만듭니다. 
 
 ```
 $ mkdir compose
 ```
 
-Change into this new directory:
+이 새 디렉토리로 변경하십시오. 
 
 ```
 $ cd compose
 ```
 
-Then, use this curl command to install Docker Compose v1.12 locally, in that directory:
+그런 다음이 curl 명령을 사용하여 해당 디렉토리에 Docker Compose v1.12를 로컬로 설치하십시오. 
 
 ```
 $ curl -L "https://github.com/docker/compose/releases/download/1.12.0/docker-compose-$(uname -s)-$(uname -m)" -o docker-compose
 ```
 
-Change the executable permissions:
+실행 권한을 변경하십시오. 
 
 ```
 $ chmod +x docker-compose
 ```
 
-Verify and check which version of Docker Compose was installed:
+설치된 Docker Compose 버전을 확인하고 확인하십시오. 
 
 ```
 $ ./docker-compose --version
 ```
 
-> *Note - for further information, please refer to these Docker docs at a later time: [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
+>*참고 - 자세한 내용은 나중에이 Docker 문서를 참조하십시오. [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/ 설치 /)*
 ***
 
-## Create a Wordpress "stack"
+## Wordpress &quot;스택&quot;만들기
 
-Follow these steps to create a simple Wordpress stack:
+간단한 Wordpress 스택을 만들려면 다음 단계를 따르십시오. 
 
-Use an editor or VI to create a file named "docker-compose.yml":
+편집기 또는 VI를 사용하여 &quot;docker-compose.yml&quot;파일을 생성하십시오 : 
 
-> *Note - just as with the Dockerfile above, case of the file name is important.  Use all lower case for "docker-compose.yml"*
+>*참고 - 위의 Dockerfile과 마찬가지로 파일 이름의 대소 문자가 중요합니다. &quot;docker-compose.yml&quot;에 대해 모두 소문자 사용*
 
 ```
 $ vi docker-compose.yml
 ```
 
-Copy / paste the following text, or YAML:
+다음 텍스트 또는 YAML을 복사하여 붙여 넣으십시오. 
 
 ```
 version: '2'
@@ -539,36 +539,36 @@ volumes:
 ```
 
 
-Save the docker-compose.yml:
+docker-compose.yml을 저장하십시오. 
 
-If you are using  VI, save the file by typing the Esc key - colon - w (for write) - q (for quit):
+VI를 사용한다면, Esc 키 - 콜론 - w (쓰기) - q (종료)를 입력하여 파일을 저장하십시오 : 
 
 	
 ```
 esc : w q 
 ```
 
-Verify the docker-compose.yml file has the correct content:
+docker-compose.yml 파일의 내용이 올바른지 확인하십시오. 
 
 ```
 $ cat docker-compose.yml
 ```
 
-Run the Wordpress stack by this command:
+이 명령으로 Wordpress 스택을 실행하십시오 : 
 
 ```
 $ ./docker-compose up -d
 ```
 
-**Verify the running stack, by visiting the Wordpress setup page.**
+**Wordpress 설정 페이지를 방문하여 실행중인 스택을 확인하십시오.**
 
-In your browser, copy the below URL, using your host IP, to initiate the Wordpress setup:
+브라우저에서 호스트 IP를 사용하여 아래 URL을 복사하여 Wordpress 설정을 시작하십시오. 
 
 ```
 http://host_ip/wp-admin/install.php
 ```
 
-> *Note - Docker for Mac users - if the following error is observed, try restarting the Docker service on the Mac, to allow writes to /var/www/html*
+>*주 - Mac 사용자 용 Docker - 다음 오류가 발생하는 경우 Mac에서 Docker 서비스를 다시 시작하여 / var / www / html*
 
 ```
 ERROR: for wordpress  Cannot start service wordpress: Mounts denied: 
@@ -578,105 +578,105 @@ You can configure shared paths from Docker -> Preferences... -> File Sharing.
 See https://docs.docker.com/docker-for-mac/osxfs/#namespaces for more info.
 ```
 
-**Congratulations, you have successfully launched your first Wordpress app in Docker!**
+**축하합니다. Docker에서 첫 번째 Wordpress 앱을 성공적으로 시작하셨습니다!**
 
-For further info on this stack, see: [https://docs.docker.com/compose/wordpress/](https://docs.docker.com/compose/wordpress/) 
+이 스택에 대한 자세한 내용은 다음을 참조하십시오. [https://docs.docker.com/compose/wordpress/](https://docs.docker.com/compose/wordpress/) 
 
 ***
 
-## Basics of Persistent storage
+## 영구 저장소의 기본 사항
 
- **Understand Docker Volumes**
+**Docker 볼륨 이해**
 
-This section will explore data persistence through the use of host data volumes.
+이 섹션에서는 호스트 데이터 볼륨을 사용하여 데이터 지속성을 살펴 봅니다. 
 
-A full introduction to Docker volumes is located here: [https://docs.docker.com/engine/tutorials/dockervolumes/](https://docs.docker.com/engine/tutorials/dockervolumes/)
+Docker 볼륨에 대한 전체 소개는 다음 링크에 있습니다. [https://docs.docker.com/engine/tutorials/dockervolumes/](https://docs.docker.com/engine/tutorials/dockervolumes/) 
 
-In short, unless a container volume is mounted to a persistent host volume, any data stored within the container will be lost when the container is removed.
+즉, 컨테이너 볼륨이 영구 호스트 볼륨에 마운트되어 있지 않으면 컨테이너가 제거 될 때 컨테이너 내에 저장된 모든 데이터가 손실됩니다. 
 
-So let's explore how data is persisted in the Wordpress stack we just used.
+이제 방금 사용했던 Wordpress 스택에서 데이터가 지속되는 방식을 살펴 보겠습니다. 
 
-Most importantly, in the Docker Compose YAML file, we used 2 volume statements, one for Wordpress and one for the DB.  
+가장 중요한 것은, Docker Compose YAML 파일에서 Wordpress와 DB를위한 2 개의 볼륨 문을 사용했습니다. 
 
-For example, this statement in the YAML for Wordpress, allows for images to be retained in blog posts.  In this example, you are explicitly stating where the data is stored on the host volume.
+예를 들어, YAML for Wordpress에있는이 문은 이미지를 블로그 게시물에 보관할 수있게 해줍니다. 이 예에서는 호스트 볼륨에 데이터가 저장되는 위치를 명시하고 있습니다. 
 ```
      volumes:
        - /var/www/html:/var/www/html:rw
 ```
 
-Plus this volume statement for the database.  In this example, you are letting Docker map where "db_data" is stored on the host volume:
+데이터베이스에 대한이 볼륨 문. 이 예에서 &quot;db_data&quot;가 호스트 볼륨에 저장된 위치를 Docker가 매핑하도록합니다. 
 
 ```
      volumes:
        - db_data:/var/lib/mysql
  ```
- 
-The host volume is listed first, then the container volume, separated by a colon.  This binds any data written in the specified container volume path to the host volume.  When the container is stopped and rerun on the same host, it will pull any existing data from the host volume. 
 
-*Now you know the magic that we will now explore.*
+호스트 볼륨이 먼저 나열된 다음 컨테이너 볼륨이 콜론으로 구분됩니다. 이는 지정된 컨테이너 볼륨 경로에 기록 된 모든 데이터를 호스트 볼륨에 바인드합니다. 컨테이너가 중지되고 동일한 호스트에서 다시 실행되면 호스트 볼륨에서 기존 데이터를 가져옵니다. 
 
-**Complete the Wordpress setup and create blog post.**
+*이제 우리가 탐구 할 마법을 알게되었습니다.*
 
-In your browser navigate to Host_IP and append it with the Wordpress initialization URL: /wp-admin/install.php like this:  
+**Wordpress 설정을 완료하고 블로그 게시물을 만드십시오.**
 
-> *Note - this is the same setup URL you saw when you deployed with Docker Compose above.  You may already have this loaded in a browser tab.*
+브라우저에서 Host_IP로 이동하여 다음과 같이 Wordpress 초기화 URL : /wp-admin/install.php와 함께 추가하십시오. 
+
+>*참고 - 위의 Docker Compose로 배포 할 때 보았던 것과 동일한 설정 URL입니다. 이미 브라우저 탭에로드되어있을 수 있습니다.*
 
 
 ```
 http://docker_host_ip/wp-admin/install.php
 ```
 
-First, select your language:
+먼저 언어를 선택하십시오. 
 
 <img src=images/033-wp-setup1.png />
 
 ***
 
-Setup the Wordpress login details.  Be sure to keep the Username and Password in your notes:
+Wordpress 로그인 정보를 설정하십시오. 노트에 사용자 이름과 비밀번호를 보관하십시오. 
 
 <img src=images/034-wp-setup2.png />
 
 ***
 
-Click the "log In" button to log into to Wordpress:
+Wordpress에 로그인하려면 &quot;로그인&quot;버튼을 클릭하십시오 : 
 
 <img src=images/034-wp-setup2.png />
 
 ***
 
-Login using the credentials you created earlier:
+이전에 생성 한 자격 증명을 사용하여 로그인하십시오. 
 
 <img src=images/036-wp-login2.png />
 
 ***
 
-Select "Write your first blog post" in the Next Steps section:
+다음 단계 섹션에서 &quot;첫 번째 블로그 게시물 작성&quot;을 선택하십시오. 
 
 <img src=images/037-write-blog.png />
 
 ***
 
-Create a sample blog post.  Include an image of your choosing, if you would like and click Publish:
+샘플 블로그 게시물을 만드십시오. 원하는 경우 이미지를 포함하고 게시를 클릭하십시오. 
 
 <img src=images/038-publish-blog.png />
 
 ***
 
-Click on the "Permalink" to navigate to the blog post:
+블로그 게시물로 이동하려면 &quot;Permalink&quot;를 클릭하십시오 : 
 
 <img src=images/039-permalink.png />
 
 ***
 
-Copy the Permalink URL of the blog post and keep this in your notes, as you will need it later:
+블로그 게시물의 퍼머 링크 URL을 복사하여 나중에 메모에 남겨 두십시오. 나중에 필요할 수 있습니다. 
 
 <img src=images/040-view-blog.png />
 
 ***
 
-Stop and Remove the running Wordpress and Database containers by using their short id.
+실행중인 Wordpress 및 Database 컨테이너를 짧은 ID로 중지하고 제거하십시오. 
 
-Remember this from a previous exercise:
+이전 실습에서이 점을 기억하십시오. 
 
 ```
 $ docker ps -a
@@ -686,31 +686,31 @@ $ docker stop short_id
 $ docker rm short_id
 ```
 
-Repeat for next container until all are stopped and removed, or use the bulk removal that was shown before.
+모든 컨테이너가 중지되고 제거 될 때까지 다음 컨테이너에 대해 반복하거나 이전에 표시된 대량 제거를 사용하십시오. 
 
 
-Verify in the browser that the Wordpress blog post is gone by refreshing the page:
+페이지를 새로 고침하여 Wordpress 블로그 게시물이 사라 졌는지 브라우저에서 확인하십시오. 
 
 <img src=images/043-refresh.png />
 
 ***
 
-Redeploy the Wordpress stack:
+Wordpress 스택 재배포 : 
 
 ```
 $ ./docker-compose up -d
 ```
 
-Navigate back to the blog post URL that you noted, in your browser and refresh the page:
+브라우저에서 기록한 블로그 게시물 URL로 돌아가서 페이지를 새로 고칩니다. 
 
 <img src=images/047-refresh-blog.png />
 
 ***
 
-The data persisted because it was written to the host volume, and then re-joined to the containers when they were re-deployed on the same hosts.
+데이터는 호스트 볼륨에 쓰여지고 동일한 호스트에 재배포 될 때 컨테이너에 다시 연결되기 때문에 지속됩니다. 
 
 
-**Please stop and remove all containers before going to the next section:**
+**다음 섹션으로 이동하기 전에 모든 용기를 중지하고 제거하십시오 :**
 
 ```
 $ docker stop $(docker ps -a -q)
@@ -721,194 +721,194 @@ $ docker rm $(docker ps -a -q)
 ***
 
 
-## Use GitHub and Docker Hub together to build an Image and Run the Container
+## GitHub와 Docker Hub를 함께 사용하여 이미지를 빌드하고 컨테이너를 실행하십시오.
 
-**Requirements: user account for GitHub and Docker Hub**
+**요구 사항 : GitHub 및 Docker 허브의 사용자 계정**
 
-> *Note - if you do not have a Github account, get a free one here: [https://github.com/join](https://github.com/join)* 
+>*참고 - Github 계정이없는 경우 여기에서 무료 계정을 만드십시오. [https://github.com/join](https://github.com/join)*
 
-Now, you will explore another method of creating an image using GitHub and Docker Hub.
+이제 GitHub 및 Docker 허브를 사용하여 이미지를 만드는 또 다른 방법을 살펴 보겠습니다. 
 
-> *Note - in this exercise you will fork an existing hello-world like repository, that you will call hello-earth, then modify its web page: Index.html in GitHub to trigger an automated Docker image build in Docker Hub.  You will then verify the successful build and run the image as a container in your Docker environment.*
-
-
-**To begin, fork this GitHub Docker001 repo to your own**
-
-Log into you GitHub account: 
-
-https://github.com/login
-
-In your browser, navigate to this GitHub repository: 
-
-https://github.com/oracle/cloud-native-devops-workshop/tree/master/containers/docker001
+>*참고 -이 연습에서는 hello-earth라는 저장소와 같은 기존의 hello-world를 분기 한 다음 웹 페이지를 수정합니다. GitHub의 Index.html은 Docker 허브에서 자동화 된 Docker 이미지 빌드를 트리거합니다. 그런 다음 성공적인 빌드를 확인하고 이미지를 Docker 환경에서 컨테이너로 실행합니다.*
 
 
-Select the "Fork" button in for the particular GitHub repository:
+**시작하려면이 GitHub Docker001 레포를 자신의 포크로 포크하십시오**
+
+로그인 GitHub 계정 : 
+
+https://github.com/login 
+
+브라우저에서 다음 GitHub 저장소로 이동합니다. 
+
+https://github.com/oracle/cloud-native-devops-workshop/tree/master/containers/docker001 
+
+
+특정 GitHub 저장소에 대해 &quot;포크&quot;버튼을 선택하십시오 : 
 
 <img src=images/github-dockerhub_14.jpg />
 
 ***
 
-This will automatically copy this repository to your own GitHub account, where you will be able to edit it as you need:
+그러면 자동으로이 저장소가 자신의 GitHub 계정에 복사되며 필요한 경우 GitHub 계정을 편집 할 수 있습니다. 
 
 <img src=images/github-dockerhub_9.jpg />
 
 ***
 
-Now, in your browser, in another tab, log into your Docker Hub Account: 
+이제 브라우저의 다른 탭에서 Docker 허브 계정에 로그인하십시오. 
 
-https://hub.docker.com/login
+https://hub.docker.com/login 
 
 
-Within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
+Docker Hub 계정에서 Create 아래의 Top Menu에서 &quot;Create Automated Build&quot;를 선택하십시오. 
 
 <img src=images/github-dockerhub_13.jpg />
 
 ***
 
-This will prompt you to link your GitHub account, so that Docker Hub can pull the source code:
+Docker 허브가 소스 코드를 가져올 수 있도록 GitHub 계정을 연결하라는 메시지가 표시됩니다. 
 
 <img src=images/2017-03-16_10-41-09.jpg />
 
 ***
 
-Select GitHub as shown here:
+다음과 같이 GitHub를 선택하십시오. 
 
 <img src=images/2017-03-16_10-41-14.jpg />
 
 ***
 
-Select for both Public and Private repositories:
+공개 및 비공개 리포지토리 모두 선택 : 
 
 <img src=images/2017-03-16_10-41-23.jpg />
 
 ***
 
-Again, within your Docker Hub account, select "Create Automated Build" in the Top Menu under the Create:
+다시 말하지만 Docker 허브 계정에서 Create 아래의 Top Menu에서 &quot;Create Automated Build&quot;를 선택하십시오. 
 
 <img src=images/github-dockerhub_13.jpg />
 
 ***
 
-Select Create Auto-build:
+Create Auto-Build :를 선택하십시오. 
 
 <img src=images/github-dockerhub_11-2.jpg />
 
 ***
 
-Select the "cloud-native-devops-workshop" repository:
+&quot;cloud-native-devops-workshop&quot;저장소를 선택하십시오 : 
 
 <img src=images/github-dockerhub-21.jpg />
 
 ***
 
-Make the repository name "hello-earth" and add a Short Description and press Save:
+저장소 이름을 &quot;hello-earth&quot;로 만들고 간단한 설명을 추가하고 저장을 누릅니다. 
 
-> *Note - naming the repository will also result in the image name being "hello-earth", after you do the first build.*
+> 주 - 저장소 이름을 지정하면 첫 번째 빌드를 수행 한 후에 이미지 이름이 &quot;hello-earth&quot;가됩니다.*
 
 <img src=images/github-dockerhub_10.jpg />
 
 ***
 
-Within the Build Settings tab, enter "/containers/docker001/lab1" for the Dockerfile Location and press the "Save Changes" button: 
+Build Settings 탭에서 Dockerfile Location에 대해 &quot;/ containers / docker001 / lab1&quot;을 입력하고 &quot;Save Changes&quot;버튼을 누릅니다. 
 
 <img src=images/github-dockerhub-20.jpg />
 
 ***
 
-Back in your GitHub account navigate to the URL where you have forked the above Docker001 repo, and specifically open the "lab1" folder.  Replace your GitHub username in the below URL.
+GitHub 계정으로 돌아가서 위의 Docker001 repo를 분기 한 URL로 이동하여 &quot;lab1&quot;폴더를 엽니 다. 아래 URL에 GitHub 사용자 이름을 바꿉니다. 
 
-https://github.com/*username*/cloud-native-devops-workshop/tree/master/containers/docker001/lab1
+https://github.com/*username*/cloud-native-devops-workshop/tree/master/containers/docker001/lab1 
 
-On the GitHub page, click on the link for "Index.html":
+GitHub 페이지에서 &quot;Index.html&quot;링크를 클릭하십시오 : 
 
 <img src=images/2017-03-16_11-15-12.png />
 
 ***
 
-You are going to modify this Index.html to create a new "Hello Earth" web page, this will automatically trigger a new (and first) image build in Docker Hub.  You will then run the resulting image as a container to observe your changes.
+이 Index.html을 수정하여 새로운 &quot;Hello Earth&quot;웹 페이지를 만들면 Docker 허브에 새로운 이미지 빌드가 자동으로 트리거됩니다. 그런 다음 결과 이미지를 컨테이너로 실행하여 변경 사항을 관찰합니다. 
 
-Edit the page via the pencil icon:
+연필 아이콘을 통해 페이지를 수정하십시오. 
 
 <img src=images/050-edit-index.png />
 
 ***
 
-Make the following changes to Line 12, replacing your own name and city where it says myName and myCity:
+Line 12를 다음과 같이 변경하여 myName 및 myCity가 표시된 사용자 이름과 도시를 대체합니다. 
 
 <img src=images/2017-03-16_11-19-42.jpg />
 
 ***
 
-Scroll down and Commit your Changes.  Add a description and press the "Commit Changes" button:
+아래로 스크롤하여 변경 사항 적용. 설명을 추가하고 &quot;Commit Changes (변경 사항 적용)&quot;버튼을 누릅니다. 
 
 <img src=images/052-commit-index.png />
 
 ***
 
-This will trigger a new automated build in Docker Hub, which will run the Dockerfile, which incorporates the new changes in Index.html as part of the build process.  Status is seen in the "Build Details" tab.  You need to refresh the browser to see updates to the build status:  
+그러면 DockerHub에서 DockerHub의 새 자동화 빌드가 실행되고, Dockerfile은 빌드 프로세스의 일부로 Index.html의 새로운 변경 사항을 통합합니다. 상태는 &#39;빌드 세부 정보&#39;탭에 표시됩니다. 빌드 상태에 대한 업데이트를 보려면 브라우저를 새로 고침해야합니다. 
 
-> *Note - if the automated build does not happen automatically, you can just use the "Trigger" button in the Docker Hub - Build Settings tab to manually start an image build.*
+> 참고 - 자동 빌드가 자동으로 실행되지 않으면 Docker Hub - Build Settings 탭의 &quot;Trigger&quot;버튼을 사용하여 수동으로 이미지 빌드를 시작할 수 있습니다.*
 
 <img src=images/github-dockerhub_3.jpg />
 
 ***
 
-The build will take a few minutes to complete in Docker Hub.  When it does, Success will be noted in the Status column:
+Docker Hub에서 빌드를 완료하는 데 몇 분이 소요됩니다. 성공하면 Status 열에 Success가 표시됩니다. 
 
-> *Note - you may need to refresh your browser tab to see the updated status.*
+>*참고 - 업데이트 된 상태를 보려면 브라우저 탭을 새로 고침해야 할 수 있습니다.*
 
 <img src=images/github-dockerhub_1.jpg />
 
 ***
 
-When you have a successful built, go back into your Docker CLI environment, run the new container.  Replace your Docker Hub name for "username" in the below command:
+빌드가 완료되면 Docker CLI 환경으로 돌아가서 새 컨테이너를 실행하십시오. 아래 명령에서 &quot;username&quot;의 Docker Hub 이름을 바꿉니다. 
 
 ```
 $ docker run -d -p 80:80 "username/hello-earth"
 ```
 
-Once the container is running, visit the docker host’s IP and observe your changes for a new hello-earth container that you just built and ran!
+컨테이너가 실행되면 도커 호스트의 IP를 방문하여 방금 빌드하고 실행 한 새로운 hello-earth 컨테이너에 대한 변경 사항을 관찰하십시오! 
 
 <img src=images/github-dockerhub_15.jpg />
 
 ***
 
-Tweet to the world that you have created your own Hello Earth containerized app! 
+자신 만의 Hello Earth 컨테이너 응용 프로그램을 만든 세계에 짹 짹짹! 
 
-> *Note - remember to use your Docker Hub account name where it says "username" in the tweet.*
+>*주 - 트위터에 &quot;username&quot;이 표시된 Docker 허브 계정 이름을 사용하십시오.*
 
 ```
 Check out my Hello Earth #Docker app that I just created in my #OracleCode HOL.  It's in my Docker Hub https://hub.docker.com/r/username/hello-earth
 ```
 
-**Congratulations!**  You have successfully completed this Hands On Lab!
+**축하합니다!**이 실습 랩을 성공적으로 완료했습니다! 
 
 ***
 
-## Demo of Oracle Container Cloud Service Showing Participant's Containers
+## 참가자의 컨테이너를 보여주는 Oracle Container Cloud Service의 데모
 
-Check out running your container in the Oracle Container Cloud Service:
+Oracle Container Cloud Service에서 컨테이너 실행 체크 아웃 : 
 
-* [Get Started for Free](https://cloud.oracle.com/tryit)
+*[무료로 시작하기] (https://cloud.oracle.com/tryit) 
 
 ***
 
-## Summary/Recap Pointer to Further Resources
+## 추가 리소스에 대한 요약 / 요약 포인터
 
-* [Oracle GitHub](https://github.com/oracle/docker-images)
+*[Oracle GitHub] (https://github.com/oracle/docker-images) 
 
-* [Oracle Images on the Docker Store](https://store.docker.com/search?q=oracle&source=verified&type=image)
+*[Docker Store의 Oracle 이미지] (https://store.docker.com/search?q=oracle&amp;source=verified&amp;type=image) 
 
-* [Oracle Container Registry](https://container-registry.oracle.com)
+*[Oracle 컨테이너 레지스트리] (https://container-registry.oracle.com) 
 
-* [Oracle Container Cloud Service Docs](http://docs.oracle.com/en/cloud/iaas/container-cloud/index.html)
+*[Oracle Container Cloud Service Docs] (http://docs.oracle.com/ko/cloud/iaas/container-cloud/index.html) 
 
-Oracle Blogs:
+오라클 블로그 : 
 
-* [Containers, Docker and Microservices](https://community.oracle.com/community/cloud_computing/containers-docker-and-microservices)
+*[컨테이너, 도커 및 마이크로 서비스] (https://community.oracle.com/community/cloud_computing/containers-docker-and-microservices) 
 
-* [Container Cloud Service Blog](https://community.oracle.com/community/cloud_computing/infrastructure-as-a-service-iaas/oracle-container-cloud-service)
+*[컨테이너 클라우드 서비스 블로그] (https://community.oracle.com/community/cloud_computing/infrastructure-as-a-service-iaas/oracle-container-cloud-service) 
 
-**DONE**
+**끝난**
 

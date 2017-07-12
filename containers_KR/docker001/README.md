@@ -1,19 +1,19 @@
-# Hands On Lab for Docker Containers - Entry Level
+# 도커 컨테이너 용 실습실 - 보급형
 
-An intro to containers covering essential concepts and an entry level Hands on Lab.  
+필수 개념 및 엔트리 레벨을 다루는 컨테이너에 대한 소개 연구소에 손을. 
 
-This lab is designed for people with no prior experience with Docker who want to learn the core concepts and basics.
+이 랩은 핵심 개념과 기본 사항을 배우려는 Docker의 사전 경험이없는 사람들을 대상으로합니다. 
 
-### Pre-work:
+### 사전 작업 :
 
-> *Note - prior to starting this Hand On Lab, please setup your laptop with access to some Docker Engine environment where you can run Docker commands in the CLI.*
+>*참고 -이 핸드 랩을 시작하기 전에 랩톱에서 CLI에서 Docker 명령을 실행할 수있는 일부 Docker 엔진 환경에 액세스 할 수 있도록 설정하십시오.*
 
-* **Required** - a pre-configured Docker-Engine environment to do the exercises in the Hands On Lab
-* **See [Prerequisites](Prerequisites.md)**
+***필수**- 실습 랩에서 연습을 할 수 있도록 미리 구성된 Docker-Engine 환경 
+***[필수 구성 요소] (선행 조건 .md) 참조**
 
 
-### Use the Participant Guide to complete the Hands On Lab:
+### 참가자 가이드를 사용하여 실습 랩 완료 :
 
-The [Participant Guide](Participant-Guide.md) walks you through a step by step Hands On Lab session, expected to take about 2 hours.   
+[Participant Guide] (Participant-Guide.md)는 약 2 시간이 걸릴 것으로 예상되는 단계별 실습 랩 세션을 안내합니다. 
 
-This Hands on Lab (HOL) will take the particant through the basics of containerization, explore it's advantages and introduce Docker technology with entry level exercises.
+이 Hands on Lab (Hands on Lab)은 컨테이너 작업의 기본을 통해 참가자를 데리고 이점을 탐구하고 엔트리 레벨 연습으로 Docker 기술을 소개합니다. 

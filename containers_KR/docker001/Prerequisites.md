@@ -1,39 +1,39 @@
-# Hands On Lab - Prerequisites
+# 실습 실험 - 전제 조건
 
-## This document outlines some example Docker Engine environment installs
+## 이 문서에서는 Docker Engine 환경 예제 설치에 대해 간략히 설명합니다.
 
-The Docker Engine environment **needs to be completed prior to starting the Hands on Lab.**  
+Docker Engine 환경**은 실습을 시작하기 전에 완료해야합니다.**
 
-*These examples are only a few of the many that you might utilize to create a Docker Environment.*
+*이 예제는 Docker 환경을 만들기 위해 활용할 수있는 몇 가지 예입니다.*
 
 
-### Use a Worker node on your Oracle Container Cloud Service instance:
+### Oracle Container Cloud Service 인스턴스에서 Worker 노드를 사용하십시오.
 
-1. [Request An Oracle Cloud Trial](https://cloud.oracle.com/tryit)
-2. Create a Container Cloud Service Instance: See [Oracle Tutorial](http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/container_cloud/creating_an_occs_service_instance/creating_occs_instance.html) | [Youtube Video](http://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19524)
+1. [Oracle Cloud Trial 요청] (https://cloud.oracle.com/tryit) 
+2. 컨테이너 클라우드 서비스 인스턴스 만들기 : [Oracle Tutorial] ( &#39;http://www.oracle.com/webfolder/technetwork/tutorials/obe/cloud/container_cloud/creating_ancs_service_instance/creating_occs_instance.html) | [Youtube Video] (http://apexapps.oracle.com/pls/apex/f?p=44785:265:0::::P265_CONTENT_ID:19524) 
 
-### Use Oracle VirtualBox:
+### Oracle VirtualBox 사용 :
 
-* [Get and Install VirtualBox for your Laptop](http://www.oracle.com/technetwork/server-storage/virtualbox/overview/index.html)
-* Create a Linux VM with VirtualBox
-* [Install Docker Engine](https://docs.docker.com/engine/installation/linux/)
+*[랩톱 용 VirtualBox 구입 및 설치] ( &#39;http://www.oracle.com/technetwork/server-storage/virtualbox/overview/index.html) 
+*VirtualBox로 Linux VM 만들기 
+*[Docker 엔진 설치] (https://docs.docker.com/engine/installation/linux/) 
 
-> **As an option for a VirtualBox VM:** [Download a prebuilt OL7 VM (DOC-1002902.ova)](http://www.oracle.com/technetwork/server-storage/linux/downloads/vm-for-hol-1896500.html) | [Docs and Docker install](https://community.oracle.com/docs/DOC-1002902)
+>**VirtualBox VM에 대한 옵션 :**[미리 만들어진 OL7 VM 다운로드 (DOC-1002902.ova)] ( &#39;http://www.oracle.com/technetwork/server-storage/linux/downloads/vm -for-hol-1896500.html) | [Docs and Docker install] (https://community.oracle.com/docs/DOC-1002902) 
 
-### Use Docker Engine on Windows:
+### Windows에서 Docker Engine 사용 :
 
-* [See Install Docker for Windows](https://docs.docker.com/docker-for-windows/install/)
+*[Windows 용 도커 설치] (https://docs.docker.com/docker-for-windows/install/) 
 
-### Use Docker Engine on Mac:
+### Mac에서 Docker Engine 사용 :
 
-* [See Install Docker for Mac](https://docs.docker.com/docker-for-mac/install/)
+*[Mac 용 Docker 설치] (https://docs.docker.com/docker-for-mac/install/) 
 
-### Use Docker Engine on Oracle Linux:
+### Oracle Linux에서 Docker Engine 사용 :
 
-1. [Request An Oracle Cloud Trial](https://cloud.oracle.com/tryit)
-2. [See the first 3 sections of this blog for a quick install on an Oracle Linux 6 Cloud VM](https://community.oracle.com/community/cloud_computing/infrastructure-as-a-service-iaas/oracle-container-cloud-service/blog/2017/01/26/the-fast-path-to-a-private-docker-registry-on-oracle-public-cloud)
+1. [Oracle Cloud Trial 요청] (https://cloud.oracle.com/tryit) 
+2. [Oracle Linux 6 Cloud VM에 대한 빠른 설치는이 블로그의 처음 세 절을 참조하십시오 (https://community.oracle.com/community/cloud_computing/infrastructure-as-a-service-iaas/oracle). -container-cloud-service / blog / 2017 / 01 / 26 / the-fast-path-to-a-private-docker-registry-oracle-public-cloud) 
 
 
 ***
 
-> *Note - after you have your Docker environment built, you will be ready to start the [Participant Guide](Participant-Guide.md)* 
+>*참고 - Docker 환경을 구축 한 후에는 [Participant Guide] (Participant-Guide.md)*를 시작할 준비가됩니다. 
