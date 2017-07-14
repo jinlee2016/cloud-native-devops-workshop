@@ -28,6 +28,6 @@ Please follow the instruction in the linked documents [Windows](http://www.oracl
 -   [blackjack.zip](BlackJack.zip)
 -   [Helloworld-Example.zip](Helloworld-Example.zip)
 -   [pom.xml](pom.xml)
-[테스트]
+테스트(test.xml)
 To log issues and view the Lab Guide source, go to the [oracle git repository](https://github.com/oracle/cloud-native-devops-workshop).
 
