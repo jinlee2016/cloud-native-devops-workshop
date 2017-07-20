@@ -2,12 +2,12 @@
 
 ## 리포지토리에서 BlackJack Project 다운로드
 
-로컬 시스템에 [blackjack.zip] (BlackJack.zip) 파일을 다운로드하십시오. 
+로컬 컴퓨터에 [blackjack.zip](BlackJack.zip) 파일 다운로드 
 
 ## 로컬 서버에 BlackJack 응용 프로그램 배포
 
 다음 지침에 따라 BlackJack 응용 프로그램을 
-Apache Tomcat Server는 프로젝트와 함께 번들로 제공됩니다. 
+Apache Tomcat Server가 프로젝트와 번들로 제공됩니다. 
 
 1. 그래픽 파일 탐색기를 열고**cloud**디렉토리로 이동하십시오. 
 
@@ -15,10 +15,10 @@ Apache Tomcat Server는 프로젝트와 함께 번들로 제공됩니다.
     **BlackJack** and copy the **BlackJack.zip** file that you
     downloaded in the earlier exercise.
 
-3.**BlackJack.zip**파일을**구름******에 압축을 풉니 다. 
+3.**BlackJack.zip**파일을**클라우드****>**에 압축을 풉니 다. 
     **BlackJack** directory.
 
-4. 바탕 화면의 바로 가기를 사용하여 Netbeans을 시작합니다. 
+4. 바탕 화면의 바로 가기를 사용하여 넷빈을 실행합니다. 
 
 5. Netbeans에서**blackjack-part2**프로젝트를 엽니 다. 
 
@@ -59,12 +59,12 @@ Apache Tomcat Server는 프로젝트와 함께 번들로 제공됩니다.
     **TCPView** tool can be used to identify and terminate the process using
     this port number.
 
-    [**Download Link**](https://technet.microsoft.com/en-us/sysinternals/bb897437)
+    AAAA
 
 ## 로컬에 배포 된 BlackJack 응용 프로그램 테스트
 
-HTML-5 클라이언트 애플리케이션이 개발되어 
-일단 BlackJack 응용 프로그램을 배포하면 해당 기능을 테스트합니다. 
+HTML-5 클라이언트 응용 프로그램이 개발되어 
+BlackJack 응용 프로그램은 한번 배포 된 기능을 테스트합니다. 
 로컬 / 원격 서버. 
 
 다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
@@ -74,7 +74,7 @@ HTML-5 클라이언트 애플리케이션이 개발되어
 
 2. 브라우저로 index.html 파일을 엽니 다. 
 
-3. 첫 번째 필드 인**서비스**가 
+3. 첫 x 째 필드 인**서비스**가 채워 졌는지 확인하십시오 
     **<http://127.0.0.1:8080/>** value, enter a number between 1 and 9
     in the second field, and then click Connect.
 
@@ -96,11 +96,11 @@ UI에서 사용할 수있는**Hit**및**Stand**버튼을 사용하여
 
 Oracle Application Container Cloud는 Java Platform을 배포하고 실행할 수 있으며, 
 Standard Edition (Java SE) 및 Node.js 응용 프로그램을 지원합니다. 첫째, 배포 
-응용 프로그램을 압축하면**ZIP**또는**Gzipped로 압축됩니다. 
+응용 프로그램을**압축**압축**응용 프로그램 압축 
 Tar (TGZ)**아카이브 파일 (필요한 구성 포함) 
 정보. 
 
-다음 지침에 따라 응용 프로그램 아카이브를 만듭니다. 
+다음 지시 사항에 따라 응용 프로그램 아카이브를 작성하십시오. 
 
 1. Netbeans에서 blackjack-part2 애플리케이션을 엽니 다 (그렇지 않은 경우). 
     opened already.
@@ -223,7 +223,7 @@ Tar (TGZ)**아카이브 파일 (필요한 구성 포함)
 BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오. 
 개발자 클라우드 서비스의 GIT 저장소. 
 
-1. GIT 저장소를 복제하려면 먼저 클라우드 / 블랙 잭으로 변경하십시오. 
+1. GIT 저장소를 복제하려면 먼저 클라우드 / 블랙 잭으로 변경하십시오 
     directory that is the root directory for your repository.
 
 2.`git clone`을 실행합니다. https : //ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084 \ _blackjack-part2 \ _4112 / scm / BlackJack-Part2Repo.git` 
@@ -242,7 +242,7 @@ BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오
 3.**BlackJack-Part2Repo**라는 새 디렉토리가 있습니다. 
     created inside **cloud/BlackJack** directory.
 
-4. 복사 및 붙여 넣기**blackjack-part2**프로젝트 디렉토리에서 
+4.**blackjack-part2**프로젝트 디렉토리를 복사하여 붙여 넣기하십시오. 
     **cloud/BlackJack** directory to **BlackJack-Part2Repo** directory
 
     **Note:** Content of the **BlackJack-Part2Repo** directory should
@@ -268,7 +268,7 @@ BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오
 
     **Note:** Wait until all the files are pushed to repository
 
-9. 개발자 클라우드 서비스로 전환하여 해당 서비스에 푸시 된 파일을 확인합니다. 
+9. 개발자 클라우드 서비스로 전환하여 개발자 클라우드 서비스로 푸시 된 파일을 확인합니다. 
     repository
 
 10.**BlackJack-Part2**홈 페이지에서**BlackJack-Part2Repo.git**을 클릭하십시오. 
@@ -286,7 +286,7 @@ BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오
 다음 지침에 따라 BlackJack-Part2 프로젝트를 빌드하십시오. 
 개발자 클라우드 서비스. 
 
-1. 왼쪽 탐색 분할 창에서**빌드**를 클릭 한 다음**새 작업**을 클릭하십시오. 
+1. 왼쪽 탐색 분할 창에서**빌드**를 누른 다음**새 작업**을 누르십시오. 
 
     <img src="images/3/image27.png" width="421" height="190" />
 
@@ -382,7 +382,7 @@ BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오
 
     <img src="images/3/image39.png" width="273" height="131" />
 
-5.**성공적인**메시지가 표시되면**연결 사용**을 클릭하십시오. 
+5.**성공**메시지가 표시되면**연결 사용**을 클릭하십시오. 
 
     <img src="images/3/image40.png" width="273" height="131" />
 
@@ -407,8 +407,8 @@ BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오
 
 ## DevCS에서 OACCS에 배포 된 BlackJack 응용 프로그램 테스트
 
-HTML-5 클라이언트 애플리케이션이 개발되어 
-일단 BlackJack 응용 프로그램을 배포하면 해당 기능을 테스트합니다. 
+HTML-5 클라이언트 응용 프로그램이 개발되어 
+BlackJack 응용 프로그램은 한번 배포 된 기능을 테스트합니다. 
 로컬 / 원격 서버. 
 
 다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 

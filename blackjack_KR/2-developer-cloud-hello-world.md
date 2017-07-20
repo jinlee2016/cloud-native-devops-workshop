@@ -1,6 +1,6 @@
 # 2 부 : Oracle Developer Cloud Service를 사용하여 Helloworld App 테스트 및 구축
 
-## Maven을위한 프록시 설정
+## 메이븐을위한 프록시 설정
 
 **중요 사항 :**프록시를 변경하려면 다음 지침을 따르십시오. 
 보안 네트워크의 일부인 경우 Maven의 설정 
@@ -33,7 +33,7 @@
     with your proxy and save the file.
 
 **참고 :**settings.xml 파일을 편집 할 때 문제가 발생하면, 
-settings.xml 파일의 복사본을 다른 위치에 저장하고 수정 한 다음, 
+settings.xml 파일의 사본을 다른 위치에 저장하고 수정 한 다음, 
 C : \\ Program Files \\ NetBeans에 다시 넣습니다. 
 8.1 \\ java \\ maven \\ conf \\ (Windows) 또는 / Applications / NetBeans / NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) 디렉토리에 있습니다. 
 
@@ -126,14 +126,14 @@ GIT 저장소에 변경 사항을 적용하기 전에
 **Hello World!를 인쇄하는**Helloworld-Example**
 메시지를 콘솔에 표시합니다. 이 응용 프로그램은 다음 
 로컬 GIT 저장소에 저장하는 활동, 프로젝트를 만드는 활동 
-DevCS, DevCS의 GIT 저장소로 복제 한 다음 Build를 작성하십시오. 
-배치 작업. 
+DevCS, DevCS의 GIT 저장소로 복제 한 다음 Build를 만듭니다. 
+배포 작업. 
 
 Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 사항을 따르십시오. 
 
 1. Windows 시작 메뉴에서 Git Bash를 열거 나 Mac을 사용하는 경우 터미널 창을여십시오. 
 
-2. Git 저장소가 저장된 클라우드 디렉토리로 변경합니다. 
+2. Git 저장소가 저장된 클라우드 디렉토리로 변경한다. 
 
         cd cloud
 
@@ -187,7 +187,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </properties>
     ```
 
-12. dependencies 요소 뒤에 빌드 및 플러그인에 대한 요소를 추가하십시오. 
+12. dependencies 요소 뒤에 빌드 및 플러그 인에 대한 요소를 추가하십시오. 
 
     ```xml
     <build>
@@ -249,7 +249,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </plugin>
     ```
 
-16. 원본 창에서**pom.xml**파일을 마우스 오른쪽 단추로 클릭하고**서식**을 선택하여 파일의 들여 쓰기를 수정합니다. 
+16. 소스 창에서**pom.xml**파일을 마우스 오른쪽 단추로 클릭하고**서식**을 선택하여 파일의 들여 쓰기를 수정하십시오. 
 
     <img src="images/2/image7.png" width="276" height="227" />
 
@@ -267,7 +267,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
     <img src="images/2/image9.png" width="231" height="225" />
 
-21. 당신은**Hello World를보아야합니다!**BUILD SUCCESS 메시지를 출력하십시오. 
+21. 당신은**Hello World!를보아야합니다!**BUILD SUCCESS 메시지를 출력하십시오. 
 
     <img src="images/2/image10.png" width="406" height="152" />
 
@@ -283,7 +283,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
     <img src="images/2/image12.png" width="363" height="387" />
 
-24.`mvn exec : java` 명령을 실행하여 응용 프로그램을 실행합니다. 
+24. mvn exec : java` 명령을 실행하여 응용 프로그램을 실행합니다. 
 
     <img src="images/2/image13.png" width="360" height="297" />
 
@@ -322,7 +322,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
     <img src="images/2/image18.png" width="408" height="106" />
 
-5. Helloworld를위한`git commit -m &#39;초기 커밋 실행 - 예 
+5. Helloworld를위한`git commit -m &#39;초기 커밋을 실행한다. 
     Project"` to commit the files to the repository and begin
     version tracking.
 
@@ -350,8 +350,8 @@ Helloworld-Example**응용 프로그램**
 이전**활동**에서 개발자 클라우드 서비스. 
 
 **참고 :**수행하려면 클라우드 로그인 자격 증명 및 링크가 필요합니다. 
-운동의이 부분. 이메일에서이 정보를 수집하십시오. 
-오라클에서 접수하여 편리하게 사용하십시오. 
+운동의이 부분. 전자 메일에서이 정보를 수집하십시오. 
+오라클에서 제공하여 편리하게 사용하십시오. 
 
 ## 저장소 복제 정책 구성
 
@@ -359,11 +359,11 @@ Helloworld-Example**응용 프로그램**
 
 1. From any browser, go to the URL: <https://cloud.oracle.com>
 
-2. 브라우저의 오른쪽 상단에있는**로그인**을 클릭하십시오. 
+2. 브라우저의 오른쪽 상단 모서리에있는**로그인**을 클릭하십시오. 
 
     <img src="images/2/Picture100-1.png" width="429" height="119" />
 
-3.****중요**- 내 서비스에서 드롭 다운 목록에서 올바른 데이터 센터를 선택하고**내 서비스**를 클릭하십시오. 직접 선택해야하는 데이터 센터를 알지 못하는 경우 이것은 개인 훈련 이벤트입니다.***강사**에게**Region**에 드롭 다운 목록에서 선택하도록 요청하십시오. 오라클 평가판을 통해 계정을받은 경우 평가판 확인 이메일에 지역을 사전 선택하는 URL이 제공되어야합니다. 
+3.****중요**- 내 서비스에서 드롭 다운 목록에서 올바른 데이터 센터를 선택하고**내 서비스**를 클릭하십시오. 직접 선택해야하는 데이터 센터를 알지 못하는 경우 이것은 개인 훈련 이벤트입니다.***강사**에게**Region**에 드롭 다운 목록에서 선택하도록 요청하십시오. 오라클 평가판을 통해 계정을받은 경우 평가판 확인 이메일에 해당 지역을 사전 선택하는 URL이 제공되어야합니다. 
 
     <img src="images/2/Picture100-2.png" />
 
@@ -379,7 +379,7 @@ Helloworld-Example**응용 프로그램**
 
     <img src="images/2/Picture100-4.png" />
 
-7. 모든**스토리지**클라우드 서비스가 보이지 않으면**대시 보드 사용자 정의**에서**를 클릭하고**보기를 클릭하여 대시 보드에 서비스를 추가 할 수 있습니다**이 워크샵의 경우**응용 프로그램 컨테이너, 개발자 및 저장소**클라우드 서비스를 표시하고 있는지 확인해야합니다. 특정 서비스를보고 싶지 않으면**숨기기**를 클릭하십시오. 
+7. 모든**스토리지**클라우드 서비스가 보이지 않으면**대시 보드 사용자 정의**에서**를 클릭하고**보기를 클릭하여 대시 보드에 서비스를 추가 할 수 있습니다**이 워크샵의 경우**응용 프로그램 컨테이너, 개발자 및 저장소**클라우드 서비스를 최소한 표시하고 싶습니다. 특정 서비스를 보지 않으려면**숨기기**를 클릭하십시오. 
 
     <img src="images/2/Picture100-5.png" />
 
@@ -394,7 +394,7 @@ Helloworld-Example**응용 프로그램**
 
     <img src="images/2/Picture-01.5.png" />
 
-3. 다음 대화 상자가 표시되면 복제 정책을 변경할 때 변경할 수 없으므로 복제 정책을 설정할 때주의해야합니다. 기본값을 가져 와서**정책 설정**버튼을 클릭하십시오. 메시지가 표시되지 않으면 복제 정책이 이미 설정되고 클라우드 계정이 Workshop에 대한 준비가되었습니다. 
+3. 다음 대화 상자가 표시되면 복제 정책을 변경할 때 변경할 수 없으므로 복제 정책을 설정할 때주의해야합니다. 기본값을 가져 와서**정책 설정**버튼을 클릭하십시오. 메시지가 표시되지 않으면 복제 정책이 이미 설정되고 클라우드 계정이 Workshop에 대한 준비가 된 것입니다. 
 
     <img src="images/2/Picture-02.5.png" />
 
@@ -408,7 +408,7 @@ Oracle 용으로 선택된 복제 정책을 찾으려면
 스토리지 클라우드 서비스 인스턴스에서**스토리지**링크를 클릭하십시오. 
 **대시 보드**페이지. 결과 페이지에서**서비스 세부 정보를 확장합니다. 
 Oracle Storage Cloud Service,**Oracle Storage Cloud의 세부 정보 
-서비스 인스턴스가 표시됩니다. 복제 정책 필드를 찾습니다. 
+서비스 인스턴스가 표시됩니다. 복제 정책 필드를 찾으십시오. 
 다음 스크린 샷에 강조 표시되어 있습니다. 
 
 <img src="images/2/image30.png" width="348" height="116" />
@@ -449,7 +449,7 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
     <img src="images/2/image35.png" width="399" height="288" />
 
-6.**빈 프로젝트**템플릿을 클릭하고**다음을 클릭합니다.**
+6.**빈 프로젝트**템플릿을 클릭하고**다음을 클릭하십시오.**
 
     <img src="images/2/image36.png" width="378" height="271" />
 
@@ -466,7 +466,7 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
 ## 개발자 클라우드 서비스에서 GIT 저장소 만들기
 
-개발자를위한 GIT 저장소 생성 방법은 다음과 같습니다. 
+다음 지시 사항에 따라 개발자에게 GIT 저장소를 만드십시오. 
 클라우드 서비스. 
 
 1.**REPOSITORIES**섹션에서**New Repository**버튼을 클릭하십시오. 
@@ -491,13 +491,13 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
 ## GIT 저장소 복제
 
-Helloworld-Example 프로젝트를 복제하려면 다음 지침을 따르십시오. 
+다음 지침에 따라 Helloworld-Example 프로젝트를 복제하십시오 
 개발자 클라우드 서비스의 GIT 저장소로 이동합니다. 
 
-1. GIT 저장소를 복제하려면 먼저 cloud / helloworld로 변경하십시오. 
+1. GIT 저장소를 복제하려면 먼저 cloud / helloworld로 변경하십시오 
     directory that is the root directory for your repository.
 
-2.`git clone`을 실행합니다. https : // ora1 @ developer.em2.oraclecloud.com / developer85599-ouopc084 / s / developer85599-ouopc084_helloworldproject_3753 / scm / HelloworldProjectRepo.git` 
+2.`git clone`을 실행하십시오. https : // ora1 @ developer.em2.oraclecloud.com / developer85599-ouopc084 / s / developer85599-ouopc084_helloworldproject_3753 / scm / HelloworldProjectRepo.git` 
 
     <img src="images/2/image43.png" width="427" height="111" />
 
@@ -512,7 +512,7 @@ Helloworld-Example 프로젝트를 복제하려면 다음 지침을 따르십시
 3.**HelloworldProjectRepo**라는 새 디렉토리가 있습니다. 
     created inside **cloud/helloworld** directory.
 
-4. Helloworld-Example**프로젝트 디렉토리 복사 및 붙여 넣기 
+4. Helloworld-Example**프로젝트 디렉토리를 복사하여 붙여 넣기하십시오. 
     **cloud/helloworld** directory to **HelloworldProjectRepo**
     directory
 
@@ -537,7 +537,7 @@ Helloworld-Example 프로젝트를 복제하려면 다음 지침을 따르십시
 
         git push origin master
 
-9. 개발자 클라우드 서비스로 전환하여 해당 서비스에 푸시 된 파일을 확인합니다. 
+9. 개발자 클라우드 서비스로 전환하여 개발자 클라우드 서비스로 푸시 된 파일을 확인합니다. 
     repository
 
 10.**HelloworldProject**홈 페이지에서**HelloworldProjectRepo.git**를 클릭하십시오. 

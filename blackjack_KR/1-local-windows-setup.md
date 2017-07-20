@@ -2,11 +2,11 @@
 
 ## 개요
 
-이 문서는 학생들이 Java 설정 프로세스를 이해하도록 도와줍니다. 
-자신의 컴퓨터에 개발 환경, &quot;Maven&quot;을 사용하여 프로젝트 만들기 
+이 문서는 학생들이 Java 설정 프로세스를 이해하도록 돕습니다. 
+자신의 컴퓨터에서 개발 환경, &quot;Maven&quot;을 사용하여 프로젝트 만들기 
 및 &quot;Netbeans&quot;을 선택하고 개발자 클라우드 서비스에 배포하십시오. 
 
-학생들은 기존의 &quot;블랙 잭&quot;프로젝트를 지역의 
+여기에 학생들은 지역에 기존의 &quot;블랙 잭&quot;프로젝트를 배포합니다. 
 Application Server, Oracle Application Cloud에 배포 
 컨테이너 서비스에 액세스하고 마지막으로 HTML-5 클라이언트에서 액세스합니다. 
 
@@ -41,10 +41,10 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 
 ## JDK 설치
 
-다음 지침에 따라 Java를 다운로드, 설치 및 구성하십시오. 
+다음 지시 사항에 따라 Java를 다운로드, 설치 및 구성하십시오. 
 컴퓨터의 개발 키트. 
 
-**참고 : JDK-8U121**은 당시 사용 가능한 최신 JDK 버전입니다. 
+**참고 : JDK-8U121**은 당시 사용 가능한 최신 버전의 JDK입니다. 
 이 문서를 만드는 방법. 다운로드하는 것이 좋습니다. 
 최신 버전의 JDK (사용 가능한 경우) 및이 랩 수행 
 활동. 
@@ -62,15 +62,15 @@ JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인
 
     <img src="images/1/image1.png" width="541" height="311" />
 
-3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다 
+3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
     SE” to download the software. Click the **Accept License
     Agreement** button.
 
-4.**jdk-8u121-windows-x64.exe**설치 프로그램 파일을에 다운로드하십시오. 
+4.**jdk-8u121-windows-x64.exe**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
     your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
-5.**jdk-8u121-windows-x64.exe**파일을 두 번 클릭하여 시작합니다. 
+5. 시작하려면**jdk-8u121-windows-x64.exe**파일을 두 번 클릭하십시오. 
     the installation.
 
     **Note:** If you receive a security warning such as “Do you want to
@@ -105,7 +105,7 @@ JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인
 
     <img src="images/1/image2.png" width="303" height="131" />
 
-5.**PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오 (If 
+5.**PATH**시스템 변수를 선택하고**Edit**버튼을 클릭하십시오 (If 
     PATH system variable is not available, click the **New** button to
     create PATH variable, enter the Variable value **C:\\Program
     Files\\Java\\jdk1.8.0\_121,** and then click the **OK** button).
@@ -118,7 +118,7 @@ JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인
 
 7.**새**단추를 클릭하여 다른 시스템 변수를 만듭니다. 
 
-8. 새 시스템 변수 창에서 변수 이름을 입력하십시오 
+8. 새 시스템 변수 창에 변수 이름을 입력하십시오 
     **CLASSPATH**, enter the Variable value **C:\\Program
     Fles\\Java\\jdk1.8.0\_121\\lib\\tools.jar;.;** (this has a
     semicolon, a period, and a semicolon at the end), and then click the
@@ -150,7 +150,7 @@ JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인
 
     <img src="images/1/image5.png" width="363" height="106" />
 
-5.**PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오 (If 
+5.**PATH**시스템 변수를 선택하고**Edit**버튼을 클릭하십시오 (If 
     PATH system variable is not available, click the **New** button to
     create PATH variable, enter the Variable value **C:\\Program
     Files\\Java\\jdk1.8.0\_121;** and then click the **OK** button).
@@ -163,7 +163,7 @@ JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인
 
 7.**새**단추를 클릭하여 다른 시스템 변수를 만듭니다. 
 
-8. 새 시스템 변수 창에서 변수 이름을 입력하십시오 
+8. 새 시스템 변수 창에 변수 이름을 입력하십시오 
     **CLASSPATH**, enter the Variable value **C:\\Program
     Fles\\Java\\jdk1.8.0\_121\\lib\\tools.jar;.;** (this has a
     semicolon, a period, and a semicolon at the end), and then click the
@@ -187,7 +187,7 @@ JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인
 ## Netbeans 설치
 
 다음 지침에 따라 다운로드, 설치 및 구성하십시오. 
-귀하의 컴퓨터에 Netbeans IDE. 
+컴퓨터의 Netbeans IDE. 
 
 **참고 : Netbeans 8.1**은 최신 버전입니다. 
 이 문서를 만듭니다. 다운로드 할 것을 적극 권장합니다. 
@@ -201,7 +201,7 @@ Netbeans 8.1 이상의 버전이 이미 설치되어있는 경우
 1. Firefox 브라우저에서 다음 위치로 이동하십시오. 
     <https://netbeans.org/downloads/>.
 
-2.**All**기술을 지원하는 Netbeans 8.1 버전 다운로드 
+2.**All**기술을 지원하는 Netbeans 8.1 버전을 다운로드하십시오. 
     from the last column.
 
 3.**netbeans-8.1-windows.exe**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
@@ -219,10 +219,10 @@ Netbeans 8.1 이상의 버전이 이미 설치되어있는 경우
     check box to select **Apache Tomcat 8.0.27** under the **Runtimes**
     section, and click the **OK** button.
 
-6. 시작 화면에서**다음**버튼을 클릭하여 계속 진행하십시오 
+6. 시작 화면에서**다음**버튼을 클릭하여 계속 진행합니다 
     the installation.
 
-7. 사용권 계약의 조항에 동의하고 
+7. 라이센스 계약의 조항에 동의하고 
     **Next** button.
 
 8. 기본**NetBeans IDE 설치를 수락합니다.**경로 
@@ -234,7 +234,7 @@ Netbeans 8.1 이상의 버전이 이미 설치되어있는 경우
     Tomcat** and click the **Next** button. Click the **Install**
     button on the Summary window.
 
-10. 설치 프로그램이 Netbeans을 설치하고 a를 표시 할 때까지 기다립니다. 
+10. 설치 프로그램이 넷빈을 설치하고 
     “**Setup Complete**” message. Click the **Finish** button.
 
 ### Netbeans 설치 확인
@@ -290,17 +290,17 @@ GIT 설치**단계.
 
     <img src="images/1/image9.png" width="324" height="252" />
 
-9.**줄 끝 구성에서 기본 선택을 수락합니다. 
+9.**라인 결말 구성에서 기본 선택을 수락하십시오 
     conversions** screen and click the **Next** button.
 
-10.**터미널 구성에서 기본 선택을 수락합니다 
+10.**터미널 구성에서 기본 선택 사항을 수락하십시오 
     emulator to use with Git Bash** screen and click the
     **Next** button.
 
 11.**추가 옵션 구성**에서 기본 선택 사항을 승인하십시오. 
     screen and click the **Next** button.
 
-12.**실험 설정 중 기본 선택을 수락합니다. 
+12.**실험 구성 중 기본 선택을 그대로 적용하십시오. 
     options** screen and click the **Install** button. Wait until the
     installer installs the **Git 2.11.0.3** and displays a “**Setup has
     finished installing Git on your computer**” message. Click the
@@ -314,7 +314,7 @@ GIT 설치**단계.
 
     <img src="images/1/image10.png" width="574" height="133" />
 
-## 메이븐 설치하기
+## Maven 설치하기
 
 Maven을 다운로드, 설치 및 구성하려면 다음 지시 사항을 따르십시오. 
 귀하의 컴퓨터에. 
@@ -325,8 +325,8 @@ Maven을 다운로드, 설치 및 구성하려면 다음 지시 사항을 따르
 활동. 
 
 Maven 3.3.9 이상 버전이 이미 설치되어있는 경우 
-그런 다음**Maven**설치 단계를 건너 뛰고**설정으로 진행하십시오. 
-M2 \ _HOME, M2 및 PATH 환경 변수**단계를 위로 설정하십시오. 
+그런 다음**Maven 설치**단계를 건너 뛰고**설정으로 진행하십시오. 
+M2 \ _HOME, M2 및 PATH 환경 변수**단계에서 위로 
 필요한 환경 변수를 설정 / 확인하십시오. 
 
 1. Firefox 브라우저에서 다음 위치로 이동하십시오. 
@@ -338,7 +338,7 @@ M2 \ _HOME, M2 및 PATH 환경 변수**단계를 위로 설정하십시오.
 
     <img src="images/1/image11.png" width="501" height="292" />
 
-3. C : \\에**Maven**이라는 디렉토리를 생성하고 
+3. C : \\에**Maven**이라는 디렉토리를 만들고 
     distribution archive to **C:\\Maven** directory.
 
     **Note:** You should achieve the directory structure highlighted in the screenshot
@@ -379,7 +379,7 @@ M2 \ _HOME, M2 및 PATH 환경 변수**단계를 위로 설정하십시오.
 
     <img src="images/1/image14.png" width="341" height="147" />
 
-6.**PATH**시스템 변수를 선택하고**Edit**버튼을 클릭하십시오. 
+6.**PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오. 
 
 7. 시스템 변수 편집 창의 변수 값 필드에서, 
     place the cursor at the last position and enter **;%M2%** and then
@@ -419,7 +419,7 @@ M2 \ _HOME, M2 및 PATH 환경 변수**단계를 위로 설정하십시오.
 
     <img src="images/1/image17.png" width="377" height="111" />
 
-6.**PATH**시스템 변수를 선택하고**Edit**버튼을 클릭하십시오. 
+6.**PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오. 
 
 7. 시스템 변수 편집 창의 변수 값 필드에서, 
     place the cursor at the last position and enter **;%M2%** and then

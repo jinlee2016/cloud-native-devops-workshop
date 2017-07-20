@@ -2,15 +2,15 @@
 
 ## 개요
 
-이 문서는 학생들이 Java 설정 프로세스를 이해하도록 도와줍니다. 
-자신의 컴퓨터에 개발 환경, &quot;Maven&quot;을 사용하여 프로젝트 만들기 
+이 문서는 학생들이 Java 설정 프로세스를 이해하도록 돕습니다. 
+자신의 컴퓨터에서 개발 환경, &quot;Maven&quot;을 사용하여 프로젝트 만들기 
 및 &quot;Netbeans&quot;을 선택하고 개발자 클라우드 서비스에 배포하십시오. 
 
-학생들은 기존의 &quot;블랙 잭&quot;프로젝트를 지역의 
+여기에 학생들은 지역에 기존의 &quot;블랙 잭&quot;프로젝트를 배포합니다. 
 Application Server, Oracle Application Cloud에 배포 
 컨테이너 서비스에 액세스하고 마지막으로 HTML-5 클라이언트에서 액세스합니다. 
 
-**중요 사항 :**신원 확인 도메인 이름, 사용자 이름과 같은 로그인 자격 증명 
+**중요 사항 :**ID 도메인 이름, 사용자 이름과 같은 로그인 자격 증명 
 및 암호는 개발자 클라우드 서비스 및 
 Oracle Application Container 클라우드 서비스. 이 정보 수집 
 오라클로부터받은 이메일을 편리하게 보관하십시오. 
@@ -41,7 +41,7 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 
 ## JDK 설치
 
-다음 지침에 따라 Java를 다운로드, 설치 및 구성하십시오. 
+다음 지시 사항에 따라 Java를 다운로드, 설치 및 구성하십시오. 
 컴퓨터의 개발 키트. 
 
 **참고 : JDK-8U121**은 당시 사용 가능한 최신 JDK 버전입니다. 
@@ -60,7 +60,7 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 
     <img src="images/1m/image1.png" width="504" height="258" />
 
-3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다 
+3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
     SE” to download the software. Click the **Accept License
     Agreement** button.
 
@@ -116,7 +116,7 @@ JAVA \ _HOME 및 PATH 설정에 대한 다음 지시 사항을 사용하십시�
 ## Netbeans 설치
 
 다음 지침에 따라 다운로드, 설치 및 구성하십시오. 
-귀하의 컴퓨터에 Netbeans IDE. 
+컴퓨터의 Netbeans IDE. 
 
 **참고 : Netbeans 8.1**은 최신 버전입니다. 
 이 문서를 만듭니다. 다운로드 할 것을 적극 권장합니다. 
@@ -150,12 +150,12 @@ Netbeans 설치**단계.
 
 9. 기본 설치 위치를 채택하십시오. 
 
-10.**사용자 정의**버튼을 클릭하고**Apache Tomcat을 선택하십시오. 
+10.**사용자 정의**버튼을 클릭하고**Apache Tomcat을 선택하려면 확인란을 클릭하십시오. 
     8.0.27**, and click **Install** button.
 
 11. 프롬프트가 표시되면 관리자 사용자 이름과 암호를 입력하십시오. 
 
-12. 설치 프로그램이 Netbeans을 설치하고 &quot;**The 
+12. 설치 프로그램이 넷빈을 설치하고 &quot;**
     Install was Successful.**” message. Click the **Close** button.
 
 ### Netbeans 설치 확인
@@ -174,13 +174,13 @@ Netbeans 설치**단계.
 다음 지침에 따라 GIT Tool을 다운로드하여 설치하십시오. 
 컴퓨터. 
 
-**참고 사항 : GIT 버전 2.10.1**은에서 사용할 수있는 최신 버전의 도구입니다. 
+**참고 : GIT 버전 2.10.1**은 최신 버전의 도구입니다. 
 이 문서를 만들 때. 그것은 당신이 
 이 도구의 최신 버전을 다운로드하십시오. 
 (가능한 경우) 실험실 활동을 수행합니다. 
 
-GIT 2.10.1 이상 버전이 이미 설치되어있는 경우 
-그런 다음**GIT**활동 설치 및 확인**진행 
+이미 GIT 2.10.1 이상 버전이 설치되어있는 경우 
+그런 다음**GIT**활동 설치를 건너 뛰고**확인하기로 진행하십시오. 
 GIT 설치**활동. 
 
 1. 터미널 창을 열고 git --version 명령을 실행하십시오. 
@@ -207,7 +207,7 @@ GIT 설치**활동.
 
     <img src="images/1m/image7.png" width="570" height="80" />
 
-## 메이븐 설치하기
+## Maven 설치하기
 
 Maven을 다운로드, 설치 및 구성하려면 다음 지시 사항을 따르십시오. 
 귀하의 컴퓨터에. 
@@ -233,13 +233,13 @@ Maven 환경 변수**필요한 설정 / 확인 작업
 
 3. / Applications 디렉토리에 배포 아카이브의 압축을 풉니 다. 
 
-4. 전체 경로 (/Applications/apache-maven-3.3.9)를 복사 한 다음 
+4. 전체 경로 (/Applications/apache-maven-3.3.9)를 
     extraction is completed; this is required to create
     environment variables.
 
 ### Maven 환경 변수 설정하기
 
-M2 \ _HOME 및 PATH 환경 설정에 대한 다음 지시 사항을 사용하십시오 
+M2 \ _HOME 및 PATH 환경 설정에 대한 다음 지시 사항을 사용하십시오. 
 변수. 
 
 **참고 :**관리자 권한으로 컴퓨터에 로그온해야합니다. 
@@ -258,7 +258,7 @@ M2 \ _HOME 및 PATH 환경 설정에 대한 다음 지시 사항을 사용하십
 
 ### Maven 설치 확인
 
-1.**Maven 버전 확인**: 터미널 창을 다시 시작하고 
+1. Maven 버전 확인**: 터미널 창을 다시 시작하고 
     `mvn --version` command. Verify that the output of the `mvn -–version`
     command matches with the following screenshot:
 

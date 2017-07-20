@@ -7,8 +7,8 @@
 귀하가 오라클로부터받은 이메일을 편리하게 보관하십시오. 
 
 이 문서를 작성하기 위해 
-EMEA 지역 데이터 센터가 사용되었습니다. 에서 인스턴스를 가져올 것입니다. 
-NAMER 지역 데이터 센터; 그에 따라 데이터 센터를 선택하십시오. 
+EMEA 지역 데이터 센터가 사용되었습니다. 에서 클라우드 인스턴스를 가져옵니다. 
+NAMER 지역 데이터 센터; 이에 따라 데이터 센터를 선택하십시오. 
 
 Oracle Application Container Cloud Service는 Java를 배포 및 실행할 수 있습니다. 
 Platform, Standard Edition (Java SE) 및 Node.js 응용 프로그램을 지원합니다. 이 
@@ -42,8 +42,8 @@ Platform, Standard Edition (Java SE) 및 Node.js 응용 프로그램을 지원�
 ## OACCS에 BlackJack 응용 프로그램 직접 배포
 
 이 액티비티에서는 응용 프로그램 아카이브를 다음 위치에 배포하는 방법을 배우게됩니다. 
-ACCS에 직접. 우리는 동일한 샘플 애플리케이션 인 BlackJack for for 
-이 배포도. 
+ACCS에 직접. 우리는 동일한 샘플 애플리케이션 인 BlackJack for 
+이 배포 역시 마찬가지입니다. 
 
 다음 지침에 따라 BlackJack 응용 프로그램을 
 OACCS에 직접. 
@@ -56,7 +56,7 @@ OACCS에 직접.
 
     <img src="images/4/image5.png" width="261" height="170" />
 
-3.**응용 프로그램 생성**대화 상자에서 BlackJack-part3 for를 입력하십시오. 
+3.**응용 프로그램 만들기**대화 상자에서 BlackJack-part3 for를 입력하십시오. 
     the application name, select **Monthly** for the subscription type,
     and enter **Deploying BlackJack Application to ACCS directly** in
     the Notes field. For the Application Archive field, select **Upload
@@ -80,7 +80,7 @@ OACCS에 직접.
 
     <img src="images/4/image9.png" width="295" height="207" />
 
-7. 아카이브 된 응용 프로그램이 업로드 된 후 서비스가 다음을 결정합니다. 
+7. 아카이브 된 응용 프로그램을 업로드하면 서비스에서 다음을 결정합니다. 
     whether the archive is properly configured. If it is, the following
     dialog box appears. Click **OK**.
 
@@ -104,8 +104,8 @@ OACCS에 직접.
 
 ## OACCS에 배포 된 BlackJack 응용 프로그램 테스트
 
-HTML-5 클라이언트 애플리케이션이 개발되어 
-일단 BlackJack 응용 프로그램을 배포하면 해당 기능을 테스트합니다. 
+HTML-5 클라이언트 응용 프로그램이 개발되어 
+BlackJack 응용 프로그램은 한번 배포 된 기능을 테스트합니다. 
 로컬 / 원격 서버. 
 
 다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
@@ -115,7 +115,7 @@ HTML-5 클라이언트 애플리케이션이 개발되어
 
 2. 브라우저로 index.html 파일을 엽니 다. 
 
-3. 첫 번째 필드**서비스**에 
+3. 첫 번째 필드 인**서비스**에 
     URL you copied in the previous exercise, <https://blackjack-part3-ouopc084.apaas.em2.oraclecloud.com/> .
     Enter a number between 1 and 9 in second field, and then
     click Connect.
