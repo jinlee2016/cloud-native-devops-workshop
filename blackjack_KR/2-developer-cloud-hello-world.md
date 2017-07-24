@@ -573,15 +573,15 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 - 조정이 필요한 경우 작업 이름을 편집하십시오. 
 - 설명을 입력하십시오. 
--**JDK**를**JDK 8로 설정하십시오.**
+- **JDK**를**JDK 8로 설정하십시오.**
 
     <img src="images/2/image50.png" width="433" height="204" />
 
 
 4. **소스 제어**탭을 클릭하십시오. 
 
--**Git**를 저장소로 선택하십시오. 
--**URL**의 경우 Git 저장소의 URL을 선택하십시오. 
+- **Git**를 저장소로 선택하십시오. 
+- **URL**의 경우 Git 저장소의 URL을 선택하십시오. 
 
 <img src="images/2/image51.png" width="433" height="211" />
 
