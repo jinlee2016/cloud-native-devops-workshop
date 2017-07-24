@@ -4,14 +4,14 @@
 ## 메이븐을위한 프록시 설정
 
 
-**중요 사항 :** 보안 네트워크의 일부이고 방화벽 뒤에있는 경우 Maven에 대한 프록시 설정을 변경하려면**다음 지침을 따르십시오.**오직**이 활동을 건너 뛰고 다음 활동으로 계속**GIT 저장소**. 
+**중요 사항 :** Secured 네트워크이거나 방화벽 뒤에 있는 경우에만 Maven에 대해서 프록시 설정을 변경하시면 되고 **다음 지침을 따르십시오. 그 이외에는 여기를 건너 뛰고 **Creating a GIT Repository**로 이동하시기 바랍니다.
 
 ### Netbeans의 Maven에 대한 프록시 설정
 
 
-1. C : \\ Program Files \\ NetBeans 8.1 \\ java \\ maven \\ conf \\ settings.xml 파일을 메모장 + +와 같은 텍스트 편집기로 엽니 다. 
+1. C :\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 메모장 + +와 같은 텍스트 편집기로 엽니다. 
 
-**참고 :** Mac의 경우 settings.xml 파일은 / Applications / NetBeans / NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml에서 찾을 수 있습니다. 
+**참고 :** Mac의 경우 settings.xml 파일은 /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml에서 찾을 수 있습니다. 
 
 2.  Add the following lines under the <proxies> tag:
 
@@ -31,12 +31,12 @@
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
 프록시로 저장하고 파일을 저장하십시오. 
 
-**참고 :** settings.xml 파일을 편집 할 때 문제가 발생하면 settings.xml 파일의 복사본을 다른 위치에 저장하고 수정 한 다음 C : \\ Program Files \ \ NetBeans 8.1 \\ java \\ maven \\ conf \\ (Windows) 또는 / Applications / NetBeans / NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) 디렉토리에 있습니다. 
+**참고 :** settings.xml 파일을 편집 할 때 문제가 발생하면 settings.xml 파일의 복사본을 다른 위치에 저장하고 수정 한 다음 C :\\Program Files \ \ NetBeans 8.1\\java\\maven\\conf\\(Windows) 또는/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) 디렉토리에 있습니다. 
 
 ### Maven의 프록시 설정
 
 
-1. 메모장 ++와 같은 텍스트 편집기로 C : \\ Maven \\ apache-maven-3.3.9 \\ conf \\ settings.xml 파일을 엽니 다. 
+1. 메모장 ++와 같은 텍스트 편집기로 C :\\Maven\\apache-maven-3.3.9\\conf\\settings.xml 파일을 엽니 다. 
 
 **참고 :** Mac의 경우 settings.xml 파일은 /Applications/apache-maven-3.3.9/conf/settings.xml에서 찾을 수 있습니다. 
 
@@ -152,14 +152,14 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 **참고 :** 이 명령의 출력은 다음 스크린 샷의 출력과 유사해야합니다. 
 
-    <img src="images/2/image3.png" width="317" height="363" />
+<img src="images/2/image3.png" width="317" height="363" />
 
 
 6. 이 명령은**Helloworld-Example**이라는 빈 Maven 프로젝트를 만듭니다. 디렉토리 구조를 검사하여 실행 클래스가 com.example.App에 있는지 확인하십시오. 이제 pom.xml 파일을 플러그인 용으로 구성해야합니다. 
 
 7. 바탕 화면의 바로 가기를 사용하여 Netbeans을 시작합니다. 
 
-8. Netbeans의**cloud / helloworld**디렉토리에 생성 된**Helloworld-Example**Maven 프로젝트를 엽니 다. 
+8. Netbeans의**cloud/helloworld**디렉토리에 생성 된**Helloworld-Example**Maven 프로젝트를 엽니 다. 
 
     <img src="images/2/image4.png" width="374" height="193" />
 
@@ -249,9 +249,9 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     ```
 
 
-16 . 소스 창에서**pom.xml**파일을 마우스 오른쪽 단추로 클릭하고**서식**을 선택하여 파일의 들여 쓰기를 수정하십시오. 
+16 . 소스 창에서 **pom.xml**파일을 마우스 오른쪽 단추로 클릭하고 **서식**을 선택하여 파일의 들여 쓰기를 수정하십시오. 
 
-    <img src="images/2/image7.png" width="276" height="227" />
+<img src="images/2/image7.png" width="276" height="227" />
 
 
 17. **pom.xml**파일을 저장하십시오. 
@@ -296,9 +296,9 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 <img src="images/2/image14.png" width="435" height="235" />
 
 
-**참고 :** **cloud / helloworld / Helloworld-Example / target**디렉토리 내에 생성 된**Helloworld-Example-1.0-SNAPSHOT.jar**파일을 검사하십시오. 
+**참고 :** **cloud/helloworld/Helloworld-Example/target**디렉토리 내에 생성 된**Helloworld-Example-1.0-SNAPSHOT.jar**파일을 검사하십시오. 
 
-26. `java -jar target / Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하여 패키지 된 애플리케이션을 실행하십시오. 
+26. `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하여 패키지 된 애플리케이션을 실행하십시오. 
 
     <img src="images/2/image15.png" width="454" height="120" />
 
@@ -308,7 +308,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 다음 지침에 따라 Helloworld-Example 프로젝트를 로컬 GIT 저장소에 저장하십시오. 
 
-1. cloud / helloworld 디렉토리로 변경하십시오. 
+1. cloud/helloworld 디렉토리로 변경하십시오. 
 
 2. `git add -n .` 명령을 실행하여 저장소에 추가 할 준비가 된 파일의 목록을보십시오. 
 
@@ -388,7 +388,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     <img src="images/2/Picture100-5.png" />
 
 
-### 저장소 복제 정책 확인 / 설정
+### 저장소 복제 정책 확인/설정
 
 
 클라우드 계정의 상태에 따라 이전에 복제 정책을 설정하지 않은 경우 복제 정책을 설정해야 할 수 있습니다. 이 단계에서는 Storage Cloud Service를 통해 복제 정책의 상태를 확인합니다. 
@@ -495,9 +495,9 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 다음 지침에 따라 Helloworld-Example 프로젝트를 개발자 클라우드 서비스의 GIT 저장소에 복제하십시오. 
 
-1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리 인 cloud / helloworld 디렉토리로 변경하십시오. 
+1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리 인 cloud/helloworld 디렉토리로 변경하십시오. 
 
-2. `git clone`을 실행하십시오. https : // ora1 @ developer.em2.oraclecloud.com / developer85599-ouopc084 / s / developer85599-ouopc084_helloworldproject_3753 / scm / HelloworldProjectRepo.git` 
+2. `git clone`을 실행하십시오. https/ora1 @ developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084_helloworldproject_3753/scm/HelloworldProjectRepo.git` 
 
     <img src="images/2/image43.png" width="427" height="111" />
 
@@ -510,9 +510,9 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 -이 명령의 출력은 다음 명령의 출력과 유사해야합니다.        above screenshot.
 
 
-3. **helloworldProjectRepo**라는 이름의 새 디렉토리가**cloud / helloworld**디렉토리에 생성됩니다. 
+3. **helloworldProjectRepo**라는 이름의 새 디렉토리가**cloud/helloworld**디렉토리에 생성됩니다. 
 
-4. **helloworld-Example**프로젝트 디렉토리를**cloud / helloworld**디렉토리에서**HelloworldProjectRepo**디렉토리로 복사하여 붙여 넣습니다. 
+4. **helloworld-Example**프로젝트 디렉토리를**cloud/helloworld**디렉토리에서**HelloworldProjectRepo**디렉토리로 복사하여 붙여 넣습니다. 
 
 **참고 :** HelloworldProjectRepo**디렉토리의 내용은 아래 스크린 샷과 일치해야합니다. 
 
@@ -590,7 +590,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 - 빌드 단계 추가를 클릭하고 Maven 3 호출을 선택하십시오. 
 - **목표**를 클린 패키지로 설정하십시오. 
-- **POM 파일**위치를 Helloworld-Example / pom.xml로 설정하십시오. 
+- **POM 파일**위치를 Helloworld-Example/pom.xml로 설정하십시오. 
 
     <img src="images/2/image52.png" width="441" height="189" />
 
@@ -601,7 +601,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 6. **Post Build**탭을 클릭하십시오. 
 
 - 아티팩트 아카이브를 선택하십시오. 
-- **보관할 파일**을 다음으로 설정 : Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 
+- **보관할 파일**을 다음으로 설정 : Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar 
 - Compression Type을 NONE으로 설정하십시오. 
 
     <img src="images/2/image54.png" width="443" height="184" />
@@ -609,11 +609,11 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 7. **저장**을 클릭 한 다음**지금 빌드를 클릭하십시오.**
 
-빌드가 성공적으로 완료되면**성공적인 빌드의 Artifact **섹션에 Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 파일이 표시됩니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
+빌드가 성공적으로 완료되면**성공적인 빌드의 Artifact **섹션에 Helloworld-Example/ target/Helloworld-Example-1.0-SNAPSHOT.jar 파일이 표시됩니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
 
 빌드가 실패한 경우 다시 빌드 작업 구성을 확인하거나**길드 로그**를 클릭하여 오류에 대한 자세한 정보를 확인하십시오. 
 
-    <img src="images/2/image55.png" width="453" height="183" />
+<img src="images/2/image55.png" width="453" height="183" />
 
 
 이를 통해 로컬 GIT 저장소 생성, Maven 프로젝트 생성, 로컬 GIT 저장소에 Maven 프로젝트 저장, DevCS 활성화, DevCS에서 프로젝트 및 GIT 저장소 생성, 프로젝트를 DevCS로 복제 한 다음 배포 작업을 생성하는 작업을 성공적으로 마쳤습니다.
