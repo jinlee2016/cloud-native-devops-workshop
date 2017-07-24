@@ -73,7 +73,9 @@ JAVA \ _HOME 및 PATH 환경 변수 설정에 대한 다음 지시 사항을 사
 
 2. ~ / .bash \ _profile 파일을 아래 명령으로 업데이트하십시오 
 
-export JAVA_HOME = $ (/ usr / libexec / java_home) export PATH = $ PATH : $ JAVA_HOME / bin 
+        export JAVA_HOME=$(/usr/libexec/java_home)
+        export PATH=$PATH:$JAVA_HOME/bin
+
 
 3. ~ / .bash \ _profile 파일을 저장하십시오. 
 
@@ -195,7 +197,9 @@ M2 \ _HOME 및 PATH 환경 변수를 설정하려면 다음 지시 사항을 따
 
 2. **~ / .bash \ _profile**파일을 아래에 언급 된 명령으로 업데이트하십시오. 
 
-export M2_HOME = / 응용 프로그램 / apache-maven-3.3.9 export PATH = $ PATH : $ M2_HOME / bin 
+        export M2_HOME=/Applications/apache-maven-3.3.9
+        export PATH=$PATH:$M2_HOME/bin
+
 
 3. **~ / .bash \ _profile**파일을 저장하십시오. 
 
