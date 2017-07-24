@@ -172,11 +172,11 @@ pom.xml 파일을 구성해야합니다.
 
     <img src="images/2/image5.png" width="384" height="181" />
 
-10 .**Project Files> pom.xml**파일을 마우스 오른쪽 버튼으로 클릭하고 열기를 클릭합니다. 
+10. **Project Files> pom.xml**파일을 마우스 오른쪽 버튼으로 클릭하고 열기를 클릭합니다. 
 
     <img src="images/2/image6.png" width="242" height="242" />
 
-11 . 파일 앞에 다음 속성 설정을 추가합니다. 
+11. 파일 앞에 다음 속성 설정을 추가합니다. 
 의존성 섹션. 자바 버전과 인코딩을 설정합니다. 
 프로젝트. 
 
