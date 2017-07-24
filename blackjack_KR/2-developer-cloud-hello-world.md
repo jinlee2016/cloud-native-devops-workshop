@@ -291,27 +291,27 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 17. **pom.xml**파일을 저장합니다. 
 
-18. **Helloworld - 예제**프로젝트를 클릭하고**깨끗하게하고 빌드하십시오.**를 클릭하십시오.**
+18. **Helloworld-Example** 프로젝트를 클릭하고 **Clean and Build.**를 클릭하십시오.**
 
-19. **Helloworld - 예제**실행을 클릭하고**실행**을 클릭하십시오.**
+19. **Helloworld-Example**실행을 클릭하고**실행**을 클릭하십시오.**
 
     <img src="images/2/image8.png" width="231" height="196" />
 
 
 
-20 . 사용 가능한 기본 클래스 목록에서**com.example.App**선택하고**주 클래스 선택**버튼을 클릭하십시오. 
+20. 사용 가능한 기본 클래스 목록에서 **com.example.App**선택하고 **Select Main Class** 버튼을 클릭하십시오. 
 
 <img src="images/2/image9.png" width="231" height="225" />
 
 
 
-21 . 성공하기 메시지**Hello World!**가 나와. 
+21. 성공하기 메시지로 **Hello World!**가 나와야 합니다. 
 
 <img src="images/2/image10.png" width="406" height="152" />
 
 
 
-22 . Git Bash (Windows) 또는 Terminal 창 (Mac)과 Helloworld-Example로 변경하십시오. 
+22. Git Bash (Windows) 또는 Terminal 창 (Mac)과 Helloworld-Example로 변경하십시오. 
 
         cd Helloworld-Example
 
@@ -322,27 +322,25 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-23 . mvn clean 컴파일 명령을 실행하고 프로젝트를 완성하십시오. 
+23. mvn clean 컴파일 명령을 실행하고 프로젝트를 완성하십시오. 
 
 <img src="images/2/image12.png" width="363" height="387" />
 
 
 
-24 . mvn exec : java 명령을 실행하고 응용 프로그램을 실행합니다. 
+24. `mvn exec:java` 명령을 실행하고 응용 프로그램을 실행합니다. 
 
 <img src="images/2/image13.png" width="360" height="297" />
 
 
 
-25 . mvn 패키지 명령어를 실행하고 응용 프로그램을 패키지화합니다. 
+25. `mvn package command`를 실행하고 응용 프로그램을 패키지화합니다. 
 
 <img src="images/2/image14.png" width="435" height="235" />
 
-
-
 Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/helloworld/Helloworld-Example/target** directory.
 
-26. `java -jar target/Helloworld-Example-1. 0-SNAPSHOT.jar` 명령을 실행하여 응용 프로그램을 실행하십시오. 
+26. `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하여 응용 프로그램을 실행하십시오. 
 
     <img src="images/2/image15.png" width="454" height="120" />
 
@@ -363,7 +361,7 @@ Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/
 
 
 
-**참고 사항 :** 감사의 말**.**가 포함되어 있습니다. 
+**참고 사항** :마지막에 **.** 가 포함되어 있는 것에 주의하십시오.
 
 3. &#39; git add&#39; . 명령을 실행하고 파일을 추가하십시오. 
 
