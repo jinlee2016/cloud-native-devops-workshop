@@ -4,14 +4,14 @@
 ## 메이븐을위한 프록시 설정
 
 
-**중요 사항 :** 보안 네트워크의 일부이고 방화벽 뒤에있는 경우 Maven에 대한 프록시 설정을 변경하려면**다음 지침을 따르십시오.**오직**이 활동을 건너 뛰고 다음 활동으로 계속**GIT 저장소**. 
+**중요 사항 :** Secured 네트워크에 있거나 방화벽 뒤에 있는 경우에만 Maven에 대한 프록시 설정을 변경하기 위해 **다음 지침을 따르십시오 .그렇지 않은 경우 이 부분을 건너 뛰고 다음 **Creating a GIT Repository**을 하시기 바랍니다. 
 
 ### Netbeans의 Maven에 대한 프록시 설정
 
 
-1. C : \\ Program Files \\ NetBeans 8.1 \\ java \\ maven \\ conf \\ settings.xml 파일을 메모장 + +와 같은 텍스트 편집기로 엽니 다. 
+1. C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 메모장 + +와 같은 텍스트 편집기로 엽니 다. 
 
-**참고 :** Mac의 경우 settings.xml 파일은 / Applications / NetBeans / NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml에서 찾을 수 있습니다. 
+**참고 :** Mac의 경우 settings.xml 파일은 /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml에서 찾을 수 있습니다. 
 
 2.  Add the following lines under the <proxies> tag:
 
@@ -31,12 +31,12 @@
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
 프록시로 저장하고 파일을 저장하십시오. 
 
-**참고 :** settings.xml 파일을 편집 할 때 문제가 발생하면 settings.xml 파일의 복사본을 다른 위치에 저장하고 수정 한 다음 C : \\ Program Files \ \ NetBeans 8.1 \\ java \\ maven \\ conf \\ (Windows) 또는 / Applications / NetBeans / NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) 디렉토리에 있습니다. 
+**참고 :** settings.xml 파일을 편집 할 때 문제가 발생하면 settings.xml 파일의 복사본을 다른 위치에 저장하고 수정 한 다음 C:\\Program Files \ \ NetBeans 8.1\\java\\maven\\conf\\(Windows) 또는/Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/(Mac) 디렉토리에 있습니다. 
 
 ### Maven의 프록시 설정
 
 
-1. 메모장 ++와 같은 텍스트 편집기로 C : \\ Maven \\ apache-maven-3.3.9 \\ conf \\ settings.xml 파일을 엽니 다. 
+1. 메모장 ++와 같은 텍스트 편집기로 C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml 파일을 엽니 다. 
 
 **참고 :** Mac의 경우 settings.xml 파일은 /Applications/apache-maven-3.3.9/conf/settings.xml에서 찾을 수 있습니다. 
 
@@ -159,7 +159,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 7. 바탕 화면의 바로 가기를 사용하여 Netbeans을 시작합니다. 
 
-8. Netbeans의**cloud / helloworld**디렉토리에 생성 된**Helloworld-Example**Maven 프로젝트를 엽니 다. 
+8. Netbeans의**cloud/helloworld**디렉토리에 생성 된**Helloworld-Example**Maven 프로젝트를 엽니 다. 
 
     <img src="images/2/image4.png" width="374" height="193" />
 
@@ -286,7 +286,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     <img src="images/2/image12.png" width="363" height="387" />
 
 
-24 . mvn exec : java` 명령을 실행하여 응용 프로그램을 실행합니다. 
+24 . mvn exeC: java` 명령을 실행하여 응용 프로그램을 실행합니다. 
 
     <img src="images/2/image13.png" width="360" height="297" />
 
@@ -296,9 +296,9 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     <img src="images/2/image14.png" width="435" height="235" />
 
 
-**참고 :** **cloud / helloworld / Helloworld-Example / target**디렉토리 내에 생성 된**Helloworld-Example-1.0-SNAPSHOT.jar**파일을 검사하십시오. 
+**참고 :** **cloud/helloworld/Helloworld-Example/target**디렉토리 내에 생성 된**Helloworld-Example-1.0-SNAPSHOT.jar**파일을 검사하십시오. 
 
-26. `java -jar target / Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하여 패키지 된 애플리케이션을 실행하십시오. 
+26. `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하여 패키지 된 애플리케이션을 실행하십시오. 
 
     <img src="images/2/image15.png" width="454" height="120" />
 
@@ -308,7 +308,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 다음 지침에 따라 Helloworld-Example 프로젝트를 로컬 GIT 저장소에 저장하십시오. 
 
-1. cloud / helloworld 디렉토리로 변경하십시오. 
+1. cloud/helloworld 디렉토리로 변경하십시오. 
 
 2. `git add -n .` 명령을 실행하여 저장소에 추가 할 준비가 된 파일의 목록을보십시오. 
 
@@ -388,7 +388,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     <img src="images/2/Picture100-5.png" />
 
 
-### 저장소 복제 정책 확인 / 설정
+### 저장소 복제 정책 확인 /설정
 
 
 클라우드 계정의 상태에 따라 이전에 복제 정책을 설정하지 않은 경우 복제 정책을 설정해야 할 수 있습니다. 이 단계에서는 Storage Cloud Service를 통해 복제 정책의 상태를 확인합니다. 
@@ -495,9 +495,9 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 다음 지침에 따라 Helloworld-Example 프로젝트를 개발자 클라우드 서비스의 GIT 저장소에 복제하십시오. 
 
-1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리 인 cloud / helloworld 디렉토리로 변경하십시오. 
+1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리 인 cloud/helloworld 디렉토리로 변경하십시오. 
 
-2. `git clone`을 실행하십시오. https : // ora1 @ developer.em2.oraclecloud.com / developer85599-ouopc084 / s / developer85599-ouopc084_helloworldproject_3753 / scm / HelloworldProjectRepo.git` 
+2. `git clone`을 실행하십시오. https ://ora1 @ developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084_helloworldproject_3753/scm/HelloworldProjectRepo.git` 
 
     <img src="images/2/image43.png" width="427" height="111" />
 
@@ -507,9 +507,9 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 -이 명령의 출력은 다음 명령의 출력과 유사해야합니다.        above screenshot.
 
 
-3. **helloworldProjectRepo**라는 이름의 새 디렉토리가**cloud / helloworld**디렉토리에 생성됩니다. 
+3. **helloworldProjectRepo**라는 이름의 새 디렉토리가**cloud/helloworld**디렉토리에 생성됩니다. 
 
-4. **helloworld-Example**프로젝트 디렉토리를**cloud / helloworld**디렉토리에서**HelloworldProjectRepo**디렉토리로 복사하여 붙여 넣습니다. 
+4. **helloworld-Example**프로젝트 디렉토리를**cloud/helloworld**디렉토리에서**HelloworldProjectRepo**디렉토리로 복사하여 붙여 넣습니다. 
 
 **참고 :** HelloworldProjectRepo**디렉토리의 내용은 아래 스크린 샷과 일치해야합니다. 
 
@@ -582,7 +582,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 5. **빌드 단계**탭을 클릭하십시오. 
 
-- 빌드 단계 추가를 클릭하고 Maven 3 호출을 선택합니다. -**목표**를 클린 패키지로 설정합니다. -**POM 파일**위치를 Helloworld-Example / pom.xml로 설정하십시오. 
+- 빌드 단계 추가를 클릭하고 Maven 3 호출을 선택합니다. -**목표**를 클린 패키지로 설정합니다. -**POM 파일**위치를 Helloworld-Example/pom.xml로 설정하십시오. 
 
     <img src="images/2/image52.png" width="441" height="189" />
 
@@ -592,14 +592,14 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 6. **Post Build**탭을 클릭하십시오. 
 
-- 아티팩트 아카이브를 선택하십시오. -**보관할 파일**을 다음으로 설정합니다. Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar - 압축 유형을 NONE으로 설정합니다. 
+- 아티팩트 아카이브를 선택하십시오. -**보관할 파일**을 다음으로 설정합니다. Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar - 압축 유형을 NONE으로 설정합니다. 
 
     <img src="images/2/image54.png" width="443" height="184" />
 
 
 7. **저장**을 클릭 한 다음**지금 빌드를 클릭하십시오.**
 
-빌드가 성공적으로 완료되면**성공적인 빌드의 인공물**섹션에 Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 파일이 표시됩니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
+빌드가 성공적으로 완료되면**성공적인 빌드의 인공물**섹션에 Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar 파일이 표시됩니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
 
 빌드가 실패한 경우 다시 빌드 작업 구성을 확인하거나**길드 로그**를 클릭하여 오류에 대한 자세한 정보를 확인하십시오. 
 
