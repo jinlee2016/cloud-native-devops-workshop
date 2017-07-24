@@ -68,13 +68,13 @@ a). **jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 �
     your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
-5.**jdk-8u121-macosx-x64.dmg**파일을 두 번 클릭하여 시작합니다. 
+5. **jdk-8u121-macosx-x64.dmg**파일을 두 번 클릭하여 시작합니다. 
     the installation.
 
-6.**JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
+A. **JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
     Development Kit in JDK 8 updates 121 window.
 
-7. 설치 프로그램이 열리면**계속**버튼을 클릭하십시오. 
+a. 설치 프로그램이 열리면**계속**버튼을 클릭하십시오. 
     Introduction screen.
 
 8. 설치 유형 화면에서 설치 버튼을 클릭합니다. 들어가다 
