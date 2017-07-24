@@ -589,8 +589,8 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 5. **빌드 단계**탭을 클릭하십시오. 
 
 - 빌드 단계 추가를 클릭하고 Maven 3 호출을 선택하십시오. 
--**목표**를 클린 패키지로 설정하십시오. 
--**POM 파일**위치를 Helloworld-Example / pom.xml로 설정하십시오. 
+- **목표**를 클린 패키지로 설정하십시오. 
+- **POM 파일**위치를 Helloworld-Example / pom.xml로 설정하십시오. 
 
     <img src="images/2/image52.png" width="441" height="189" />
 
@@ -601,7 +601,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 6. **Post Build**탭을 클릭하십시오. 
 
 - 아티팩트 아카이브를 선택하십시오. 
--**보관할 파일**을 다음으로 설정 : Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 
+- **보관할 파일**을 다음으로 설정 : Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 
 - Compression Type을 NONE으로 설정하십시오. 
 
     <img src="images/2/image54.png" width="443" height="184" />
