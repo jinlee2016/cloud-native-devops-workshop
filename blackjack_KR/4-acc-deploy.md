@@ -100,7 +100,7 @@ OACCS에 직접.
 10 . 응용 프로그램 URL을 복사하여 메모장에 붙여 넣습니다. 우리는 필요할 것이다. 
 이 URL은 테스트 용입니다. 
 
-    <img src="images/4/image13.png" width="486" height="147" />
+<img src="images/4/image13.png" width="486" height="147" />
 
 ## OACCS에 배포 된 BlackJack 응용 프로그램 테스트
 
