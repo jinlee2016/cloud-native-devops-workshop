@@ -241,7 +241,7 @@
 
 **참고 :** 스크린 샷에서 강조 표시된 디렉토리 구조를 달성해야합니다. 
 
-    <img src="images/1/image12.png" width="348" height="160" />
+<img src="images/1/image12.png" width="348" height="160" />
 
 
 4. 추출이 완료되면 전체 경로 (**C:\\Maven\\apache-maven-3.3.9**)를 복사하십시오. 이것은 환경 변수를 작성하는데 필요합니다. 
@@ -261,21 +261,21 @@
 
 4. 새 시스템 변수 창에서 변수 이름**M2\_HOME**을 입력하고 변수 값**C:\\Maven\\apache-maven-3.3.9**를 입력 한 다음**확인**버튼. 
 
-    <img src="images/1/image13.png" width="341" height="147" />
+<img src="images/1/image13.png" width="341" height="147" />
 
 
 5. 환경 변수 창의**시스템 변수**에서**새로 만들기**버튼을 누릅니다. 
 
 새 시스템 변수 창에서 변수 이름**M2**를 입력하고 변수 값**%M2\_HOME%\\bin**을 입력 한 다음**확인**버튼을 클릭하십시오. 
 
-    <img src="images/1/image14.png" width="341" height="147" />
+<img src="images/1/image14.png" width="341" height="147" />
 
 
 6. **PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오. 
 
 7. 시스템 변수 편집 윈도우의 변수 값 필드에서 커서를 마지막 위치에 놓고**; %M2%**를 입력 한 다음**확인**버튼을 클릭합니다. 
 
-    <img src="images/1/image15.png" width="347" height="149" />
+<img src="images/1/image15.png" width="347" height="149" />
 
 
 8. **확인**버튼을 두 번 클릭하여 시스템 변수 및 시스템 속성 편집 창을 닫습니다. 
@@ -302,7 +302,7 @@
 
 새 시스템 변수 창에서 변수 이름**M2**를 입력하고 변수 값**%M2\_HOME%\\bin**을 입력 한 다음**확인**버튼을 클릭하십시오. 
 
-    <img src="images/1/image17.png" width="377" height="111" />
+<img src="images/1/image17.png" width="377" height="111" />
 
 
 6. **PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오. 
