@@ -251,7 +251,7 @@ pom.xml 파일을 구성해야합니다.
 
 16 . 소스 창에서**pom.xml**파일을 마우스 오른쪽 단추로 클릭하고**서식**을 선택하여 파일의 들여 쓰기를 수정하십시오. 
 
-    <img src="images/2/image7.png" width="276" height="227" />
+<img src="images/2/image7.png" width="276" height="227" />
 
 17 .**pom.xml**파일을 저장하십시오. 
 
@@ -260,36 +260,36 @@ pom.xml 파일을 구성해야합니다.
 
 19 .**Helloworld-Example**프로젝트를 마우스 오른쪽 버튼으로 클릭하고**Run을 클릭하십시오.**
 
-    <img src="images/2/image8.png" width="231" height="196" />
+<img src="images/2/image8.png" width="231" height="196" />
 
 20 . 사용 가능한 기본 클래스 목록에서**com.example.App**를 선택하고 
 **Select Main Class**버튼을 클릭하십시오. 
 
-    <img src="images/2/image9.png" width="231" height="225" />
+<img src="images/2/image9.png" width="231" height="225" />
 
 21 . 당신은**Hello World!를보아야합니다!**BUILD SUCCESS 메시지를 출력하십시오. 
 
-    <img src="images/2/image10.png" width="406" height="152" />
+<img src="images/2/image10.png" width="406" height="152" />
 
 22 . Git Bash (Windows) 또는 터미널 창 (Mac)으로 전환하고 
 디렉토리에서 Helloworld-Example으로 이동하십시오. 
 
 cd Helloworld - 예 
 
-    <img src="images/2/image11.png" width="395" height="100" />
+<img src="images/2/image11.png" width="395" height="100" />
 
 23 .`mvn clean compile` 명령을 실행하여 정리하고 컴파일하십시오. 
 프로젝트. 
 
-    <img src="images/2/image12.png" width="363" height="387" />
+<img src="images/2/image12.png" width="363" height="387" />
 
 24 . mvn exec : java` 명령을 실행하여 응용 프로그램을 실행합니다. 
 
-    <img src="images/2/image13.png" width="360" height="297" />
+<img src="images/2/image13.png" width="360" height="297" />
 
 25 . mvn 패키지 명령을 실행하여 응용 프로그램을 패키지화하십시오. 
 
-    <img src="images/2/image14.png" width="435" height="235" />
+<img src="images/2/image14.png" width="435" height="235" />
 
 **참고 :** **Helloworld-Example-1.0-SNAPSHOT.jar**파일을 검사하십시오. 
 **구름 / 헬로우 월드 / 헬로우 월드 - 예 / 타겟**내부에서 생성되었습니다. 
