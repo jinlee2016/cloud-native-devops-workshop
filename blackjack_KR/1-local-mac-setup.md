@@ -55,7 +55,7 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 1. 브라우저를 열고 
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
-2.**다운로드**탭을 클릭하고 최신 버전을 다운로드하십시오. 
+2. **다운로드**탭을 클릭하고 최신 버전을 다운로드하십시오. 
     JDK available. In this case, we are downloading JDK-8U121.
 
     <img src="images/1m/image1.png" width="504" height="258" />
@@ -68,10 +68,10 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
     your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
-5.**jdk-8u121-macosx-x64.dmg**파일을 두 번 클릭하여 시작합니다. 
+5. **jdk-8u121-macosx-x64.dmg**파일을 두 번 클릭하여 시작합니다. 
     the installation.
 
-6.**JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
+6. **JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
     Development Kit in JDK 8 updates 121 window.
 
 7. 설치 프로그램이 열리면**계속**버튼을 클릭하십시오. 
