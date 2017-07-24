@@ -680,8 +680,8 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 4. **소스 제어**탭을 클릭하십시오. 
 
-- **Git**을 보유하고 선택하십시오. 
-- **URL**의 사례 URL은 선택합니다. 
+- Repository로 **Git**을 선택합니다.
+- **URL**은 Git Reposityr에서 URL을 선택합니다. 
 
 <img src="images/2/image51.png" width="433" height="211" />
 
