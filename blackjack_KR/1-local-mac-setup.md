@@ -13,7 +13,8 @@
 ## 소프트웨어 다운로드 목록
 
 
-|**이름 및 버전**|**다운로드 링크**||----------------------------|---------------------------------------------------------------------|
+| **Name and Version**       | **Download Link**                                                   |
+|----------------------------|---------------------------------------------------------------------|
 | **JDK 8 or higher**        | <http://www.oracle.com/technetwork/java/javase/overview/index.html> |
 | **Netbeans 8.1 or higher** | <https://netbeans.org/downloads/>                                   |
 | **GIT 2.10.1 or higher** | <https://git-scm.com/downloads>                                     |
