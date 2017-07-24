@@ -1,127 +1,127 @@
-# PART III: Test, Build and Deploy the BlackJack Web Service App
+# PART III : BlackJack 웹 서비스 응용 프로그램 테스트, 빌드 및 배포
 
-## Downloading BlackJack Project from the Repository
+## 리포지토리에서 BlackJack Project 다운로드
 
- Download the [blackjack.zip](BlackJack.zip) file to your local machine
+로컬 컴퓨터에 [blackjack.zip](BlackJack.zip) 파일 다운로드 
 
-## Deploying the BlackJack Application on a Local Server
+## 로컬 서버에 BlackJack 응용 프로그램 배포
 
-Use the following instructions to deploy the BlackJack application to
-Apache Tomcat Server bundled with the project.
+다음 지침에 따라 BlackJack 응용 프로그램을 
+Apache Tomcat Server가 프로젝트와 번들로 제공됩니다. 
 
-1.  Open a graphical file explorer and navigate to the **cloud** directory.
+1. 그래픽 파일 탐색기를 열고**cloud**디렉토리로 이동하십시오. 
 
-2.  Inside the **cloud** directory, create a directory named
-    **BlackJack** and copy the **BlackJack.zip** file that you
-    downloaded in the earlier exercise.
+2. **cloud**디렉토리 안에 이름이 지정된 디렉토리를 만듭니다. 
+**BlackJack**및**BlackJack.zip**파일을 복사하여 
+이전 연습에서 다운로드했습니다. 
 
-3.  Unzip the **BlackJack.zip** file to the **cloud** **>**
-    **BlackJack** directory.
+3. **BlackJack.zip**파일을**클라우드****>**에 압축을 풉니 다. 
+**BlackJack**디렉토리. 
 
-4.  Launch Netbeans using the shortcut on the desktop.
+4. 바탕 화면의 바로 가기를 사용하여 Netbeans을 시작합니다. 
 
-5.  Open the **blackjack-part2** project in Netbeans.
+5. Netbeans에서**blackjack-part2**프로젝트를 엽니 다. 
 
     <img src="images/3/image1.png" width="314" height="163" />
 
-    **Note:** If you see a \[Unloaded\] tag against the project name then
-    right-click on the project and select, **Resolve Project Problems**
-    and then click on Resolve button. Please wait until Netbeans downloads
-    the Maven related files then click on close button.
+**참고 :** 프로젝트 이름에 대해 \ [언로드] 태그가 표시되면 
+프로젝트를 마우스 오른쪽 버튼으로 클릭하고**프로젝트 문제 해결**을 선택하십시오. 
+Resolve 버튼을 클릭하십시오. Netbeans 다운로드가 완료 될 때까지 기다려주세요. 
+Maven 관련 파일을 클릭 한 다음 닫기 버튼을 클릭하십시오. 
 
-6.  Right-click the project and select the **Clean and**
-    **Build** option.
+6. 프로젝트를 마우스 오른쪽 버튼으로 클릭하고**Clean 및**을 선택합니다. 
+**빌드**옵션. 
 
     <img src="images/3/image2.png" width="132" height="167" />
 
-7.  Right-click the project and select **Run** to deploy the project on
-    Tomcat Server.
+7. 프로젝트를 마우스 오른쪽 단추로 클릭하고**실행**을 선택하여 프로젝트를 배포합니다. 
+톰캣 서버. 
 
     <img src="images/3/image3.png" width="138" height="173" />
 
-8.  Select **com.example.blackjack.rest.Application** from the Available
-    Main Classes list and click the **Select Main Class** button.
+8. Available에서**com.example.blackjack.rest.Application**을 선택하십시오. 
+Main Classes 목록에서**Select Main Class**버튼을 클릭하십시오. 
 
     <img src="images/3/image4.png" width="252" height="245" />
 
-9.  You should receive a “*Started Application in
-    &lt;&lt;seconds&gt;&gt; seconds (JVM running for 5.19)*” message in
-    the Output window.
+9. &quot;시작 응용 프로그램&quot;을 받아야합니다. 
+&lt;&lt; 초 >> 초 (5.19 용 JVM 실행)*&quot;에서 메시지 
+출력 윈도우. 
 
     <img src="images/3/image5.png" width="490" height="280" />
 
-    **Note:** You may encounter a problem in running this project due to a
-    port conflict issue. This application will be deployed to Apache Tomcat
-    Server and it requires **8080** local port number to listen to the
-    client request. Make sure you stop the services running on **8080**
-    local port number.
+**참고 :** 이 프로젝트를 실행하는 데 문제가 발생할 수 있습니다. 
+포트 충돌 문제. 이 응용 프로그램은 Apache Tomcat에 배포됩니다. 
+서버와 그것을 듣기 위해서는**8080**로컬 포트 ​​번호가 필요합니다. 
+클라이언트 요청.**8080**에서 실행중인 서비스를 중지하십시오. 
+로컬 포트 ​​번호. 
 
-    **TCPView** tool can be used to identify and terminate the process using
-    this port number.
+**TCPView**도구를 사용하여 프로세스를 식별하고 종료 할 수 있습니다. 
+이 포트 번호. 
 
-    [**Download Link**](https://technet.microsoft.com/en-us/sysinternals/bb897437)
+[**Download Link**](https://technet.microsoft.com/en-us/sysinternals/bb897437) 
 
-## Testing the Locally Deployed BlackJack Application
+## 로컬에 배포 된 BlackJack 응용 프로그램 테스트
 
-An HTML-5 client application has been developed and supplied with the
-BlackJack application to test its functionality once deployed on a
-local/remote server.
+HTML-5 클라이언트 응용 프로그램이 개발되어 
+BlackJack 응용 프로그램은 한번 배포 된 기능을 테스트합니다. 
+로컬 / 원격 서버. 
 
-Use the following instructions to test the BlackJack application.
+다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
 
-1.  Open a graphical file explorer and navigate to the **cloud >
-    BlackJack > html5-client** directory.
+1. 그래픽 파일 탐색기를 열고**구름> 
+BlackJack> html5-client**디렉토리에 있습니다. 
 
-2.  Open the index.html file with a browser.
+2. 브라우저로 index.html 파일을 엽니 다. 
 
-3.  Make sure that the first field, **Service**, is populated with
+3. 첫 x 째 필드 인**서비스**가 채워 졌는지 확인하십시오 
     **<http://127.0.0.1:8080/>** value, enter a number between 1 and 9
-    in the second field, and then click Connect.
+두 번째 필드에 입력 한 다음 연결을 클릭하십시오. 
 
     <img src="images/3/image6.png" width="528" height="229" />
 
-4.  Once you connect to the gaming console, click the **Debug on/off**
-    button to view the Debug console.
+4. 게임 콘솔에 연결되면**디버그 켜기 / 끄기**를 클릭하십시오. 
+버튼을 클릭하여 디버그 콘솔을 봅니다. 
 
     <img src="images/3/image7.png" width="535" height="251" />
 
-You can use the **Hit** and **Stand** buttons available on the UI to
-play the game.
+UI에서 사용할 수있는**Hit**및**Stand**버튼을 사용하여 
+게임하자. 
 
-This HTML5 Client application interacts with the BlackJack gaming
-application deployed on Tomcat Server running locally on your computer.
-Close this HTML5 Client application once you are done.
+이 HTML5 클라이언트 애플리케이션은 BlackJack 게임과 상호 작용합니다. 
+컴퓨터에서 로컬로 실행되는 Tomcat Server에 배포 된 응용 프로그램입니다. 
+완료되면이 HTML5 클라이언트 애플리케이션을 닫습니다. 
 
-## Generating Application Archive Files for the BlackJack Application
+## BlackJack 응용 프로그램을위한 응용 프로그램 아카이브 파일 생성
 
-Oracle Application Container Cloud can deploy and run Java Platform,
-Standard Edition (Java SE), and Node.js applications. First, to deploy
-your application, we compress the application in a **ZIP** or **Gzipped
-Tar (TGZ)** archive file, which includes the required configuration
-information.
+Oracle Application Container Cloud는 Java Platform을 배포하고 실행할 수 있으며, 
+Standard Edition (Java SE) 및 Node.js 응용 프로그램을 지원합니다. 첫째, 배포 
+응용 프로그램을**압축**압축**응용 프로그램 압축 
+Tar (TGZ)**아카이브 파일 (필요한 구성 포함) 
+정보. 
 
-Use the following instructions to create an application archive.
+다음 지시 사항에 따라 응용 프로그램 아카이브를 작성하십시오. 
 
-1.  Open the blackjack-part2 application in Netbeans if it is not
-    opened already.
+1. Netbeans에서 blackjack-part2 애플리케이션을 엽니 다 (그렇지 않은 경우). 
+이미 열렸습니다. 
 
-2.  Right-click the project and click **Clean**.
+2. 프로젝트를 마우스 오른쪽 버튼으로 클릭하고**Clean**을 클릭하십시오. 
 
     <img src="images/3/image8.png" width="165" height="192" />
 
-3.  Open a graphical file explorer, navigate to **cloud > BlackJack >
-    blackjack-part2**, and make a note of the directory structure and
-    its contents.
+3. 그래픽 파일 탐색기를 열고**구름> BlackJack> 
+blackjack-part2**를 만들고 디렉토리 구조를 기록하고 
+그것의 내용. 
 
     <img src="images/3/image9.png" width="444" height="102" />
 
-    **Note:** The manifest.json file is required for all applications
-    deployed to Oracle Application Container Cloud Service. If this file
-    is not present in the root directory of the .zip, .tar, or .tar.gz
-    file, deployment will fail. At a minimum, this file specifies the
-    major version of the runtime environment and the launch command.
+**참고 :** manifest.json 파일은 모든 응용 프로그램에 필요합니다. 
+Oracle Application Container Cloud Service에 배포됩니다. 이 파일 
+.zip, .tar 또는 .tar.gz의 루트 디렉토리에 존재하지 않습니다. 
+파일, 배포가 실패합니다. 최소한이 파일은 
+런타임 환경의 주 버전 및 실행 명령. 
 
-    **Content of manifest.json file in this example**:
+**이 예제에서 manifest.json 파일의 내용**: 
 
     ```json
     {
@@ -138,300 +138,300 @@ Use the following instructions to create an application archive.
     }
     ```
 
-4.  Switch to Netbeans, right-click the project, and click **Build.**
+4. Netbeans로 전환하고 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음**Build를 클릭하십시오.**
 
     <img src="images/3/image10.png" width="184" height="237" />
 
-5.  Switch to the **cloud > BlackJack > blackjack-part2**
-    directory and notice that a new directory named **target**
-    is created.
+5. **구름> BlackJack> Blackjack-part2**로 전환하십시오. 
+디렉토리에 복사하여**target**이라는 새 디렉토리 
+생성됩니다. 
 
-6.  Examine the **target** directory. You will notice that **.zip and
-    .tar.gz** distribution files have been generated. These are
-    application archive files that we can use to deploy to OACCS.
+6. **target**디렉토리를 검사하십시오.**. zip 및 
+.tar.gz**배포 파일이 생성되었습니다. 이것들은 
+OACCS에 배포하는 데 사용할 수있는 응용 프로그램 아카이브 파일 
 
     <img src="images/3/image11.png" width="466" height="178" />
 
-## Creating a New Project in Developer Cloud Service
+## 개발자 클라우드 서비스에서 새 프로젝트 만들기
 
-Use the following instruction to create an empty Project on Developer
-Cloud Service
+다음 지시 사항에 따라 개발자에게 빈 프로젝트를 만듭니다. 
+클라우드 서비스 
 
-1.  Login to your oracle cloud account.
+1. oracle 클라우드 계정에 로그인하십시오. 
 
-2.  Click **Developer Cloud Service** on the Dashboard to go to the
-    **ServiceDetails:developer85599 (Oracle Developer
-    Cloud Service)** page.
+2. 대시 보드에서**개발자 클라우드 서비스**를 클릭하여 
+**ServiceDetails : developer85599 (Oracle Developer 
+클라우드 서비스)**페이지. 
 
     <img src="images/3/image12.png" width="466" height="137" />
 
-3.  Click the **Open Service Console** button.
+3. **서비스 콘솔 열기**버튼을 클릭하십시오. 
 
     <img src="images/3/image13.png" width="460" height="225" />
 
-4.  Click **New Project**.
+4. **새 프로젝트**를 클릭하십시오. 
 
     <img src="images/3/image14.png" width="378" height="232" />
 
-5.  Enter the Project Name and Description as shown in the following
-    screenshot and click **Next**.
+5. 다음과 같이 프로젝트 이름과 설명을 입력하십시오 
+스크린 샷을 클릭하고**다음**을 클릭하십시오. 
 
     <img src="images/3/image15.png" width="378" height="268" />
 
-6.  Click the **Empty Project** template and **Next**.
+6. **빈 프로젝트**템플릿 및**다음**을 클릭하십시오. 
 
     <img src="images/3/image16.png" width="378" height="271" />
 
-7.  Select **MARKDOWN** from the Wiki Markup drop-down list and click
-    **Finish.**
+7. Wiki Markup 드롭 다운 목록에서**MARKDOWN**을 선택하고 
+**끝.**
 
     <img src="images/3/image17.png" width="388" height="280" />
 
-8.  Provisioning BlackJack-Part2 project may take several minutes. Wait
-    until all the modules are provisioned and redirected to the
-    BlackJack-Part2 home screen.
+8. Provisioning BlackJack-Part2 프로젝트는 몇 분이 걸릴 수 있습니다. 기다림 
+모든 모듈이 프로비저닝되고 모듈로 리디렉션 될 때까지 
+블랙 잭 - 파트 2 홈 스크린. 
 
     <img src="images/3/image18.png" width="444" height="161" />
 
-## Creating a GIT Repository in Developer Cloud Service
+## 개발자 클라우드 서비스에서 GIT 저장소 만들기
 
-Use the following instructions to create an empty GIT repository on
-Developer Cloud Service.
+다음 지침에 따라 빈 GIT 저장소를 만듭니다. 
+개발자 클라우드 서비스. 
 
-1.  Click the **New Repository** button in the **REPOSITORIES** section.
+1. **REPOSITORIES**섹션에서**New Repository**버튼을 클릭하십시오. 
 
     <img src="images/3/image19.png" width="426" height="154" />
 
-2.  In the New Repository window, enter the repository name and
-    description as shown in the following screenshot and click **Create**.
+2. 새 저장소 창에서 저장소 이름을 입력하고 
+설명을 클릭하고**만들기**를 클릭하십시오. 
 
     <img src="images/3/image20.png" width="426" height="362" />
 
-3.  It may take a few minutes to create a repository. Wait until the
-    BlackJack-Part2Repo repository is created and redirected to its
-    home page.
+3. 저장소를 만드는 데 몇 분이 걸릴 수 있습니다. 때까지 기다리십시오. 
+BlackJack-Part2Repo 저장소가 생성되고 해당 저장소로 리디렉션됩니다. 
+홈페이지. 
 
     <img src="images/3/image21.png" width="426" height="112" />
 
-4.  Click the HTTP tab in the BlackJack-Part2Repo home page and copy
-    the URL.
+4. BlackJack-Part2Repo 홈페이지에서 HTTP 탭을 클릭하고 복사하십시오. 
+URL. 
 
     <img src="images/3/image22.png" width="546" height="143" />
 
-## Cloning a GIT Repository
+## GIT 저장소 복제
 
-Use the following instructions to clone the BlackJack-Part2 project to a
-GIT repository on Developer Cloud Service.
+BlackJack-Part2 프로젝트를 복제하려면 다음 지침을 따르십시오. 
+개발자 클라우드 서비스의 GIT 저장소. 
 
-1.  To clone a GIT repository, first change to the cloud/BlackJack
-    directory that is the root directory for your repository.
+1. GIT 저장소를 복제하려면 먼저 클라우드 / 블랙 잭으로 변경하십시오 
+디렉토리는 저장소의 루트 디렉토리입니다. 
 
-2.  Execute `git clone https://ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_blackjack-part2\_4112/scm/BlackJack-Part2Repo.git`
+2. `git clone`을 실행합니다. https : //ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084 \ _blackjack-part2 \ _4112 / scm / BlackJack-Part2Repo.git` 
 
     <img src="images/3/image23.png" width="507" height="166" />
 
-    **Notes:**
+**노트:** 
 
-    -   Enter your cloud account username and password, if you are prompted.
-    -   If you are not prompted for user name and password and if this
-        command fails with 403 error then mention the password explicitly
-        the GIT repository URL. For example: `git clone https://ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_blackjack-part2\_4112/scm/BlackJack-Part2Repo.git`
-    -   The output of this command should be similar to the output in the
-        above screenshot.
+- 메시지가 나타나면 클라우드 계정 사용자 이름과 암호를 입력하십시오. 
+- 사용자 이름과 암호를 입력하라는 메시지가 표시되지 않고 
+명령이 403 오류와 함께 실패하면 명시 적으로 암호를 언급합니다. 
+GIT 저장소 URL 예를 들면 :`git clonehttps : //ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084 \ _blackjack-part2 \ _4112 / scm / BlackJack-Part2Repo.git` 
+-이 명령의 출력은 다음 명령의 출력과 유사해야합니다. 
+위의 스크린 샷. 
 
-3.  Notice that there is a new directory named **BlackJack-Part2Repo**
-    created inside **cloud/BlackJack** directory.
+3. **BlackJack-Part2Repo**라는 새 디렉토리가 있습니다. 
+**cloud / BlackJack**디렉토리에 생성됩니다. 
 
-4.  Copy and paste **blackjack-part2** project directory from
-    **cloud/BlackJack** directory to **BlackJack-Part2Repo** directory
+4. **blackjack-part2**프로젝트 디렉토리를 복사하여 붙여 넣기하십시오. 
+**cloud / BlackJack**디렉토리**BlackJack-Part2Repo**디렉토리 
 
-    **Note:** Content of the **BlackJack-Part2Repo** directory should
-    match with the contents listed below screenshot.
+**참고 :** **BlackJack-Part2Repo**디렉토리의 내용은 
+아래 스크린 샷의 내용과 일치해야합니다. 
 
     <img src="images/3/image24.png" width="535" height="94" />
 
-5.  Change to the **BlackJack-Part2Repo** directory
+5. **BlackJack-Part2Repo**디렉토리로 변경하십시오. 
 
-        cd BlackJack-Part2Repo
+cd 블랙 잭 -Part2Repo 
 
-6.  Add the source files to GIT from project root directory
+6. 프로젝트 루트 디렉토리에서 GIT에 소스 파일을 추가하십시오 
 
-        git add .
+자식 추가. 
 
-7.  Commit the changes
+7. 변경 사항 적용 
 
-        git commit –m "commiting changes to BlackJack-Part2Repo repository"
+git commit -m &quot;BlackJack-Part2Repo 저장소 변경 커밋&quot; 
 
-8.  Push the files to the repository on Developer Cloud Service
+8. 개발자 클라우드 서비스의 저장소로 파일을 푸시합니다. 
 
-        git push origin master
+git push origin master 
 
-    **Note:** Wait until all the files are pushed to repository
+**참고 :** 모든 파일이 저장소로 푸시 될 때까지 기다리십시오. 
 
-9.  Switch to Developer Cloud Service to verify the files pushed to the
-    repository
+9. 개발자 클라우드 서비스로 전환하여 개발자 클라우드 서비스로 푸시 된 파일을 확인합니다. 
+저장소 
 
-10. In the **BlackJack-Part2** home page, click on **BlackJack-Part2Repo.git**
+10 .**BlackJack-Part2**홈 페이지에서**BlackJack-Part2Repo.git**을 클릭하십시오. 
 
     <img src="images/3/image25.png" width="474" height="178" />
 
-11. Notice that **blackjack-part2** project directory has been pushed to
-    repository on Developer Cloud Service. Click on it and verify
-    its contents.
+11 .**blackjack-part2**프로젝트 디렉토리가 푸시되었습니다. 
+개발자 클라우드 서비스의 저장소 그것을 클릭하고 확인하십시오. 
+그것의 내용. 
 
     <img src="images/3/image26.png" width="478" height="154" />
 
-## Building a Project on Developer Cloud Service
+## 개발자 클라우드 서비스에 대한 프로젝트 빌드
 
-Use the following instructions to build BlackJack-Part2 project in
-Developer Cloud Service.
+다음 지침에 따라 BlackJack-Part2 프로젝트를 빌드하십시오. 
+개발자 클라우드 서비스. 
 
-1.  In the left navigation pane, click on **Build** and then **New Job**.
+1. 왼쪽 탐색 분할 창에서**빌드**를 누른 다음**새 작업**을 누르십시오. 
 
     <img src="images/3/image27.png" width="421" height="190" />
 
-2.  In the New Job window, enter **BlackJack-Part2BuildJob** in the job
-    name field and click on **Save**.
+2. 새 작업 창에서**BlackJack-Part2BuildJob**을 입력하십시오 
+이름 입력란을 클릭하고**저장**을 클릭하십시오. 
 
     <img src="images/3/image28.png" width="421" height="147" />
 
-3.  In the **Main** tab, enter the following values:
+3. **주**탭에서 다음 값을 입력하십시오. 
 
-    -   Edit the job name if it needs adjusting.
-    -   Enter a description.
-    -   Set the **JDK** to **JDK 8.**
+- 조정이 필요한 경우 작업 이름을 편집하십시오. 
+- 설명을 입력하십시오. 
+-**JDK**를**JDK 8로 설정하십시오.**
 
     <img src="images/3/image29.png" width="421" height="188" />
 
-4.  Click the **Source Control** tab
+4. **소스 제어**탭을 클릭하십시오. 
 
-    -   Select **Git** as your repository.
-    -   For **URL**, select the URL to your Git repository.
+-**Git**를 저장소로 선택하십시오. 
+-**URL**의 경우 Git 저장소의 URL을 선택하십시오. 
 
     <img src="images/3/image30.png" width="391" height="203" />
 
-5.  Click the **Triggers** tab
+5. **트리거**탭을 클릭하십시오. 
 
-    -   Based on SCM polling schedule
+- SCM 폴링 일정에 기반 
 
     <img src="images/3/image31.png" width="391" height="178" />
 
-    **Note:** This setting will enable auto-deploy feature of DevCS. After
-    the application is modified and if the changes are committed to GIT
-    repository on DevCS, it automatically picks up the updated code and
-    deploys.
+**참고 :** 이 설정은 DevCS의 자동 배포 기능을 활성화합니다. 후 
+응용 프로그램이 수정되고 변경 사항이 GIT에 위임 된 경우 
+DevCS의 저장소에서 업데이트 된 코드를 자동으로 선택하고 
+배치. 
 
-6.  Click the **Build Steps** tab.
+6. **빌드 단계**탭을 클릭하십시오. 
 
-    -   Click Add Build Step and select Invoke Maven 3.
-    -   Set the **Goals** to: clean package.
-    -   Set the **POM File** location to: blackjack-part2/pom.xml
+- 빌드 단계 추가를 클릭하고 Maven 3 호출을 선택하십시오. 
+-**목표**를 클린 패키지로 설정하십시오. 
+-**POM 파일**위치를 blackjack-part2 / pom.xml로 설정하십시오. 
 
     <img src="images/3/image32.png" width="397" height="171" />
     <img src="images/3/image33.png" width="397" height="216" />
 
-7.  Click the **Post Build** tab.
+7. **Post Build**탭을 클릭하십시오. 
 
-    -   Select Archive the artifacts.
-    -   Set **Files To Archive** to: blackjack-part2/target/blackjack-part2-1.0.jar,
-        blackjack-part2/target/blackjack-part2-1.0-dist.zip
-    -   Set Compression Type to **NONE**.
+- 아티팩트 아카이브를 선택하십시오. 
+-**보관할 파일**을 blackjack-part2 / target / blackjack-part2-1.0.jar로 설정합니다. 
+blackjack-part2 / target / blackjack-part2-1.0-dist.zip 
+- 압축 유형을**NONE**으로 설정하십시오. 
 
     <img src="images/3/image34.png" width="451" height="186" />
 
-8.  Click **Save** and then click **Build Now**.
+8. **저장**을 클릭 한 다음**지금 빌드**를 클릭하십시오. 
 
-    If the build was successful, you'll see two files in the **Artifacts of Last Successful Build** section:
-    -   blackjack-part2/target/blackjack-part2-1.0.jar
-    -   blackjack-part2/target/blackjack-part2-1.0-dist.zip
+빌드가 성공적으로 완료되면**마지막 성공 빌드의 아티팩트**섹션에 두 개의 파일이 표시됩니다. 
+- blackjack-part2 / target / blackjack-part2-1.0.jar 
+- blackjack-part2 / target / blackjack-part2-1.0-dist.zip 
 
-    You can download them by clicking the file name.
+파일 이름을 클릭하여 다운로드 할 수 있습니다. 
 
-    If the build failed then go back to check the build job configuration
-    or click **Git Logs** to see more information about the error.
+빌드가 실패한 경우 다시 빌드 작업 구성을 확인하십시오. 
+또는**Git Logs**를 클릭하여 오류에 대한 추가 정보를 확인하십시오. 
 
     <img src="images/3/image35.png" width="451" height="181" />
 
-## Deploying a Project to ACCS from DevCS
+## DevCS에서 ACCS로 프로젝트 배포
 
-Use the following instructions to deploy the BlackJack-Part2 to
-Application Container Cloud Service from Developer Cloud Service.
+다음 지침에 따라 BlackJack-Part2를 
+개발자 클라우드 서비스의 응용 프로그램 컨테이너 클라우드 서비스. 
 
-1.  In the left navigation pane, click on **Deploy** and then **New
-    Configuration**
+1. 왼쪽 탐색 창에서**배포**를 클릭 한 다음**새로 만들기를 클릭하십시오. 
+구성**
 
     <img src="images/3/image36.png" width="436" height="171" />
 
-2.  In the **New Deployment Configuration** page, enter
-    the **Configuration Name** and **Application Name** as shown below
+2. **새 배포 구성**페이지에서 다음을 입력합니다. 
+**구성 이름**및**응용 프로그램 이름**
 
     <img src="images/3/image37.png" width="436" height="173" />
 
-3.  In the **Deployment Target** field, click **New** and
-    select **Application Container Cloud**
+3. **Deployment Target**필드에서**New**를 클릭하고 
+**응용 프로그램 컨테이너 클라우드**를 선택하십시오. 
 
     <img src="images/3/image38.png" width="233" height="119" />
 
-4.  In the **Deploy to Application Container Cloud** window, enter the
-    following values and click **Test connection**
+4. **응용 프로그램 컨테이너 클라우드에 배포**창에서 다음을 입력합니다. 
+값을 클릭하고**연결 테스트**를 클릭하십시오. 
 
-    -   Data center
-    -   Identity Domain
-    -   Username
-    -   Password
+- 데이터 센터 
+- ID 도메인 
+- 사용자 이름 
+- 비밀번호 
 
     <img src="images/3/image39.png" width="273" height="131" />
 
-5.  When you see the **Successful** message click **Use Connection**
+5. **성공**메시지가 표시되면**연결 사용**을 클릭하십시오. 
 
     <img src="images/3/image40.png" width="273" height="131" />
 
-6.  Enter the following values and click **Save**
+6. 다음 값을 입력하고**저장**을 클릭하십시오. 
 
-    -   **Type**: Automatic (Select Deploy stable build only)
-    -   **Job:** BlackJack-Part2BuildJob
-    -   **Runtime**: Java
-    -   **Subscription:** Monthly
-    -   **Artifact:** blackjack-part2/target/blackjack-part2-1.0-dist.zip
+-**유형**: 자동 (선택 : 안정된 빌드 만 배포) 
+-**Job :** BlackJack - Part2BuildJob 
+-**런타임**: Java 
+-**구독 :** 월간 
+-**아티팩트 :** 블랙 잭 - 파트 2 / 타겟 / 블랙 잭 - 파트 2 - 1.0-리스트 .zip 
 
     <img src="images/3/image41.png" width="393" height="137" />
 
 7.  Click the gear icon <img src="images/3/image42.png" width="51" height="28" />
-    and then select **Start** to deploy the application to Oracle
-    Application Container Cloud Service.
+**시작**을 선택하여 Oracle에 응용 프로그램을 배포하십시오 
+응용 프로그램 컨테이너 클라우드 서비스. 
 
-8.  After the successful deployment, right-click on Blackjack-Part2
-    project name and copy the URL
+8. 성공적인 배포 후 Blackjack-Part2를 마우스 오른쪽 단추로 클릭합니다. 
+프로젝트 이름 및 URL 복사 
 
     <img src="images/3/image43.png" width="393" height="130" />
 
-## Testing the BlackJack Application Deployed to OACCS from DevCS
+## DevCS에서 OACCS에 배포 된 BlackJack 응용 프로그램 테스트
 
-An HTML-5 client application has been developed and supplied with the
-BlackJack application to test its functionality once deployed on a
-local/remote server.
+HTML-5 클라이언트 응용 프로그램이 개발되어 
+BlackJack 응용 프로그램은 한번 배포 된 기능을 테스트합니다. 
+로컬 / 원격 서버. 
 
-Use the following instructions to test the BlackJack application.
+다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
 
-1.  Open a graphical file explorer and navigate to the **cloud >
-    BlackJack > html5-client** directory.
+1. 그래픽 파일 탐색기를 열고**구름> 
+BlackJack> html5-client**디렉토리에 있습니다. 
 
-2.  Open the index.html file with a browser.
+2. 브라우저로 index.html 파일을 엽니 다. 
 
-3.  Make sure that the first field, **Service**, is populated with the
-    URL you copied in the previous exercise,
+3. 첫 번째 필드**서비스**에 
+이전 연습에서 복사 한 URL, 
     <https://blackjack-part2-ouopc084.apaas.em2.oraclecloud.com/>. Enter a
-    number between 1 and 9 in second field, and then click Connect.
+두 번째 필드에서 1과 9 사이의 숫자를 입력 한 다음 연결을 클릭하십시오. 
 
     <img src="images/3/image44.png" width="513" height="230" />
 
-4.  Once you connect to the gaming console, click the **Debug on/off**
-    button to view the Debug console.
+4. 게임 콘솔에 연결되면**디버그 켜기 / 끄기**를 클릭하십시오. 
+버튼을 클릭하여 디버그 콘솔을 봅니다. 
 
     <img src="images/3/image45.png" width="513" height="247" />
 
-    **Note:** You can use the **Hit** and **Stand** buttons available on the
-    UI to play the game.
+**참고 :** **히트**및**스탠드**버튼을 사용할 수 있습니다 
+게임을하기위한 UI. 
 
-This HTML5 Client application interacts with the BlackJack gaming
-application deployed on OACCS on cloud.
+이 HTML5 클라이언트 애플리케이션은 BlackJack 게임과 상호 작용합니다. 
+클라우드의 OACCS에 배포 된 응용 프로그램 
