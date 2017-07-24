@@ -5,10 +5,14 @@
 랩톱과 Oracle Cloud 평가판 계정을 사용하여 랩을 수행하고 블랙 잭 카드 게임을 실행합니다.
 ## 첫째, Oracle Cloud 계정 가져 오기
 
+
 - 행사에 도착하기 전에 귀하의 Trial 계정에 대한 액세스 권한을 얻으십시오. 평가판 계정은 [Try it] (http://cloud.oracle.com/tryit)에서 얻을 수 있습니다.
 ## 둘째, 클라이언트 환경 구성
 
 1. 실습을하기 전에 컴퓨터 환경을 구성해야합니다.
 실험실을 시도하기 전에 실험실 안내서의 링크 된 문서 [Windows](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Windows-HOL-setup.pdf) or [Mac](http://www.oracle.com/webfolder/technetwork/tutorials/OracleCode/Mac-HOL-setup.pdf)의 지침을 따르십시오.
-2. [GitHub](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack)-[blackjack.zip](BlackJack.zip)-[Helloworld-Example.zip](Helloworld-Example.zip)-[pom.xml](pom.xml)에서 다음 파일을 다운로드하십시오.
+2. [GitHub](https://github.com/oracle/cloud-native-devops-workshop/tree/master/blackjack)에서 다음 파일을 다운로드하십시오. 
+- [blackjack.zip](BlackJack.zip) 
+- [Helloworld-Example.zip](Helloworld-Example.zip) 
+- [pom.xml](pom.xml)
 문제를 기록하고 랩 가이드 소스를 보려면 [oracle git repository](https://github.com/oracle/cloud-native-devops-workshop)로 이동하십시오.
