@@ -298,7 +298,7 @@ cd Helloworld - 예
 26 .`java -jar target / Helloworld-Example-1.0-SNAPSHOT.jar`을 실행하십시오. 
 명령을 사용하여 패키지 된 응용 프로그램을 실행하십시오. 
 
-    <img src="images/2/image15.png" width="454" height="120" />
+<img src="images/2/image15.png" width="454" height="120" />
 
 ## Helloworld-Example 프로젝트를 GIT 저장소로 확인하기
 
@@ -519,7 +519,7 @@ GIT 저장소 URL 예를 들면 :`git clonehttps : // ora1 : e1Car030@developer.
 **참고 :** **HelloworldProjectRepo**디렉토리의 내용은 
 아래 스크린 샷의 내용과 일치해야합니다. 
 
-    <img src="images/2/image44.png" width="441" height="89" />
+<img src="images/2/image44.png" width="441" height="89" />
 
 5. **HelloworldProjectRepo**디렉토리로 변경하십시오. 
 
