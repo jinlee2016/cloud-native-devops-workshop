@@ -52,19 +52,19 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 그런 다음**JDK 활동 설치**를 건너 뛰고**Java 설정으로 진행하십시오. 
 환경 변수**환경 변수를 설정 / 검증하는 활동. 
 
-A. 브라우저를 열고 
+ㄱ. 브라우저를 열고 
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
-2. **다운로드** 탭을 클릭하고 최신 버전을 다운로드하십시오. 
+가. **다운로드** 탭을 클릭하고 최신 버전을 다운로드하십시오. 
     JDK available. In this case, we are downloading JDK-8U121.
 
     <img src="images/1m/image1.png" width="504" height="258" />
 
-3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
+가). &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
     SE” to download the software. Click the **Accept License
     Agreement** button.
 
-4.**jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
+a). **jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
     your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
