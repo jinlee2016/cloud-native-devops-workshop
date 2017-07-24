@@ -1,439 +1,439 @@
-# 1 부 : 지역 개발 환경 설정
+# PART I: Local Development Environment Setup
 
-## 개요
+## Overview
 
-이 문서는 학생들이 Java 설정 프로세스를 이해하도록 돕습니다. 
-자신의 컴퓨터에서 개발 환경, &quot;Maven&quot;을 사용하여 프로젝트 만들기 
-및 &quot;Netbeans&quot;을 선택하고 개발자 클라우드 서비스에 배포하십시오. 
+This document helps students understand the process to setup the Java
+development environment on their computer, create project using “Maven”
+and “Netbeans” and deploy it on Developer Cloud Service.
 
-여기에 학생들은 지역에 기존의 &quot;블랙 잭&quot;프로젝트를 배포합니다. 
-Application Server, Oracle Application Cloud에 배포 
-컨테이너 서비스에 액세스하고 마지막으로 HTML-5 클라이언트에서 액세스합니다. 
+Here students deploy their existing “Blackjack” project on a local
+Application Server, followed by deploying it on Oracle Application Cloud
+Container Service and finally accessing it from an HTML-5 client.
 
-**중요 사항 :** ID 도메인 이름, 사용자와 같은 로그인 자격 증명 
-개발자 클라우드 서비스를 사용하려면 이름과 비밀번호가 필요합니다. 
-Oracle Application Container 클라우드 서비스. 이 정보 수집 
-오라클로부터받은 이메일을 편리하게 보관하십시오. 
+**Important Note:** Login credentials like Identity Domain Name, User
+Name and Password are required to work with Developer Cloud Service and
+Oracle Application Container Cloud Service. Gather this information from
+the email you have received from Oracle and keep it handy
 
-## 소프트웨어 다운로드 목록
+## Software Download List
 
-|**이름 및 버전**|**다운로드 링크**| 
+| **Name and Version**       | **Download Link**                                                   |
 |----------------------------|---------------------------------------------------------------------|
 | **JDK 8 or higher**        | <http://www.oracle.com/technetwork/java/javase/overview/index.html> |
 | **Netbeans 8.1 or higher** | <https://netbeans.org/downloads/>                                   |
 | **GIT 2.11.0.3 or higher** | <https://git-scm.com/downloads>                                     |
 | **Maven 3.3.9 or higher**  | <http://maven.apache.org/download.cgi>                              |
 
-**참고**: 위 표에 언급 된 소프트웨어 목록을 다운로드 할 수 있습니다. 
-다운로드 저장을 시작하기 전에 컴퓨터에 저장 
-시각. 
+**Note**: List of software mentioned in the above table can be downloaded
+and stored onto your computer before you get started to save download
+time.
 
-**또는**
+**Or**
 
-연습과 함께 소프트웨어를 다운로드 할 수 있습니다. 마다 
-운동에는 필요한 다운로드 및 설치를위한 세부 단계가 포함되어 있습니다. 
-소프트웨어. 
+Software can be downloaded as you go along with the exercises. Each
+exercise contains detailed steps for downloading and installing required
+software.
 
-64 비트 설정에서 작업하고 제공된 것으로 가정합니다. 
-이에 따라 소프트웨어를 다운로드하고 설치하십시오. 당신이있는 경우 
-64 비트 설정에서 작동하지 않는 다음 호환되는 소프트웨어를 다운로드하십시오. 
-귀하의 설정. 
+It is assumed that you will be working on a 64bit setup and provided
+instructions accordingly to download and install software. If you are
+not working on 64bit setup then download the software compatible to with
+your setup.
 
-## JDK 설치
+## Installing JDK
 
-다음 지시 사항에 따라 Java를 다운로드, 설치 및 구성하십시오. 
-컴퓨터의 개발 키트. 
+Use the following instructions to download, install, and configure Java
+Development Kit on your computer.
 
-**참고 : JDK-8U121**은 당시 사용 가능한 최신 버전의 JDK입니다. 
-이 문서를 만드는 방법. 다운로드하는 것이 좋습니다. 
-최신 버전의 JDK (사용 가능한 경우) 및이 랩 수행 
-활동. 
+**Note: JDK-8U121** is the latest version of JDK available at the time
+of creating this document. It is highly recommended that you download
+the newer version of JDK (if available) and perform these lab
+activities.
 
-이미 JDK 8 이상 버전이 설치되어있는 경우 
-그런 다음**Install JDK**단계를 건너 뛰고**설정으로 진행하십시오. 
-JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수**설정 / 확인 
-환경 변수. 
+If you already have the JDK 8 or higher version installed on your
+computer then skip **Installing JDK** step and proceed with **Setting Up
+JAVA\_HOME, PATH, and CLASSPATH Environment Variables** to setup/verify
+environment variables.
 
-1. Firefox 브라우저에서 다음 위치로 이동하십시오. 
+1.  In the Firefox browser, navigate to
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
-2. **다운로드**탭을 클릭하고 최신 버전을 다운로드하십시오. 
-JDK를 사용할 수 있습니다. 여기서는 JDK-8U121을 다운로드 중입니다. 
+2.  Click the **Downloads** tab and download the latest version of
+    JDK available. In this case, we are downloading JDK-8U121.
 
     <img src="images/1/image1.png" width="541" height="311" />
 
-3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
-SE &quot;를 클릭하여 소프트웨어를 다운로드하십시오.**라이센스 수락을 클릭하십시오. 
-계약**버튼. 
+3.  You must accept the “Oracle Binary Code License Agreement for Java
+    SE” to download the software. Click the **Accept License
+    Agreement** button.
 
-4. **jdk-8u121-windows-x64.exe**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
-너의 컴퓨터. 다운로드에는 다소 시간이 걸릴 수 있습니다. 기다려라. 
-다운로드하여 다음 단계로 진행하십시오. 
+4.  Download the **jdk-8u121-windows-x64.exe** installer file on to
+    your computer. The download may take some time. Wait for the
+    download to complete before proceeding to the next step.
 
-5. 시작하려면**jdk-8u121-windows-x64.exe**파일을 두 번 클릭하십시오. 
-설치. 
+5.  Double-click the **jdk-8u121-windows-x64.exe** file to start
+    the installation.
 
-**참고 :** &quot;다음과 같은 보안 경고가 표시되는 경우 
-다음 프로그램이이 컴퓨터를 변경하도록 허용 하시겠습니까? &quot;를 
-**예**. 
+    **Note:** If you receive a security warning such as “Do you want to
+    allow the following program to make changes to this computer?” click
+    **Yes**.
 
-6. 설치 프로그램이 열리면**다음**버튼을 클릭하십시오. 
+6.  When the installer opens, click the **Next** button.
 
-7. 기본 설치 위치를 승인하고**다음**을 두 번 클릭하십시오. 
+7.  Accept the default installation locations and click **Next** twice.
 
-8. 설치 프로그램이 JDK를 성공적으로 설치하고 표시 할 때까지 기다립니다. 
-「Java SE Development Kit 8 업데이트 121 (64 비트)」메세지 클릭 
-**닫기**버튼. 
+8.  Wait until the installer installs the JDK successfully and displays
+    a “Java SE Development Kit 8 Update 121 (64-bit)” message. Click the
+    **Close** button.
 
-### Windows 7 - 환경 변수 설정
+### Windows 7 – Setting Environment Variables
 
-#### JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수 설정 
+#### Setting Up JAVA\_HOME, PATH, and CLASSPATH Environment Variables
 
-**참고 :** 관리자 권한으로 컴퓨터에 로그온해야합니다. 
+**Note:** You must be logged on to your computer as the Admin user.
 
-1. Windows**시작**버튼을 클릭하십시오.**컴퓨터**를 마우스 오른쪽 버튼으로 클릭하고 
-**속성**을 선택하십시오.**고급 시스템 설정**을 클릭하십시오. 
+1.  Click the Windows **Start** button. Right-click **Computer** and
+    select **Properties**. Click **Advanced system settings**.
 
-2. **환경 변수**를 클릭하십시오. 
+2.  Click **Environment Variables**.
 
-3. 환경 변수 창의**시스템 변수**아래에서, 
-**New**버튼을 클릭하십시오. 
+3.  In the Environment Variables window, under **System Variables**,
+    click the **New** button.
 
-4. 새 시스템 변수 창에서 변수 이름을 입력하십시오 
-**JAVA \ _HOME**, 변수 값을 입력하십시오.**C : \\ Program 
-Files \\ Java \\ jdk1.8.0 \ _121,**을 선택한 다음**확인**버튼을 누릅니다. 
+4.  In the New System Variable window, enter the Variable name
+    **JAVA\_HOME**, enter the Variable value **C:\\Program
+    Files\\Java\\jdk1.8.0\_121,** and then click the **OK** button.
 
     <img src="images/1/image2.png" width="303" height="131" />
 
-5. **PATH**시스템 변수를 선택하고**Edit**버튼을 클릭하십시오 (If 
-PATH 시스템 변수를 사용할 수 없으면**New**버튼을 클릭하십시오. 
-PATH 변수를 만들고, 변수 값을 입력하십시오.**C : \\ Program 
-Files \\ Java \\ jdk1.8.0 \ _121,**을 선택한 다음**확인**버튼을 누릅니다. 
+5.  Select **PATH** system variable and click the **Edit** button (If
+    PATH system variable is not available, click the **New** button to
+    create PATH variable, enter the Variable value **C:\\Program
+    Files\\Java\\jdk1.8.0\_121,** and then click the **OK** button).
 
-6. 시스템 변수 편집 창의 변수 값 필드에서, 
-커서를 시작 위치에 놓고**C : \\ Program을 입력하십시오 
-파일 \\ Java \\ jdk1.8.0 \ _121 \\ bin**; 그런 다음**확인**버튼을 클릭하십시오. 
+6.  In the Edit System Variable window, in the Variable value field,
+    place the cursor at the starting position and enter **C:\\Program
+    Files\\Java\\jdk1.8.0\_121\\bin**; Then click the **OK** button.
 
     <img src="images/1/image3.png" width="303" height="131" />
 
-7. **새**단추를 클릭하여 다른 시스템 변수를 만듭니다. 
+7.  Click the **New** button to create another System Variable.
 
-8. 새 시스템 변수 창에 변수 이름을 입력하십시오 
-**CLASSPATH**, 변수 값 입력**C : \\ Program 
-Fles \\ Java \\ jdk1.8.0 \ _121 \\ lib \\ tools.jar;.;**
-세미콜론, 마침표 및 세미콜론)를 입력 한 다음 
-**확인**버튼. 
+8.  In the New System Variable window, enter the Variable name
+    **CLASSPATH**, enter the Variable value **C:\\Program
+    Fles\\Java\\jdk1.8.0\_121\\lib\\tools.jar;.;** (this has a
+    semicolon, a period, and a semicolon at the end), and then click the
+    **OK** button.
 
     <img src="images/1/image4.png" width="314" height="136" />.
 
-9. 세 개의 시스템 변수를 작성 / 갱신했습니다.**확인**을 클릭하십시오.**
-환경 변수와 시스템 닫기 버튼 
-속성 창. 제어판 창을 닫습니다. 
+9.  You have created/updated three system variables. Click the **OK**
+    button to close the Environment Variables and System
+    Properties windows. Close the Control Panel window.
 
-### Windows 10 - 환경 변수 설정
+### Windows 10 – Setting Environment Variables
 
-#### JAVA \ _HOME, PATH 및 CLASSPATH 환경 변수 설정 
+#### Setting Up JAVA\_HOME, PATH, and CLASSPATH Environment Variables
 
-**참고 :** 관리자 권한으로 컴퓨터에 로그온해야합니다. 
+**Note:** You must be logged on to your computer as the Admin user.
 
-1. Windows 바탕 화면에서**이 PC**를 마우스 오른쪽 단추로 클릭하고 
-**속성**.**고급 시스템 설정**을 클릭하십시오. 
+1.  In Windows Desktop, right-click on **This PC** and select
+    **Properties**. Click **Advanced system settings**.
 
-2. **환경 변수**를 클릭하십시오. 
+2.  Click **Environment Variables**.
 
-3. 환경 변수 창의**시스템 변수**아래에서, 
-**New**버튼을 클릭하십시오. 
+3.  In the Environment Variables window, under **System Variables**,
+    click the **New** button.
 
-4. 새 시스템 변수 창에서 변수 이름을 입력하십시오 
-**JAVA \ _HOME**, 변수 값을 입력하십시오.**C : \\ Program 
-Files \\ Java \\ jdk1.8.0 \ _121**을 선택한 다음**확인**버튼을 누릅니다. 
+4.  In the New System Variable window, enter the Variable name
+    **JAVA\_HOME**, enter the Variable value **C:\\Program
+    Files\\Java\\jdk1.8.0\_121** and then click the **OK** button.
 
     <img src="images/1/image5.png" width="363" height="106" />
 
-5. **PATH**시스템 변수를 선택하고**Edit**버튼을 클릭하십시오 (If 
-PATH 시스템 변수를 사용할 수 없으면**New**버튼을 클릭하십시오. 
-PATH 변수를 만들고, 변수 값을 입력하십시오.**C : \\ Program 
-Files \\ Java \\ jdk1.8.0 \ _121;**을 선택한 다음**확인**버튼을 누릅니다. 
+5.  Select **PATH** system variable and click the **Edit** button (If
+    PATH system variable is not available, click the **New** button to
+    create PATH variable, enter the Variable value **C:\\Program
+    Files\\Java\\jdk1.8.0\_121;** and then click the **OK** button).
 
-6. 환경 변수 편집 창에서**새로 작성**버튼을 클릭하고 
-**C : \\ Program Files \\ Java \\ jdk1.8.0 \ _121 \\ bin**을 입력 한 다음 
-**확인**버튼. 
+6.  In the Edit Environment Variable window, click **New** button and
+    enter **C:\\Program Files\\Java\\jdk1.8.0\_121\\bin** then click the
+    **OK** button.
 
     <img src="images/1/image6.png" width="177" height="194" />
 
-7. **새**단추를 클릭하여 다른 시스템 변수를 만듭니다. 
+7.  Click the **New** button to create another System Variable.
 
-8. 새 시스템 변수 창에 변수 이름을 입력하십시오 
-**CLASSPATH**, 변수 값 입력**C : \\ Program 
-Fles \\ Java \\ jdk1.8.0 \ _121 \\ lib \\ tools.jar;.;**
-세미콜론, 마침표 및 세미콜론)를 입력 한 다음 
-**확인**버튼. 
+8.  In the New System Variable window, enter the Variable name
+    **CLASSPATH**, enter the Variable value **C:\\Program
+    Fles\\Java\\jdk1.8.0\_121\\lib\\tools.jar;.;** (this has a
+    semicolon, a period, and a semicolon at the end), and then click the
+    **OK** button.
 
     <img src="images/1/image7.png" width="326" height="95" />.
 
-9. 세 개의 시스템 변수를 작성 / 갱신했습니다.**확인**을 클릭하십시오.**
-환경 변수와 시스템 닫기 버튼 
-속성 창. 
+9.  You have created/updated three system variables. Click the **OK**
+    button to close the Environment Variables and System
+    Properties windows.
 
-### JDK 설치 확인
+### Verifying the JDK Installation
 
-1. **Java 버전 확인 :** 명령 프롬프트 창을 열고 실행하십시오. 
-`java -version` 명령을 사용하십시오. 이렇게하면 JRE가 설치되어 있지만 
-JDK가 설치되어 있는지 확인하지 않습니다. 의 출력이 
-`java -version` 명령은 &quot;1.8.0 \ _121&quot;또는 그 이상을 보여줍니다. 
+1.  **Verify the Java version:** Open a Command Prompt window and run
+    the `java -version` command. This verifies that a JRE is installed but
+    does not verify that the JDK is installed. Verify that the output of
+    the `java –version` command shows “1.8.0\_121” or higher.
 
     <img src="images/1/image8.png" width="570" height="126" />
 
-## Netbeans 설치
+## Installing Netbeans
 
-다음 지침에 따라 다운로드, 설치 및 구성하십시오. 
-컴퓨터의 Netbeans IDE. 
+Use the following instructions to download, install, and configure
+Netbeans IDE on your computer.
 
-**참고 : Netbeans 8.1**은 최신 버전입니다. 
-이 문서를 만듭니다. 다운로드 할 것을 적극 권장합니다. 
-최신 버전의 IDE (사용 가능한 경우) 및이 랩 수행 
-활동. 
+**Note: Netbeans 8.1** is the latest version available at the time of
+creating this document. It is highly recommended that you download the
+newer version of the IDE (if available) and perform these lab
+activities.
 
-Netbeans 8.1 이상의 버전이 이미 설치되어있는 경우 
-그런 다음**Netbeans 설치**단계를 건너 뛰고 계속 진행하십시오. 
-**넷빈 설치 확인**단계. 
+If you already have the Netbeans 8.1 or higher version installed on your
+computer then skip **Installing Netbeans** step and proceed with
+**Verifying the Netbeans Installation** step.
 
-1. Firefox 브라우저에서 다음 위치로 이동하십시오. 
+1.  In the Firefox browser, navigate to
     <https://netbeans.org/downloads/>.
 
-2. **All**기술을 지원하는 Netbeans 8.1 버전을 다운로드하십시오. 
-마지막 열에서 
+2.  Download Netbeans 8.1 version which supports **All** technologies
+    from the last column.
 
-3. **netbeans-8.1-windows.exe**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
-너의 컴퓨터. 다운로드에는 다소 시간이 걸릴 수 있습니다. 기다려라. 
-다운로드하여 다음 단계로 진행하십시오. 
+3.  Download the **netbeans-8.1-windows.exe** installer file on to
+    your computer. The download may take some time. Wait for the
+    download to complete before proceeding to the next step.
 
-4. **netbeans-8.1-windows.exe**파일을 두 번 클릭하여 시작합니다. 
-설치. 
+4.  Double-click the **netbeans-8.1-windows.exe** file to start
+    the installation.
 
-**참고 :** &quot;다음과 같은 보안 경고가 표시되는 경우 
-다음 프로그램이이 컴퓨터를 변경하도록 허용 하시겠습니까? &quot;를 
-**예**. 
+    **Note:** If you receive a security warning such as “Do you want to
+    allow the following program to make changes to this computer?” click
+    **Yes**.
 
-5. 설치 프로그램이 열리면**사용자 정의**버튼을 클릭하고 
-확인란을 선택하여**Runtime**아래에서 Apache Tomcat 8.0.27**을 선택합니다. 
-섹션을 열고**확인**버튼을 누릅니다. 
+5.  When the installer opens, click the **Customize**… button, click the
+    check box to select **Apache Tomcat 8.0.27** under the **Runtimes**
+    section, and click the **OK** button.
 
-6. 시작 화면에서**다음**버튼을 클릭하여 계속 진행합니다 
-설치. 
+6.  Click the **Next** button on the Welcome screen to proceed with
+    the installation.
 
-7. 라이센스 계약의 조항에 동의하고 
-**다음**버튼. 
+7.  Accept the terms in the license agreement and click the
+    **Next** button.
 
-8. 기본**NetBeans IDE 설치를 수락합니다.**경로 
-NetBeans에서 올바른 설치 경로가 
-**NetBeans IDE 용**JDK에서 JDK (jdk1.8.0 \ _121)가 선택되었습니다.**
-필드를 선택하고**다음**버튼을 클릭하십시오. 
+8.  Accept the default **Install the NetBeans IDE to:** path for
+    NetBeans, make sure the correct installation path of
+    JDK (jdk1.8.0\_121) is selected in the **JDK for the NetBeans IDE:**
+    field, and click the **Next** button.
 
-9. **Glassfish**및**Apache의 기본 설치 경로를 그대로 사용합니다. 
-Tomcat**을 클릭하고**다음**버튼을 클릭하십시오.**설치**를 클릭하십시오. 
-버튼을 클릭하십시오. 
+9.  Accept the default installation path for **Glassfish** and **Apache
+    Tomcat** and click the **Next** button. Click the **Install**
+    button on the Summary window.
 
-10 . 설치 프로그램이 넷빈을 설치하고 
-&quot;**설치 완료**&quot;메시지.**마침**버튼을 클릭하십시오. 
+10. Wait until the installer installs the Netbeans and displays a
+    “**Setup Complete**” message. Click the **Finish** button.
 
-### Netbeans 설치 확인
+### Verifying the Netbeans Installation
 
-1. Netbeans 확인 :** Netbeans IDE를 시작하고 
-IDE에서 사용하는 JDK의 버전 번호를 두 번 클릭합니다. 
-**Netbeans 8.1**바탕 화면의 바로 가기. 넷빈즈는 &quot;시작 
-페이지. &quot;**도움말**메뉴를 열고**정보**를 선택하십시오. Netbeans 및 
-Java 버전은**Netbeans IDE 8.1**이어야하며 
-**Java 1.8.0 \ _121.**완료되면**닫기****정보**창. 
+1.  **Verify Netbeans:** To start the Netbeans IDE and verify the
+    version number of the JDK used by the IDE, double-click the
+    **Netbeans 8.1** shortcut on the desktop. Netbeans opens to a “Start
+    Page.” Open the **Help** menu and select **About**. The Netbeans and
+    Java versions should be **Netbeans IDE 8.1** and
+    **Java 1.8.0\_121.** When done, **Close** the **About** window.
 
-## GIT 설치
+## Installing GIT
 
-다음 지침에 따라 GIT를 다운로드, 설치 및 구성하십시오. 
-컴퓨터의 도구. 
+Use the following instructions to download, install, and configure GIT
+Tool on your computer.
 
-**참고 : GIT 2.11.0.3**은에서 사용할 수있는 최신 버전의 도구입니다. 
-이 문서를 만들 때. 그것은 당신이 
-이 도구의 최신 버전을 다운로드하십시오. 
-(가능한 경우) 실험실 활동을 수행합니다. 
+**Note: GIT 2.11.0.3** is the latest version of the tool available at
+the time of creating this document. It is highly recommended that you
+download the newer version of this tool  
+(if available) and perform these lab activities.
 
-GIT 2.11.0.3 이상의 버전이 이미 설치되어있는 경우 
-그런 다음**GIT 설치**단계를 건너 뛰고**확인하기로 진행하십시오. 
-GIT 설치**단계. 
+If you already have the GIT 2.11.0.3 or higher version installed on your
+computer then skip **Installing GIT** step and proceed with **Verifying
+the GIT Installation** step.
 
 1.  In the Firefox browser, navigate to <https://git-scm.com/downloads>
-**Windows 용 다운로드**버튼을 클릭하십시오. 
+    and click the **Downloads for Windows** button.
 
-2. **Git-2.11.0.3-64-bit.exe**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
-너의 컴퓨터. 다운로드에는 다소 시간이 걸릴 수 있습니다. 기다려라. 
-다운로드하여 다음 단계로 진행하십시오. 
+2.  Download the **Git-2.11.0.3-64-bit.exe** installer file to
+    your computer. The download may take some time. Wait for the
+    download to complete before proceeding to the next step.
 
-3. 시작하려면**Git-2.11.0.3-64-bit.exe**파일을 두 번 클릭하십시오. 
-설치. 
+3.  Double-click the **Git-2.11.0.3-64-bit.exe** file to start
+    the installation.
 
-**참고 :** &quot;다음과 같은 보안 경고가 표시되는 경우 
-다음 프로그램이이 컴퓨터를 변경하도록 허용 하시겠습니까? &quot;를 
-**예**. 
+    **Note:** If you receive a security warning such as “Do you want to
+    allow the following program to make changes to this computer?” click
+    **Yes**.
 
-4. 설치 프로그램이 열리면**다음**버튼을 클릭하십시오. 
+4.  When the installer opens, click the **Next** button.
 
-5. **GIT**의 기본 설치 경로를 그대로 사용하고 
-**다음**버튼. 
+5.  Accept the default installation path for **GIT** and click the
+    **Next** button.
 
-6. **구성 요소 선택 화면에서 기본 선택 사항을 수락하고 
-**다음**버튼을 클릭하십시오. 
+6.  Accept the default selection on the **Select Components** screen and
+    click the **Next** button.
 
-7. **시작 메뉴 폴더 선택**화면에서 기본값을 승인하십시오 
-**다음**버튼을 클릭하십시오. 
+7.  Accept the default value on the **Select Start Menu Folder** screen
+    and click the **Next** button.
 
-8. **Adjusting에서**Use Git Bash only**옵션을 선택하십시오 
-PATH 환경**화면을 열고**다음**버튼을 클릭하십시오. 
+8.  Select the **Use Git from Git Bash only** option on the **Adjusting
+    your PATH environment** screen and click the **Next** button.
 
     <img src="images/1/image9.png" width="324" height="252" />
 
-9. **라인 결말 구성에서 기본 선택을 수락하십시오 
-전환**화면에서**다음**버튼을 클릭하십시오. 
+9.  Accept the default selection on the **Configuring the line ending
+    conversions** screen and click the **Next** button.
 
-10 .**터미널 구성에서 기본 선택 사항을 수락하십시오 
-에뮬레이터에서 Git Bash**화면을 사용하고 
-**다음**버튼. 
+10. Accept the default selection on the **Configuring the terminal
+    emulator to use with Git Bash** screen and click the
+    **Next** button.
 
-11 .**추가 옵션 구성**에서 기본 선택 사항을 승인하십시오. 
-화면을 열고**다음**버튼을 클릭하십시오. 
+11. Accept the default selection on the **Configuring extra options**
+    screen and click the **Next** button.
 
-12 .**실험 구성 중 기본 선택을 그대로 적용하십시오. 
-옵션**화면에서**설치**버튼을 클릭하십시오. 때까지 기다리십시오. 
-installer는**Git 2.11.0.3**을 설치하고 &quot;**Setup has have 
-컴퓨터에 힘내 설치 완료**&quot;메시지가 나타납니다. 클릭 
-**마침**버튼. 
+12. Accept the default selection on the **Configuring experimental
+    options** screen and click the **Install** button. Wait until the
+    installer installs the **Git 2.11.0.3** and displays a “**Setup has
+    finished installing Git on your computer**” message. Click the
+    **Finish** button.
 
-### GIT 설치 확인
+### Verifying the GIT Installation
 
-1. **GIT 확인 :** Windows**시작**메뉴에서**Git Bash**열기 
-`git --version` 명령을 실행하십시오. `git의 출력 
---version` 명령은 &quot;git version 2.11.0.windows.3&quot;을 보여줍니다. 
+1.  **Verify GIT:** Open **Git Bash** from the Windows **Start** menu
+    and run the `git --version` command. Verify that the output of the `git
+    --version` command shows “git version 2.11.0.windows.3.”
 
     <img src="images/1/image10.png" width="574" height="133" />
 
-## Maven 설치하기
+## Installing Maven
 
-Maven을 다운로드, 설치 및 구성하려면 다음 지시 사항을 따르십시오. 
-귀하의 컴퓨터에. 
+Use the following instructions to download, install, and configure Maven
+on your computer.
 
-**참고 : Maven 3.3.9**는 최신 버전의 도구입니다. 
-이 문서를 만드는 시간. 그것은 당신이 
-이 도구의 최신 버전을 다운로드하고 (사용 가능한 경우)이 랩을 수행하십시오. 
-활동. 
+**Note: Maven 3.3.9** is the latest version of the tool available at the
+time of creating this document. It is highly recommended that you
+download the newer version of this tool (if available) and perform these lab
+activities.
 
-Maven 3.3.9 이상 버전이 이미 설치되어있는 경우 
-그런 다음**Maven 설치**단계를 건너 뛰고**설정으로 진행하십시오. 
-M2 \ _HOME, M2 및 PATH 환경 변수**단계에서 위로 
-필요한 환경 변수를 설정 / 확인하십시오. 
+If you already have the Maven 3.3.9 or higher version installed on your
+computer then skip **Installing Maven** step and proceed with **Setting
+Up the M2\_HOME, M2, and PATH Environment Variables** step to
+setup/verify the required environment variables.
 
-1. Firefox 브라우저에서 다음 위치로 이동하십시오. 
+1.  In the Firefox browser, navigate to
     <http://maven.apache.org/download.cgi>.
 
-2. 바이너리 ZIP 아카이브,**apache-maven-3.3.9-bin.zip**파일을 다운로드하십시오. 
-컴퓨터에 연결하십시오. 다운로드에는 다소 시간이 걸릴 수 있습니다. 기다려라. 
-다운로드하여 다음 단계로 진행하십시오. 
+2.  Download the Binary ZIP archive, **apache-maven-3.3.9-bin.zip** file
+    on to your computer. The download may take some time. Wait for the
+    download to complete before proceeding to the next step.
 
     <img src="images/1/image11.png" width="501" height="292" />
 
-3. C : \\에**Maven**이라는 디렉토리를 만들고 
-**C : \\ Maven**디렉토리에 배포 아카이브. 
+3.  Create a directory named **Maven** in C:\\ and unzip the
+    distribution archive to **C:\\Maven** directory.
 
-**참고 :** 스크린 샷에서 강조 표시된 디렉토리 구조를 달성해야합니다. 
+    **Note:** You should achieve the directory structure highlighted in the screenshot
 
     <img src="images/1/image12.png" width="348" height="160" />
 
-4. 전체 경로 (**C : \\ Maven \\ apache-maven-3.3.9**)를 복사하십시오. 
-추출이 완료되었습니다. 이것은 생성하는 데 필요합니다. 
-환경 변수. 
+4.  Copy the complete path (**C:\\Maven\\apache-maven-3.3.9**) once the
+    extraction is completed; this is required to create
+    environment variables.
 
-### Windows 7 - 환경 변수 설정
+### Windows 7 – Setting Environment Variables
 
-#### M2 \ _HOME, M2 및 PATH 환경 변수 설정 
+#### Setting Up the M2\_HOME, M2, and PATH Environment Variables
 
-**참고 :** 관리자 권한으로 컴퓨터에 로그온해야합니다. 
+**Note:** You must be logged on to your computer as the Admin user.
 
-1. Windows**시작**버튼을 클릭하십시오.**컴퓨터**를 마우스 오른쪽 버튼으로 클릭하고 
-**속성**을 선택하십시오.**고급 시스템 설정**을 클릭하십시오. 
+1.  Click the Windows **Start** button. Right-click **Computer** and
+    select **Properties**. Click **Advanced system settings**.
 
-2. **환경 변수**를 클릭하십시오. 
+2.  Click **Environment Variables**.
 
-3. 환경 변수 창의**시스템 변수**아래에서, 
-**New**버튼을 클릭하십시오. 
+3.  In the Environment Variables window, under **System Variables**,
+    click the **New** button.
 
-4. 새 시스템 변수 창에서 변수 이름을 입력하십시오 
-**M2 \ _HOME**, 변수 값을 입력하십시오 
-**C : \\ Maven \\ apache-maven-3.3.9**를 클릭 한 다음 
-**확인**버튼. 
+4.  In the New System Variable window, enter the Variable name
+    **M2\_HOME**, enter the Variable value
+    **C:\\Maven\\apache-maven-3.3.9** , and then click the
+    **OK** button.
 
     <img src="images/1/image13.png" width="341" height="147" />
 
-5. 환경 변수 창의**시스템 변수**아래에서, 
-**New**버튼을 클릭하십시오. 
+5.  In the Environment Variables window, under **System Variables**,
+    click the **New** button.
 
-새 시스템 변수 창에 변수 이름**M2**, 
-변수 값**% M2 \ _HOME % \\ bin**을 입력 한 다음 
-**확인**버튼. 
+    In the New System Variable window, enter the Variable name **M2**,
+    enter the Variable value **%M2\_HOME%\\bin** , and then click the
+    **OK** button.
 
     <img src="images/1/image14.png" width="341" height="147" />
 
-6. **PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오. 
+6.  Select the **PATH** system variable and click the **Edit** button.
 
-7. 시스템 변수 편집 창의 변수 값 필드에서, 
-커서를 마지막 위치에 놓고**; % M2 %**를 입력 한 다음 
-**확인**버튼을 클릭하십시오. 
+7.  In the Edit System Variable window, in the Variable value field,
+    place the cursor at the last position and enter **;%M2%** and then
+    click the **OK** button.
 
     <img src="images/1/image15.png" width="347" height="149" />
 
-8. **확인**버튼을 두 번 클릭하여 시스템 변수 편집을 닫고 
-시스템 속성 창 
+8.  Click **OK** button twice to to close Edit System Variable and
+    System Property windows
 
-### Windows 10 - 환경 변수 설정
+### Windows 10 – Setting Environment Variables
 
-#### M2 \ _HOME, M2 및 PATH 환경 변수 설정 
+#### Setting Up the M2\_HOME, M2, and PATH Environment Variables
 
-**참고 :** 관리자 권한으로 컴퓨터에 로그온해야합니다. 
+**Note:** You must be logged on to your computer as the Admin user.
 
-1. Windows 바탕 화면에서**이 PC**를 마우스 오른쪽 단추로 클릭하고 
-**속성**.**고급 시스템 설정**을 클릭하십시오. 
+1.  In Windows Desktop, right-click **This PC** and select
+    **Properties**. Click **Advanced system settings**.
 
-2. **환경 변수**를 클릭하십시오. 
+2.  Click **Environment Variables**.
 
-3. 환경 변수 창의**시스템 변수**아래에서, 
-**New**버튼을 클릭하십시오. 
+3.  In the Environment Variables window, under **System Variables**,
+    click the **New** button.
 
-4. 새 시스템 변수 창에서 변수 이름을 입력하십시오 
-**M2 \ _HOME**, 변수 값을 입력하십시오 
-**C : \\ Maven \\ apache-maven-3.3.9****확인**버튼을 클릭하십시오. 
+4.  In the New System Variable window, enter the Variable name
+    **M2\_HOME**, enter the Variable value
+    **C:\\Maven\\apache-maven-3.3.9** and then click the **OK** button.
 
     <img src="images/1/image16.png" width="372" height="110" />
 
-5. 환경 변수 창의**시스템 변수**아래에서, 
-**New**버튼을 클릭하십시오. 
+5.  In the Environment Variables window, under **System Variables**,
+    click the **New** button.
 
-새 시스템 변수 창에 변수 이름**M2**, 
-변수 값**% M2 \ _HOME % \\ bin**을 입력 한 다음 
-    **확인**버튼. 
+    In the New System Variable window, enter the Variable name **M2**,
+    enter the Variable value **%M2\_HOME%\\bin** , and then click the
+    **OK** button.
 
     <img src="images/1/image17.png" width="377" height="111" />
-	
-6. **PATH**시스템 변수를 선택하고**편집**버튼을 클릭하십시오. 
 
-7. 시스템 변수 편집 창의 변수 값 필드에서, 
-커서를 마지막 위치에 놓고**; % M2 %**를 입력 한 다음 
-**확인**버튼을 클릭하십시오. 
+6.  Select the **PATH** system variable and click the **Edit** button.
+
+7.  In the Edit System Variable window, in the Variable value field,
+    place the cursor at the last position and enter **;%M2%** and then
+    click the **OK** button.
 
     <img src="images/1/image18.png" width="228" height="251" />
 
-8. **확인**버튼을 두 번 클릭하여 시스템 변수 편집을 닫고 
-시스템 속성 창 
+8.  Click **OK** button twice to to close Edit System Variable and
+    System Property windows
 
-### Maven 설치 확인
+### Verifying Maven Installation
 
-1. Maven 버전 확인 :** 명령 프롬프트 창을 열고 실행 
-`mvn --version` 명령. `mvn의 출력 
---version` 명령은 다음 스크린 샷과 일치합니다 : 
+1.  **Verify the Maven version:** Open a Command Prompt window and run
+    the `mvn --version` command. Verify that the output of the `mvn
+    -–version` command matches with the following screenshot:
 
     <img src="images/1/image19.png" width="499" height="143" />
