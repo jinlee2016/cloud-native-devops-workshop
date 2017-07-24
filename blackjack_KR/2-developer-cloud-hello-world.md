@@ -1,21 +1,17 @@
 # 2 부 : Oracle Developer Cloud Service를 사용하여 Helloworld App 테스트 및 사용
 
+## Setting Proxy for Maven
 
 
 
-## Make-up
+** 중요 사항 : ** Secured 네트워크를 사용하시거나 방화벽 뒤에 있는 경우에만 해당합니다. 이 경우 Maven에 대한 프록시 설정을 위해 ** 다음 지침을 따르십시오. 그 이외에는 이 부분을 건너 뛰고 ** GIT 저장소 **을 수행하시기 바랍니다.
+
+### Proxy Settings for Maven in Netbeans
 
 
+1. C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 메모장에 놓습니다. 
 
-**중요 사항 :** 보안 네트워크 Maven을 선택하면 다음과 같은 경고 메시지가 표시됩니다. 그때는 건너 뛰기**GITistor 생성**로 이동 시도. 
-
-### Netbeans의 Maven에 대한 설정
-
-
-
-1. C : \\ Program Files \\ NetBeans 8. 1 \\ java \\ maven \\ conf \\ settings.xml 파일을 메모장에 놓습니다. 
-
-**참고 :** Mac 설정 파일. / 응용 프로그램 / NetBeans / NetBeans 8. 1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml. 
+**참고 :** Mac 설정 파일. /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml. 
 
 2.  Add the following lines under the <proxies> tag:
 
@@ -39,15 +35,14 @@
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
 임시 저장하고 파일을 저장합니다. 
 
-**참고 :** settings.xml C : \\ Program Files \ \ NetBeans 8. 1 settings \\ java \\ maven \ settings.xml 파일의 설정을 저장하는 데 문제가있을 수 있습니다. \ conf \\ (Windows) 또는 / Applications / NetBeans / NetBeans 8. 1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) 디렉토리입니다. 
+**참고 :** If you are facing problems in editing the settings.xml file, save a copy of the settings.xml file to some other location, modify it,
+and then put it back in to C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\ (Windows) or /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) directory.
 
 ### Maven의 프록시 설정
 
+1. NotePad ++와 같은 텍스트 편집기 C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml 
 
-
-1. NotePad ++와 같은 텍스트 편집기 C : \\ Maven \\ apache-maven-3. 3.9  \\ conf \\ settings.xml 
-
-**참고 :** Mac 설정 파일. /Applications/apache-maven-3. 3.9/ conf/settings.xml. 
+**참고 :** Mac 설정 파일. /Applications/apache-maven-3.3.9/conf/settings.xml. 
 
 2.  Add the following lines under the <proxies> tag:
 
@@ -71,7 +66,7 @@
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
 임시 저장하고 파일을 저장합니다. 
 
-## GIT res 만들기
+## GIT Repository 만들기
 
 
 
@@ -190,7 +185,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 7. 넷빈즈를 사용 하시려면 여기를 클릭하십시오. 
 
-8. Netbeans의**구름 / 헬로우 월드**헬프 월드 - 예**Maven 프로젝트를위한 연습. 
+8. Netbeans의**cloud/helloworld**헬프 월드 - 예**Maven 프로젝트를위한 연습. 
 
     <img src="images/2/image4.png" width="374" height="193" />
 
@@ -345,9 +340,9 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-**참고****구름 / 헬로우 월드 / 헬로우 월드 - 예 / 목표**홀트 제작**Helloworld-Example-1. 0-SNAPSHOT.jar**파일을 검사하십시오. 
+Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/helloworld/Helloworld-Example/target** directory.
 
-26. `java -jar target / Helloworld-Example-1. 0-SNAPSHOT.jar` 명령을 실행하여 응용 프로그램을 실행하십시오. 
+26. `java -jar target/Helloworld-Example-1. 0-SNAPSHOT.jar` 명령을 실행하여 응용 프로그램을 실행하십시오. 
 
     <img src="images/2/image15.png" width="454" height="120" />
 
@@ -360,7 +355,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 다음 Helloworld-Example 프로젝트에 GIT 저장하기 
 
-1. cloud / helloworld 디렉토리로 바꾸기. 
+1. cloud/helloworld 디렉토리로 바꾸기. 
 
 2. `git add -n .` 명령을 실행하여 추가 준비가 된 파일의 목록을보십시오. 
 
@@ -400,15 +395,15 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 ## 개발자 클라우드 서비스 프로젝트 만들기
 
+이 작업의 일부로 복제 정책을 선택합니다 (복제 정책을 선택하면 Identity Domain 관리자가 아직 수행하지 않은)
+기본 데이터 센터는 또한 데이터가 있어야하는지 여부를 지정합니다.
+지리적으로 멀리 떨어져있는 (보조) 데이터 센터에 복제됩니다.
 
+이전 Step에서 개발자 클라우드 서비스에 생성한 application Helloworld-Example을 push하기 위한, (HelloworldProjectRepo)의 repository를 포함한 빈 (HelloworldProject) 프로젝트 만드십시오.
 
-이 액티비티는 기본 데이터 센터에서 정보를 정의하고 데이터를 지우면 데이터를 복제하거나 복제 할 수 있습니다. 
+** 참고 : ** 이 실습 부분을 수행하려면 클라우드 로그인 자격 증명 및 링크가 필요합니다. 오라클로부터 받은 이메일에서 이 정보를 수집하고 편리하게 보관하십시오.
 
-(HelloworldProjectRepo) HelloworldProject (HelloworldProject)를 사용하여 응용 프로그램을 다운로드 할 수 있습니다. 
-
-**참고 :** 연습의 부분은 돈돈 자격 증명 및 링크가 필요합니다. 그곳에서 정보를 수집하고 즐기십시오. 
-
-## storage layer configuration
+## 저장소 복제 정책 구성
 
 
 
@@ -450,14 +445,14 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-7. 모든**스토리지**클라우드 서비스는 보이지 않는 폴더**대시 보드 사용자 정의****************************************응용 프로그램 컨테이너, 개발자 및 저장 장치. 특별한 서비스를 받으려면 클릭하십시오. 
+7. 모든 ** 스토리지 ** 클라우드 서비스가 보이지 않으면 ** 대시 보드 사용자 정의 **에서 **를 클릭하고 **보기를 클릭하여 대시 보드에 서비스를 추가 할 수 있습니다 **이 워크샵의 경우 적어도 ** 응용 프로그램 컨테이너, 개발자 및 저장소 ** 클라우드 서비스를 표시하고 있는지 확인하십시오. 특정 서비스를 보지 않으려면 ** 숨기기 **를 클릭하십시오.
 
     <img src="images/2/Picture100-5.png" />
 
 
 
 
-### 스토리지 계층화 정책 확인 / 설정
+### 스토리지 계층화 정책 확인/설정
 
 
 
@@ -582,33 +577,29 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-## GIT 저장소
+## GIT 저장소 복제
 
 
 
-다음 지침에 따라 Helloworld-Example 프로젝트 호스팅 패키지를 Ghost에 저장하십시오. 
+다음 지침에 따라 Hello World-Example 프로젝트를 개발자 클라우드 서비스의 GIT 저장소에 복제하십시오.
+1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리 인 cloud/helloworld 디렉토리로 변경하십시오.
 
-1. GIT 스토리지를 사용하여 클라우드 / helloworld를 변경하십시오. 
-
-2. `git clone`을 실행하십시오. https / ora1  @ developer.em2. oraclecloud.com / developer85599- ouopc084  / s / developer85599- ouopc084_ helloworldproject_3753  / scm / HelloworldProjectRepo.git` 
+2. git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git` 실행
 
     <img src="images/2/image43.png" width="427" height="111" />
 
 
 
 **참고 :** 
-- 사용자가 암호를 입력하면 암호를 입력하십시오. 
-명령이 403  오류로 실패하고 명시 적으로 암호를 언급합니다        the GIT repository URL. For example: `git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git`
+- 메시지가 표시되면 클라우드 계정 사용자 이름과 암호를 입력하십시오.
+- 사용자 이름과 암호를 입력하라는 메시지가 표시되지 않고 이 명령이 403 오류로 실패하면 암호를 명시적으로 넣으십시오. For example: `git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git`
 
 
-- 명령의 출력은 명령의 출력과 유사합니다. 위의 스크린 샷. 
+3. ** helloworldProjectRepo **라는 이름의 새 디렉토리가 ** cloud/helloworld ** 디렉토리에 생성됩니다.
 
+4. Helloworld-Example ** 프로젝트 디렉토리를 ** cloud/helloworld ** 디렉토리에서 ** HelloworldProjectRepo ** 디렉토리로 복사하여 붙여 넣습니다.
 
-3. **helloworldProjectRepo**클라우드 / helloworld**를 생성합니다. 
-
-4. **helloworld - 예제**프로젝트 디렉토리에서**cloud / helloworld**디렉토리에서**HelloworldProjectRepo**디렉토리로 복사를 시도하십시오. 
-
-**참고 :** HelloworldProjectRepo**디렉토리의 내용은 스크린 샷과 일치합니다. 
+** 참고 : ** HelloworldProjectRepo ** 디렉토리의 내용은 아래 스크린 샷과 일치해야합니다.
 
 <img src="images/2/image44.png" width="441" height="89" />
 
@@ -632,13 +623,13 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-8. 자선 서비스의 저장고를 푸시합니다. 
+8. 개발자 클라우드 서비스의 저장소로 파일을 푸시합니다.
 
         git push origin master
 
 
 
-9. 차량 대여 서비스를 푸시 한 파일을 확인하십시오. 
+9. 개발자 클라우드 서비스로 전환하여 저장소에 푸시 된 파일을 확인합니다.
 
 10. **HelloworldProject**홈 페이지에서**HelloworldProjectRepo.git**를 클릭하십시오. 
 
@@ -646,7 +637,7 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-11. **Helloworld - 예**프로젝트의 길잡이는 자원 봉사자의 수퍼 스타가됩니다. 클릭하고 내용을 확인하십시오. 
+11. **Helloworld-Example** 프로젝트 디렉토리가 개발자 클라우드 서비스의 저장소로 푸시되었습니다. 그것을 클릭하고 내용을 확인하십시오.
 
     <img src="images/2/image46.png" width="385" height="153" />
 
@@ -676,9 +667,9 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-3. **주**탭에서 다음 값을 입력하십시오. 
+3. **Main**탭에서 다음 값을 입력하십시오. 
 
-- 조정. 
+- 조정이 필요한 경우 작업 이름을 편집하십시오.
 - 설명을 입력하십시오. 
 - **JDK**를**JDK 8로 설정하십시오.**
 
@@ -698,8 +689,8 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 5. **설치 단계**탭을 클릭하십시오. 
 
 - Maven 3를 선택하고 빌드를 선택하십시오. 
-- **목표**를 클린턴으로 설정하십시오. 
-- **POM 파일**위치 Helloworld-Example / pom.xml로 설정하십시오. 
+- **목표**를 clean package으로 설정하십시오. 
+- **POM 파일**위치 Helloworld-Example/pom.xml로 설정하십시오. 
 
     <img src="images/2/image52.png" width="441" height="189" />
 
@@ -713,8 +704,8 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 6. **게시물 작성**탭을 클릭하십시오. 
 
 - 아티팩트 아크를 선택하십시오. 
-- Helloworld-Example / target / Helloworld-Example-1. 0-SNAPSHOT.jar 
-- 압축 유형을 선택하지 않으면 설정합니다. 
+- Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar 
+- Set Compression Type to NONE. 
 
     <img src="images/2/image54.png" width="443" height="184" />
 
@@ -722,12 +713,10 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 7. 저장**다음을 클릭하십시오**지금 클릭하십시오.**
 
-Helloworld-Example / target / Helloworld-Example-1. 0-SNAPSHOT.jar에 대한 요약을 참고하십시오. 파일 이름을 클릭하면 다운로드 할 수 있습니다. 
+빌드가 성공적으로 완료되면 파일이 표시됩니다.
+Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar은 ** 마지막으로 성공한 빌드의 인공물 ** 섹션에 있습니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다.
 
-더 많은 정보를 얻으려면 로그인하십시오**더 많이 읽음 로그인 더 이상 선택하지 않으셨습니까? 
-
+빌드가 실패한 경우 다시 빌드 작업 구성을 확인하십시오. 또는 ** Git Logs **를 클릭하여 오류에 대한 추가 정보를 확인하십시오.
 <img src="images/2/image55.png" width="453" height="183" />
 
-
-
-Maven 프로젝트 생성, Maven 프로젝트 저장, DevCS 활성화, DevCS에서의 프로젝트 생성, GIT 저장소 생성, DevCode 생성, 생성하기.
+이를 통해 로컬 GIT 저장소 생성, Maven 프로젝트 생성, 로컬 GIT 저장소에 Maven 프로젝트 저장, DevCS 활성화, DevCS에서 프로젝트 및 GIT 저장소 생성, 프로젝트를 DevCS로 복제 한 다음 배포를 위해 빌드 작업을 성공적으로 완료했습니다.
