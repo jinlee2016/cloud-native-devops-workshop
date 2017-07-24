@@ -24,5 +24,5 @@ Lab을 시도하기 전에 Lab 안내서의 링크 된 문서 [Windows](http://w
 - [Helloworld-Example.zip](Helloworld-Example.zip) 
 - [pom.xml](pom.xml) 
 
-문제를 기록하고 랩 가이드 소스를 보려면 [oracle git repository](https://github.com/oracle/cloud-native-devops-workshop)로 이동하십시오. 
+문제를 기록하고 랩 가이드 소스를 보려면 [oracle git repository](https://github.com/oracleCloudKr/cloud-native-devops-workshop)로 이동하십시오. 
 
