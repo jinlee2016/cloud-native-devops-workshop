@@ -186,18 +186,18 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 12 . dependencies 요소 뒤에 빌드 및 플러그 인에 대한 요소를 추가하십시오. 
 
-    ```xml
+```xml
     <build>
       <plugins>
       <!-- Your plugins go here -->
       </plugins>
     </build>
-    ```
+```
 
 
 13 . 플러그인 섹션에 컴파일러 플러그인의 구성을 추가합니다. 
 
-    ```xml
+```xml
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-compiler-plugin</artifactId>
@@ -207,12 +207,12 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
         <target>1.8</target>
       </configuration>
     </plugin>
-    ```
+```
 
 
 14 . pom.xml 파일에 exec 플러그인을 추가하십시오. 
 
-    ```xml
+```xml
     <plugin>
       <groupId>org.codehaus.mojo</groupId>
       <artifactId>exec-maven-plugin</artifactId>
@@ -228,12 +228,12 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
         <mainClass>com.example.App</mainClass>
       </configuration>
     </plugin>
-    ```
+```
 
 
 15 . pom.xml 파일에 JAR 플러그인을 추가하십시오. 
 
-    ```xml
+```xml
     <plugin>
       <groupId>org.apache.maven.plugins</groupId>
       <artifactId>maven-jar-plugin</artifactId>
@@ -246,7 +246,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
         </archive>
       </configuration>
     </plugin>
-    ```
+```
 
 
 16 . 소스 창에서 **pom.xml**파일을 마우스 오른쪽 단추로 클릭하고 **서식**을 선택하여 파일의 들여 쓰기를 수정하십시오. 
