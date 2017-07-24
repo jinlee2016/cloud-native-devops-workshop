@@ -64,7 +64,7 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
     SE” to download the software. Click the **Accept License
     Agreement** button.
 
-4.**jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
+4. **jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
     your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
