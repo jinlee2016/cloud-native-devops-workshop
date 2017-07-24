@@ -201,7 +201,7 @@ GIT 설치**활동.
 
 ### GIT 설치 확인
 
-1. **GIT 연장 확인 :**터미널 창에서 &#39;자녀 
+1. **GIT 연장 확인 :** 터미널 창에서 &#39;자녀 
 --version 명령. `git --version`의 결과가 나옵니까? 
 명령 &quot;git version 2.10.1 (Apple Git-78)&quot; 
 
