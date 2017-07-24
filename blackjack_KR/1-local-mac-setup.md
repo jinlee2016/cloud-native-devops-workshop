@@ -52,7 +52,7 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 그런 다음**JDK 활동 설치**를 건너 뛰고**Java 설정으로 진행하십시오. 
 환경 변수**환경 변수를 설정 / 검증하는 활동. 
 
-1. 브라우저를 열고 
+A. 브라우저를 열고 
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
 2. **다운로드** 탭을 클릭하고 최신 버전을 다운로드하십시오. 
