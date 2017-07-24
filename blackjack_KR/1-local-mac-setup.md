@@ -17,8 +17,8 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 
 ## 소프트웨어 다운로드 목록
 
-| **이름 및 버전**|**다운로드 링크**| 
-| ---------------------------- | -------------------- ------------------------------------------------- | 
+| **이름 및 버전**       | **다운로드 링크**                                                   |
+| ---------------------------- | -------------------- ------------------------------------------------- |
 | **JDK 8 or higher**        | <http://www.oracle.com/technetwork/java/javase/overview/index.html> |
 | **Netbeans 8.1 or higher** | <https://netbeans.org/downloads/>                                   |
 | **GIT 2.10.1 or higher** | <https://git-scm.com/downloads>                                     |
