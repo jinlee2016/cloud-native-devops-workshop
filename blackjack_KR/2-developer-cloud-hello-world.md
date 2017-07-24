@@ -152,7 +152,7 @@ mvn archetype : 생성 -DgroupId = com.example -DartifactId = Helloworld-Example
 
 **참고 :** 이 명령의 출력은 다음 스크린 샷의 출력과 유사해야합니다. 
 
-    <img src="images/2/image3.png" width="317" height="363" />
+<img src="images/2/image3.png" width="317" height="363" />
 
 6. 이 명령은 이름이 지정된 빈 Maven 프로젝트를 만듭니다. 
 **Helloworld - 예**. 디렉토리 구조를 검사하고 기록하십시오. 
@@ -540,11 +540,11 @@ git push origin master
 9. 개발자 클라우드 서비스로 전환하여 개발자 클라우드 서비스로 푸시 된 파일을 확인합니다. 
 저장소 
 
-10 .**HelloworldProject**홈 페이지에서**HelloworldProjectRepo.git**를 클릭하십시오. 
+10. **HelloworldProject**홈 페이지에서**HelloworldProjectRepo.git**를 클릭하십시오. 
 
     <img src="images/2/image45.png" width="378" height="150" />
 
-11 .**Helloworld-Example**프로젝트 디렉토리가 푸시되었습니다. 
+11. **Helloworld-Example**프로젝트 디렉토리가 푸시되었습니다. 
 개발자 클라우드 서비스의 저장소에 저장합니다. 그것을 클릭하고 확인하십시오. 
 그것의 내용. 
 
@@ -576,10 +576,10 @@ git push origin master
 
 4. **소스 제어**탭을 클릭하십시오. 
 
--**Git**를 저장소로 선택하십시오. 
--**URL**의 경우 Git 저장소의 URL을 선택하십시오. 
+- **Git**를 저장소로 선택하십시오. 
+- **URL**의 경우 Git 저장소의 URL을 선택하십시오. 
 
-    <img src="images/2/image51.png" width="433" height="211" />
+<img src="images/2/image51.png" width="433" height="211" />
 
 5. **빌드 단계**탭을 클릭하십시오. 
 
@@ -609,7 +609,7 @@ Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar in
 빌드가 실패한 경우 다시 빌드 작업 구성을 확인하십시오. 
 또는**Git Logs**를 클릭하여 오류에 대한 추가 정보를 확인하십시오. 
 
-    <img src="images/2/image55.png" width="453" height="183" />
+<img src="images/2/image55.png" width="453" height="183" />
 
 이를 통해 로컬 GIT 생성을 성공적으로 마쳤습니다. 
 저장소, Maven 프로젝트 생성하기, Maven 프로젝트를 로컬에 저장하기 
