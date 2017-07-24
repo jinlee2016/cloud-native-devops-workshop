@@ -52,29 +52,29 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 그런 다음**JDK 활동 설치**를 건너 뛰고**Java 설정으로 진행하십시오. 
 환경 변수**환경 변수를 설정 / 검증하는 활동. 
 
-ㄱ. 브라우저를 열고 
+1. 브라우저를 열고 
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
-가. **다운로드** 탭을 클릭하고 최신 버전을 다운로드하십시오. 
+2. **다운로드**탭을 클릭하고 최신 버전을 다운로드하십시오. 
     JDK available. In this case, we are downloading JDK-8U121.
 
     <img src="images/1m/image1.png" width="504" height="258" />
 
-가). &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
+3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
     SE” to download the software. Click the **Accept License
     Agreement** button.
 
-a). **jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
+4. **jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
     your computer. The download may take some time. Wait for the
     download to complete before proceeding to the next step.
 
 5. **jdk-8u121-macosx-x64.dmg**파일을 두 번 클릭하여 시작합니다. 
     the installation.
 
-A. **JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
+6. **JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
     Development Kit in JDK 8 updates 121 window.
 
-a. 설치 프로그램이 열리면**계속**버튼을 클릭하십시오. 
+7. 설치 프로그램이 열리면**계속**버튼을 클릭하십시오. 
     Introduction screen.
 
 8. 설치 유형 화면에서 설치 버튼을 클릭합니다. 들어가다 
@@ -106,7 +106,7 @@ JAVA \ _HOME 및 PATH 설정에 대한 다음 지시 사항을 사용하십시�
 
 ### JDK 설치 확인
 
-1.**Java 버전 확인 :**터미널 창을 열고 java 
+1. **Java 버전 확인 :**터미널 창을 열고 java 
     -version` command. This verifies that a JRE is installed but does not
     verify that the JDK is installed. Verify that the output of the `java
     –version` command shows “1.8.0\_121” or higher.
@@ -130,16 +130,16 @@ Netbeans 설치**단계.
 1. Firefox 브라우저에서 다음 위치로 이동하십시오. 
     <https://netbeans.org/downloads/>.
 
-2.**모든**기술을 지원하는 Netbeans 8.1 버전 다운로드 
+2. **모든**기술을 지원하는 Netbeans 8.1 버전 다운로드 
     the last column.
 
-3.**netbeans-8.1-macosx.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
+3. **netbeans-8.1-macosx.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
     your computer. Download may take some time. Wait for the download to
     complete before proceeding to the next step.
 
-4.**netbeans-8.1-macosx.dmg**파일을 두 번 클릭하여 설치 프로그램을 엽니 다. 
+4. **netbeans-8.1-macosx.dmg**파일을 두 번 클릭하여 설치 프로그램을 엽니 다. 
 
-5.**Netbeans 8.1.pkg**를 두 번 눌러 설치를 시작하십시오. 
+5 .**Netbeans 8.1.pkg**를 두 번 눌러 설치를 시작하십시오. 
 
 6. 보안 경고 창에서**계속**버튼을 클릭하십시오. 
 
@@ -150,12 +150,12 @@ Netbeans 설치**단계.
 
 9. 기본 설치 위치를 채택하십시오. 
 
-10.**사용자 정의**버튼을 클릭하고**Apache Tomcat을 선택하려면 확인란을 클릭하십시오. 
+10 .**사용자 정의**버튼을 클릭하고**Apache Tomcat을 선택하려면 확인란을 클릭하십시오. 
     8.0.27**, and click **Install** button.
 
-11. 프롬프트가 표시되면 관리자 사용자 이름과 암호를 입력하십시오. 
+11 . 프롬프트가 표시되면 관리자 사용자 이름과 암호를 입력하십시오. 
 
-12. 설치 프로그램이 넷빈을 설치하고 &quot;**
+1 2. 설치 프로그램이 넷빈을 설치하고 &quot;**
     Install was Successful.**” message. Click the **Close** button.
 
 ### Netbeans 설치 확인
@@ -189,11 +189,11 @@ GIT 설치**활동.
 
     **Note:** This command installs GIT tool if it is not installed already.
 
-2.**설치**버튼을 클릭하십시오. 
+2. **설치**버튼을 클릭하십시오. 
 
     <img src="images/1m/image6.png" width="457" height="190" />
 
-3.**Agree**버튼을 클릭하여 사용권 계약에 동의하십시오. 
+3. **Agree**버튼을 클릭하여 사용권 계약에 동의하십시오. 
 
 4. 설치 프로그램이 GIT 도구를 다운로드하여 설치할 때까지 기다렸다가 
     displays a “**The Software was installed.**” message. Click the
@@ -201,7 +201,7 @@ GIT 설치**활동.
 
 ### GIT 설치 확인
 
-1.**GIT Tool 확인 :**터미널 창을 열고`git 
+1. **GIT Tool 확인 :**터미널 창을 열고`git 
     --version` command. Verify that the output of the `git --version`
     command shows “git version 2.10.1 (Apple Git-78)”
 
@@ -246,13 +246,13 @@ M2 \ _HOME 및 PATH 환경 설정에 대한 다음 지시 사항을 사용하십
 
 1. 터미널 창을 열고`vim ~ / .bash_profile` 명령을 실행하십시오. 
 
-2.**~ / .bash \ _profile**파일을 명령으로 업데이트하십시오 
+2. **~ / .bash \ _profile**파일을 명령으로 업데이트하십시오 
     mentioned below.
 
         export M2_HOME=/Applications/apache-maven-3.3.9
         export PATH=$PATH:$M2_HOME/bin
 
-3.**~ / .bash \ _profile**파일을 저장하십시오. 
+3. **~ / .bash \ _profile**파일을 저장하십시오. 
 
     <img src="images/1m/image9.png" width="469" height="295" />
 
