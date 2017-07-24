@@ -423,7 +423,7 @@ Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/
 
 
 
-3. ****중요**- 내 서비스에서 드롭 다운 목록에서 올바른 데이터 센터를 선택하고**내 서비스**를 클릭하십시오. 직접 선택 데이터 센터에서 알 수없는 경우 개인 훈련 이벤트입니다.***강좌**에**Local**에있는 드롭 다운 목록에서 선택하십시오. 평가판을 사용하여 평가판을 작성하십시오 로컬에서 사전 선택하는 URL을 제공하십시오. 
+3. ** 중요 ** - 내 서비스에서 올바른 데이터 센터를 드롭 다운 목록에서 선택하고 ** 내 서비스 **를 클릭하십시오. 직접 선택해야하는 데이터 센터를 알지 못하는 경우 이것은 개인 훈련 이벤트입니다. *** 강사 **에게 ** Region **에 드롭 다운 목록에서 선택하도록 요청하십시오. 오라클 평가판을 통해 계정을받은 경우 평가판 확인 이메일에 해당 지역을 사전 선택하는 URL이 제공되어야합니다.
 
     <img src="images/2/Picture100-2.png" />
 
@@ -431,7 +431,7 @@ Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/
 
 4. ID 도메인을 선택하고**이동**을 클릭하십시오. 
 
-**참고 :** **ID ID, 사용자 이름**및**비밀번호**값 또는 강좌 또는 시험판 확인 이메일이 있습니다. 
+** 참고 : ** ** ID 도메인, 사용자 이름 ** 및 ** 비밀번호 ** 값은 강사 또는 시험판 확인 이메일에서 제공됩니다.
 
 5. 로그인을 클릭하고 로그인하십시오. 
 
@@ -452,13 +452,14 @@ Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/
 
 
 
-### 스토리지 계층화 정책 확인/설정
+### Check/Set Storage Replication Policy
 
 
 
-이전 버전의 복제 정책을 사용하면 복제 정책을 사용하지 않을 수 있습니다. 스토리지 클라우드 서비스가 복제 정책의 상태를 확인하십시오. 
+클라우드 계정의 상태에 따라 이전에 복제 정책을 설정하지 않은 경우 복제 정책을 설정해야 할 수 있습니다. 이 단계에서는 Storage Cloud Service를 통해 복제 정책의 상태를 확인합니다.
 
-1. **스토리지**클라우드 서비스를 클릭하십시오.    <img src="images/2/Picture-01.png" />
+1. **스토리지**클라우드 서비스를 클릭하십시오.    
+<img src="images/2/Picture-01.png" />
 
 
 
@@ -468,13 +469,13 @@ Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/
 
 
 
-3. 대화 상자는 복제 정책을 사용하여 복제 정책을 설명합니다. 기본값을 사용하고 정책 설정**버튼을 클릭하십시오. 이 정책은 워크샵에 준비가되었습니다. 
+3. 후속 대화 상자가 표시되면 복제 정책을 변경할 때 변경할 수 없으므로 복제 정책을 설정할 때주의해야합니다. 기본값을 가져 와서 ** 정책 설정 ** 버튼을 클릭하십시오. 메시지가 표시되지 않으면 복제 정책이 이미 설정되고 클라우드 계정이 Workshop에 대한 준비가되었습니다. 
 
     <img src="images/2/Picture-02.5.png" />
 
 
 
-4. 지금까지 복제 정책을 설정하고 실행 창을 닫으십시오. 
+4. 복제 정책이 설정되었으므로 브라우저 창을 닫을 수 있습니다.
 
 
 
@@ -482,22 +483,22 @@ Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/
 
 
 
-Oracle Storage Cloud Service에서 대시 보드**페이지에서**스토리지**링크를 클릭하십시오. 결과 페이지에서**서비스 내용 : Oracle Storage Cloud Service를 확장하십시오.**Oracle Storage Cloud Service 인스턴스의 세부 사항이 표시됩니다. 다음으로 스크린 샷을 펼치기 복제 정책 필드를 찾으십시오. 
+Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 확인하려면 ** 대시 보드 ** 페이지에서 ** 스토리지 ** 링크를 클릭하십시오. 결과 페이지에서 ** 서비스 세부 사항 : Oracle Storage Cloud Service를 확장하십시오. ** Oracle Storage Cloud Service 인스턴스의 세부 사항이 표시됩니다. 다음 스크린 샷에 강조 표시된 복제 정책 필드를 찾으십시오.
 
 <img src="images/2/image30.png" width="348" height="116" />
 
 
 
 
-## 학생 클라우드 서비스 활성화 및 새 프로젝트 만들기
+## 개발자 클라우드 서비스 활성화 및 새 프로젝트 만들기
 
 
 
-DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생성하고, DevCS GIT 저장소를 사용하여 로컬 빌드 프로젝트를 생성하고 생성합니다. 
+이번 활동에서는 개발자 클라우드 서비스를 활성화하고, DevCS에서 새 프로젝트를 만들고, DevCS에서 GIT 저장소를 만들고, DevCS GIT 저장소를 사용하여 로컬로 빌드 된 프로젝트를 복제하고 배포를위한 빌드 작업을 생성 할 것입니다.
 
 다음 지시 사항에 따라 DevCS를 활성화하고 새 프로젝트를 수행하십시오. 
 
-1. 개발자 서비스는 보이지 않습니다.**개발자**서비스**버튼을 클릭하고**앱 컨테이너**에 대한**표지**버튼을 클릭하십시오. 대시 보드에 표시됩니다. 
+1. 계정에 할당 된 서비스는 대시 보드에 표시됩니다. ** 개발자 ** 서비스가 보이지 않으면 ** 대시 보드 사용자 정의 ** 버튼을 클릭하고 ** 애플리케이션 컨테이너** 에 대한 **표시** 버튼을 클릭하여 대시 보드에 표시하십시오.
 
     <img src="images/2/image31.png" width="378" height="237" />
 
@@ -509,7 +510,7 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-3. 서비스를 다시 클릭하십시오.**버튼을 클릭하십시오. 
+3. ** 서비스 콘솔 열기 ** 버튼을 클릭하십시오.
 
     <img src="images/2/image33.png" width="399" height="195" />
 
@@ -521,13 +522,13 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-5. 다음 화면을 클릭하고**다음을 클릭하십시오**. 
+5. 다음 스크린 샷과 같이 프로젝트 이름 및 설명을 입력하고 ** 다음 **을 클릭하십시오.
 
     <img src="images/2/image35.png" width="399" height="288" />
 
 
 
-6. 프로젝트를 클릭하고**다음을 클릭하십시오.**
+6. ** 빈 프로젝트 ** 템플릿을 클릭하고 ** 다음** 을 클릭하십시오.
 
     <img src="images/2/image36.png" width="378" height="271" />
 
@@ -539,14 +540,14 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-8. 프로비저닝 HelloworldProject는 분분하면됩니다. HelloworldProject 홈 화면으로 돌아 가기 
+8. 프로비저닝 HelloworldProject는 몇 분이 걸릴 수 있습니다. 모든 모듈이 프로비저닝되고 HelloworldProject 홈 화면으로 리디렉션 될 때까지 기다리십시오.
 
     <img src="images/2/image38.png" width="388" height="141" />
 
 
 
 
-## GITector에서 제공하는 패키지 배송 서비스
+## 개발자 클라우드 서비스에서 GIT 저장소 만들기
 
 
 
@@ -558,19 +559,19 @@ DevCS에서 새 프로젝트를 개발하고, DevCS에서 GIT 저장소를 생�
 
 
 
-2. New Repository (새 저장소) 다음을 클릭하십시오.****을 (를) 작성하십시오. 
+2. New Repository 창에서 다음 스크린 샷과 같이 저장소 이름과 설명을 입력하고 ** Create **를 클릭하십시오.
 
     <img src="images/2/image40.png" width="351" height="282" />
 
 
 
-3. 저장소를 생성합니다. HelloworldProjectRepo 저장소 HelloworldProjectRepo 홈 페이지에서 새로 고침. 
+3. 저장소를 만드는 데 몇 분이 걸릴 수 있습니다. HelloworldProjectRepo 저장소가 만들어지고 HelloworldProjectRepo 홈 페이지로 리디렉션 될 때까지 기다립니다.
 
     <img src="images/2/image41.png" width="384" height="103" />
 
 
 
-4. HelloworldProjectRepo 홈 페이지에서 HTTP를 클릭하고 URL을 복사하십시오. 
+4. HelloworldProjectRepo 홈 페이지에서 HTTP 탭을 클릭하고 URL을 복사하십시오.
 
     <img src="images/2/image42.png" width="384" height="106" />
 
