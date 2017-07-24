@@ -176,12 +176,12 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 11 . 종속성 섹션 앞에 다음 특성 설정을 파일에 추가하십시오. 프로젝트의 자바 버전과 인코딩을 설정합니다. 
 
-    ```xml
+```xml
     <properties>
       <java.version>1.8</java.version>
       <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    ```
+```
 
 
 12 . dependencies 요소 뒤에 빌드 및 플러그 인에 대한 요소를 추가하십시오. 
