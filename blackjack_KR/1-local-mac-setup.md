@@ -17,8 +17,8 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 
 ## 소프트웨어 다운로드 목록
 
-| **이름 및 버전**       | **다운로드 링크**| 
-| ----------------------------|---------------------------------------------------------------------| 
+|**이름 및 버전**|**다운로드 링크**| 
+|----------------------------|---------------------------------------------------------------------|
 | **JDK 8 or higher**        | <http://www.oracle.com/technetwork/java/javase/overview/index.html> |
 | **Netbeans 8.1 or higher** | <https://netbeans.org/downloads/>                                   |
 | **GIT 2.10.1 or higher** | <https://git-scm.com/downloads>                                     |
@@ -56,33 +56,33 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
 2. **다운로드**탭을 클릭하고 최신 버전을 다운로드하십시오. 
-    JDK available. In this case, we are downloading JDK-8U121.
+JDK를 사용할 수 있습니다. 여기서는 JDK-8U121을 다운로드 중입니다. 
 
     <img src="images/1m/image1.png" width="504" height="258" />
 
 3. &quot;Java 용 Oracle 이진 코드 라이센스 계약&quot;에 동의해야합니다. 
-    SE” to download the software. Click the **Accept License
-    Agreement** button.
+SE &quot;를 클릭하여 소프트웨어를 다운로드하십시오.**라이센스 수락을 클릭하십시오. 
+계약**버튼. 
 
 4. **jdk-8u121-macosx-x64.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
-    your computer. The download may take some time. Wait for the
-    download to complete before proceeding to the next step.
+너의 컴퓨터. 다운로드에는 다소 시간이 걸릴 수 있습니다. 기다려라. 
+다운로드하여 다음 단계로 진행하십시오. 
 
 5. **jdk-8u121-macosx-x64.dmg**파일을 두 번 클릭하여 시작합니다. 
-    the installation.
+설치. 
 
 6. **JDK 8 Update 121.pkg**아이콘을 두 번 클릭하여 Java를 설치합니다. 
-    Development Kit in JDK 8 updates 121 window.
+JDK 8 업데이트 키트의 개발 키트. 
 
 7. 설치 프로그램이 열리면**계속**버튼을 클릭하십시오. 
-    Introduction screen.
+소개 화면. 
 
 8. 설치 유형 화면에서 설치 버튼을 클릭합니다. 들어가다 
-    administrator user name and password if prompted.
+메시지가 표시되면 관리자 사용자 이름과 암호. 
 
 9. 설치 프로그램이 JDK를 성공적으로 설치하고 표시 할 때까지 기다립니다. 
-    a “The installation was completed successfully” message. Click
-    the **Close** button.
+a &quot;설치가 성공적으로 완료되었습니다.&quot;라는 메시지가 나타납니다. 딸깍 하는 소리 
+**닫기**버튼. 
 
 ### Java 환경 변수 설정
 
@@ -97,8 +97,8 @@ JAVA \ _HOME 및 PATH 설정에 대한 다음 지시 사항을 사용하십시�
 
 2. ~ / .bash \ _profile 파일을 아래 명령으로 업데이트하십시오 
 
-        export JAVA_HOME=$(/usr/libexec/java_home)
-        export PATH=$PATH:$JAVA_HOME/bin
+export JAVA_HOME = $ (/ usr / libexec / java_home) 
+export PATH = $ PATH : $ JAVA_HOME / bin 
 
 3. ~ / .bash \ _profile 파일을 저장하십시오. 
 
@@ -107,9 +107,9 @@ JAVA \ _HOME 및 PATH 설정에 대한 다음 지시 사항을 사용하십시�
 ### JDK 설치 확인
 
 1. **Java 버전 확인 :**터미널 창을 열고 java 
-    -version` command. This verifies that a JRE is installed but does not
-    verify that the JDK is installed. Verify that the output of the `java
-    –version` command shows “1.8.0\_121” or higher.
+-version` 명령을 사용하십시오. 이렇게하면 JRE가 설치되었지만 설치되지 않았 음을 확인할 수 있습니다. 
+JDK가 설치되어 있는지 확인하십시오. java의 출력이 
+-version` 명령은 &quot;1.8.0 \ _121&quot;이상을 표시합니다. 
 
     <img src="images/1m/image3.png" width="556" height="115" />
 
@@ -131,41 +131,41 @@ Netbeans 설치**단계.
     <https://netbeans.org/downloads/>.
 
 2. **모든**기술을 지원하는 Netbeans 8.1 버전 다운로드 
-    the last column.
+마지막 열. 
 
 3. **netbeans-8.1-macosx.dmg**설치 프로그램 파일을 다음 위치로 다운로드하십시오. 
-    your computer. Download may take some time. Wait for the download to
-    complete before proceeding to the next step.
+너의 컴퓨터. 다운로드에는 시간이 걸릴 수 있습니다. 다운로드를 기다리십시오. 
+다음 단계로 진행하기 전에 완료하십시오. 
 
 4. **netbeans-8.1-macosx.dmg**파일을 두 번 클릭하여 설치 프로그램을 엽니 다. 
 
-5 .**Netbeans 8.1.pkg**를 두 번 눌러 설치를 시작하십시오. 
+5. **Netbeans 8.1.pkg**를 두 번 눌러 설치를 시작하십시오. 
 
 6. 보안 경고 창에서**계속**버튼을 클릭하십시오. 
 
 7. 소개 화면에서**계속**버튼을 클릭하십시오. 
 
 8. 소프트웨어 사용권 계약 창에서 조건에 동의하고 확인을 클릭합니다. 
-    the **Continue** button.
+**계속**버튼. 
 
 9. 기본 설치 위치를 채택하십시오. 
 
 10 .**사용자 정의**버튼을 클릭하고**Apache Tomcat을 선택하려면 확인란을 클릭하십시오. 
-    8.0.27**, and click **Install** button.
+8. 0.27**을 선택하고**설치**버튼을 클릭하십시오. 
 
 11 . 프롬프트가 표시되면 관리자 사용자 이름과 암호를 입력하십시오. 
 
-1 2. 설치 프로그램이 넷빈을 설치하고 &quot;**
-    Install was Successful.**” message. Click the **Close** button.
+12 . 설치 프로그램이 넷빈을 설치하고 &quot;**
+설치가 성공적이었습니다.**&quot;메시지.**닫기**버튼을 클릭하십시오. 
 
 ### Netbeans 설치 확인
 
 1. Netbeans 확인 :**Netbeans IDE를 시작하고 버전 확인 
-    number of the JDK used by the IDE, launch Netbeans 8.1
-    from Applications. Netbeans opens to a “Start Page.” Open the
-    Netbeans menu and select About Netbeans. The Netbeans and Java
-    versions should be Netbeans IDE 8.1 and Java 1.8.0\_121. When done,
-    Close the About window.
+IDE에서 사용하는 JDK 번호, Netbeans 8.1 시작 
+응용 프로그램에서. Netbeans은 &quot;시작 페이지&quot;를 엽니 다. 
+Netbeans 메뉴에서 Netbeans 정보를 선택하십시오. Netbeans 및 Java 
+버전은 Netbeans IDE 8.1 및 Java 1.8.0 \ _121이어야합니다. 완료되면, 
+정보 창을 닫습니다. 
 
     <img src="images/1m/image4.png" width="402" height="471" />
 
@@ -187,7 +187,7 @@ GIT 설치**활동.
 
     <img src="images/1m/image5.png" width="568" height="111" />
 
-    **Note:** This command installs GIT tool if it is not installed already.
+**참고 :**이 명령은 이미 설치되지 않은 경우 GIT 도구를 설치합니다. 
 
 2. **설치**버튼을 클릭하십시오. 
 
@@ -196,14 +196,14 @@ GIT 설치**활동.
 3. **Agree**버튼을 클릭하여 사용권 계약에 동의하십시오. 
 
 4. 설치 프로그램이 GIT 도구를 다운로드하여 설치할 때까지 기다렸다가 
-    displays a “**The Software was installed.**” message. Click the
-    **Done** button.
+&quot;**소프트웨어가 설치되었습니다.**&quot;메시지가 표시됩니다. 클릭 
+**완료**버튼. 
 
 ### GIT 설치 확인
 
 1. **GIT Tool 확인 :**터미널 창을 열고`git 
-    --version` command. Verify that the output of the `git --version`
-    command shows “git version 2.10.1 (Apple Git-78)”
+--version` 명령. `git --version`의 결과가 
+명령에 &quot;git version 2.10.1 (Apple Git-78)&quot;이 표시됩니다. 
 
     <img src="images/1m/image7.png" width="570" height="80" />
 
@@ -226,16 +226,16 @@ Maven 환경 변수**필요한 설정 / 확인 작업
     <http://maven.apache.org/download.cgi>.
 
 2. 바이너리 ZIP 아카이브,**apache-maven-3.3.9-bin.tar.gz**파일을 다운로드하십시오. 
-    on to your computer. The download may take some time. Wait for the
-    download to complete before proceeding to the next step.
+컴퓨터에 연결하십시오. 다운로드에는 다소 시간이 걸릴 수 있습니다. 기다려라. 
+다운로드하여 다음 단계로 진행하십시오. 
 
     <img src="images/1m/image8.png" width="624" height="129" />
 
 3. / Applications 디렉토리에 배포 아카이브의 압축을 풉니 다. 
 
 4. 전체 경로 (/Applications/apache-maven-3.3.9)를 
-    extraction is completed; this is required to create
-    environment variables.
+추출이 완료되었습니다. 이것은 생성하는 데 필요합니다. 
+환경 변수. 
 
 ### Maven 환경 변수 설정하기
 
@@ -247,10 +247,10 @@ M2 \ _HOME 및 PATH 환경 설정에 대한 다음 지시 사항을 사용하십
 1. 터미널 창을 열고`vim ~ / .bash_profile` 명령을 실행하십시오. 
 
 2. **~ / .bash \ _profile**파일을 명령으로 업데이트하십시오 
-    mentioned below.
+. 
 
-        export M2_HOME=/Applications/apache-maven-3.3.9
-        export PATH=$PATH:$M2_HOME/bin
+export M2_HOME = / 응용 프로그램 / apache-maven-3.3.9 
+export PATH = $ PATH : $ M2_HOME / bin 
 
 3. **~ / .bash \ _profile**파일을 저장하십시오. 
 
@@ -259,7 +259,7 @@ M2 \ _HOME 및 PATH 환경 설정에 대한 다음 지시 사항을 사용하십
 ### Maven 설치 확인
 
 1. Maven 버전 확인**: 터미널 창을 다시 시작하고 
-    `mvn --version` command. Verify that the output of the `mvn -–version`
-    command matches with the following screenshot:
+`mvn --version` 명령. `mvn --version` 명령의 출력이 &quot; 
+명령이 다음 스크린 샷과 일치합니다. 
 
     <img src="images/1m/image10.png" width="553" height="167" />

@@ -1,15 +1,15 @@
-# 2 부 : Oracle Developer Cloud Service를 사용하여 Helloworld App 테스트 및 구축
+# PART II: Test and Build Helloworld App using Oracle Developer Cloud Service
 
-## 메이븐을위한 프록시 설정
+## Setting Proxy for Maven
 
-**중요 사항 :**프록시를 변경하려면 다음 지침을 따르십시오. 
-보안 네트워크의 일부인 경우 Maven의 설정 
-방화벽**전용**이 활동을 건너 뛰고 
-다음 활동,**GIT 저장소 만들기**. 
+**Important Note:** Use the following instructions to change the proxy
+settings for Maven if you are part of the secured network and behind a
+firewall **ONLY** otherwise skip this activity and continue with the
+next activity, **Creating a GIT Repository**.
 
-### Netbeans의 Maven에 대한 프록시 설정
+### Proxy Settings for Maven in Netbeans
 
-1. C : \\ Program Files \\ NetBeans를 엽니 다. 
+1.  Open the C:\\Program Files\\NetBeans
     8.1\\java\\maven\\conf\\settings.xml file with a text editor
     like Notepad++.
 
@@ -32,14 +32,14 @@
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
     with your proxy and save the file.
 
-**참고 :**settings.xml 파일을 편집 할 때 문제가 발생하면, 
-settings.xml 파일의 사본을 다른 위치에 저장하고 수정 한 다음, 
-C : \\ Program Files \\ NetBeans에 다시 넣습니다. 
-8.1 \\ java \\ maven \\ conf \\ (Windows) 또는 / Applications / NetBeans / NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) 디렉토리에 있습니다. 
+**Note:** If you are facing problems in editing the settings.xml file,
+save a copy of the settings.xml file to some other location, modify it,
+and then put it back in to C:\\Program Files\\NetBeans
+8.1\\java\\maven\\conf\\ (Windows) or /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/ (Mac) directory.
 
-### Maven의 프록시 설정
+### Proxy Settings for Maven
 
-1. C : \\ Maven \\ apache-maven-3.3.9 \\ conf \\ settings.xml 파일을 다음과 같이 엽니 다. 
+1.  Open the C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml file with
     a text editor like Notepad++.
 
     **Note:** On a Mac the settings.xml file can be found at /Applications/apache-maven-3.3.9/conf/settings.xml
@@ -60,26 +60,26 @@ C : \\ Program Files \\ NetBeans에 다시 넣습니다.
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
     with your proxy and save the file.
 
-## GIT 저장소 만들기
+## Creating a GIT Repository
 
-이 액티비티의 일환으로 다음을 작성하고 초기화하는 방법을 배웁니다. 
-사용자의 홈 디렉토리 아래 로컬 GIT 저장소. 
+As part of this activity, you will learn to create and initialize a
+local GIT repository under user’s home directory.
 
-1. Windows**시작**메뉴에서 Git Bash를 열거 나 Mac을 사용하는 경우 터미널 창을여십시오. 
+1.  Open Git Bash from the Windows **Start** menu or open a terminal window if using a Mac.
 
-2. 홈 디렉토리에서**cloud**디렉토리를 작성하십시오. 
+2.  In your home directory, create a **cloud** directory.
 
         mkdir cloud
 
-3. 디렉토리를**cloud**디렉토리로 변경하십시오. 
+3.  Change the directory to **cloud** directory.
 
         cd cloud
 
-4. Git 저장소 유형을 만듭니다. 
+4.  Create a Git repository type.
 
         git init
 
-5. 이제 클라우드 디렉토리가 Git 저장소가됩니다. `ls -a`를 실행하십시오. 
+5.  The cloud directory is now a Git repository. Execute the `ls –a`
     command to confirm the same. The output of the `ls –a` command must
     match the output in the following screenshot:
 
@@ -88,64 +88,64 @@ C : \\ Program Files \\ NetBeans에 다시 넣습니다.
     **Note:** Now you should see that a .git directory has been created
     inside the cloud directory and your repository is ready.
 
-## GIT 저장소 구성
+## Configuring a GIT Repository
 
-GIT 저장소에 변경 사항을 적용하기 전에 
-이름 및 전자 메일 주소를 사용하여 저장소의 커밋을 식별합니다. 
+Before you commit changes to GIT repository, you must configure your
+name and email address to identify your commits in the repository.
 
-1. 다음 명령을 실행하여 이름을 구성하십시오. 
+1.  Execute the following commands to configure your name:
 
         git config --global user.name "Your Name"
 
     **Example:** `git config –global user.name "John Doe"`
 
-2. 다음 명령을 실행하여 전자 메일 주소를 구성합니다. 
+2.  Execute the following commands to configure your email address:
 
         git config --global user.email your-email@address
 
     **Example:** `git config –global user.email <john.doe@oracle.com>`
 
-3. 값이 설정되었는지 확인하려면 다음을 실행하십시오. 
+3.  To confirm that the values have been set, execute the following
     command:
 
         git config --global –l
 
-이 명령의 출력은 다음 명령의 출력과 유사해야합니다. 
-다음 스크린 샷 : 
+The output of these commands must be similar to the output in the
+following screenshot:
 
 <img src="images/2/image2.png" width="420" height="219" />
 
-**노트:**
-- 모든 GIT 프로젝트의 이름과 이메일 주소를 설정합니다. 
-- - global 옵션을 사용하여 이름과 이메일 주소를 설정하지 마십시오. 
+**Notes:**
+-   This sets your name and email address for all GIT projects.
+-   Don’t use --global option to set the name and email address at the
     project level.
 
-## Maven 아키 타입을 사용하여 프로젝트 만들기
+## Creating a Project with Maven Archetypes
 
-이 액티비티의 일환으로 간단한 Maven을 만드는 방법을 배웁니다. 
-**Hello World!를 인쇄하는**Helloworld-Example**
-메시지를 콘솔에 표시합니다. 이 응용 프로그램은 다음 
-로컬 GIT 저장소에 저장하는 활동, 프로젝트를 만드는 활동 
-DevCS, DevCS의 GIT 저장소로 복제 한 다음 Build를 만듭니다. 
-배포 작업. 
+As part of this activity, you will learn to create a simple Maven
+application named, **Helloworld-Example** to print "Hello World!"
+message on the console. This application will be used in the subsequent
+activities to store it in a local GIT repository, creating a project on
+DevCS, clone it with GIT repository on DevCS and then creating a Build
+Job for deployment.
 
-Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 사항을 따르십시오. 
+Use the following instructions to create a Maven project using Archetypes.
 
-1. Windows 시작 메뉴에서 Git Bash를 열거 나 Mac을 사용하는 경우 터미널 창을여십시오. 
+1.  Open Git Bash from the Windows Start menu or open a terminal window if using a Mac.
 
-2. Git 저장소가 저장된 클라우드 디렉토리로 변경한다. 
+2.  Change to the cloud directory where your Git repository is stored.
 
         cd cloud
 
-3. helloworld라는 디렉토리를 작성하십시오. 
+3.  Create a directory named helloworld.
 
         mkdir helloworld
 
-4. Helloworld 디렉토리로 변경하십시오. 
+4.  Change to the Helloworld directory.
 
         cd helloworld
 
-5. 다음을 사용하여 빈 Maven 프로젝트를 만듭니다. 
+5.  Create an empty Maven project using the
     maven-archetype-quickstart archetype. Enter the following command:
 
         mvn archetype:generate -DgroupId=com.example -DartifactId=Helloworld-Example -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
@@ -154,29 +154,29 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
     <img src="images/2/image3.png" width="317" height="363" />
 
-6.이 명령은 이름이 지정된 빈 Maven 프로젝트를 만듭니다. 
+6.  The command creates an empty Maven project named
     **Helloworld-Example**. Examine the directory structure and note
     that an executable class is located at com.example.App. Now the
     pom.xml file must be configured for  
     plug-ins.
 
-7. 바탕 화면의 바로 가기를 사용하여 Netbeans을 시작합니다. 
+7.  Launch Netbeans using the shortcut on the desktop.
 
-8. 아래에서 생성 된**Helloworld-Example**Maven 프로젝트를 엽니 다. 
+8.  Open the **Helloworld-Example** Maven project created under
     **cloud/helloworld** directory in Netbeans.
 
     <img src="images/2/image4.png" width="374" height="193" />
 
-9. 프로젝트의 디렉토리 구조를 검사하고, open 
+9.  Examine the directory structure of the project, open
     **com.example.App** executable class, and review the code.
 
     <img src="images/2/image5.png" width="384" height="181" />
 
-10.**Project Files> pom.xml**파일을 마우스 오른쪽 버튼으로 클릭하고 열기를 클릭합니다. 
+10. Right-click the **Project Files > pom.xml** file and click Open.
 
     <img src="images/2/image6.png" width="242" height="242" />
 
-11. 파일 앞에 다음 속성 설정을 추가합니다. 
+11. Add the following properties settings to the file before the
     dependencies section. This sets the Java version and encoding for
     the project.
 
@@ -187,7 +187,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </properties>
     ```
 
-12. dependencies 요소 뒤에 빌드 및 플러그 인에 대한 요소를 추가하십시오. 
+12. After the dependencies element, add elements for build and plug-ins.
 
     ```xml
     <build>
@@ -197,7 +197,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </build>
     ```
 
-13. 컴파일러 플러그인의 구성을 
+13. Add the configuration for the compiler plug-in to the
     plug-ins section.
 
     ```xml
@@ -212,7 +212,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </plugin>
     ```
 
-14. pom.xml 파일에 exec 플러그인을 추가하십시오. 
+14. Add the exec plug-in to the pom.xml file.
 
     ```xml
     <plugin>
@@ -232,7 +232,7 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </plugin>
     ```
 
-15. pom.xml 파일에 JAR 플러그인을 추가하십시오. 
+15. Add the JAR plug-in to the pom.xml file.
 
     ```xml
     <plugin>
@@ -249,45 +249,45 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     </plugin>
     ```
 
-16. 소스 창에서**pom.xml**파일을 마우스 오른쪽 단추로 클릭하고**서식**을 선택하여 파일의 들여 쓰기를 수정하십시오. 
+16. In the source window, right-click the **pom.xml** file and select **Format** to fix the indentation for the file.
 
     <img src="images/2/image7.png" width="276" height="227" />
 
-17.**pom.xml**파일을 저장하십시오. 
+17. Save the **pom.xml** file.
 
-18.**Helloworld-Example**프로젝트를 마우스 오른쪽 버튼으로 클릭하고**Clean을 클릭하십시오. 
+18. Right-click the **Helloworld-Example** project and click **Clean
     and Build.**
 
-19.**Helloworld-Example**프로젝트를 마우스 오른쪽 버튼으로 클릭하고**Run을 클릭하십시오.**
+19. Right-click the **Helloworld-Example** project and click **Run.**
 
     <img src="images/2/image8.png" width="231" height="196" />
 
-20. 사용 가능한 기본 클래스 목록에서**com.example.App**를 선택하고 
+20. Select **com.example.App** from the Available Main Classes list and
     click the **Select Main Class** button.
 
     <img src="images/2/image9.png" width="231" height="225" />
 
-21. 당신은**Hello World!를보아야합니다!**BUILD SUCCESS 메시지를 출력하십시오. 
+21. You should see **Hello World!** Output with a BUILD SUCCESS message.
 
     <img src="images/2/image10.png" width="406" height="152" />
 
-22. Git Bash (Windows) 또는 터미널 창 (Mac)으로 전환하고 
+22. Switch to Git Bash(Windows) or terminal window(Mac) and change the
     directory to Helloworld-Example.
 
         cd Helloworld-Example
 
     <img src="images/2/image11.png" width="395" height="100" />
 
-23.`mvn clean compile` 명령을 실행하여 정리하고 컴파일하십시오. 
+23. Execute the `mvn clean compile` command to clean and compile
     the project.
 
     <img src="images/2/image12.png" width="363" height="387" />
 
-24. mvn exec : java` 명령을 실행하여 응용 프로그램을 실행합니다. 
+24. Execute the `mvn exec:java` command to execute the application.
 
     <img src="images/2/image13.png" width="360" height="297" />
 
-25. mvn 패키지 명령을 실행하여 응용 프로그램을 패키지화하십시오. 
+25. Execute the `mvn package command` to package the application.
 
     <img src="images/2/image14.png" width="435" height="235" />
 
@@ -295,209 +295,209 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
     created inside **cloud/helloworld/Helloworld-Example/target**
     directory.
 
-26.`java -jar target / Helloworld-Example-1.0-SNAPSHOT.jar`을 실행하십시오. 
+26. Execute the `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar`
     command to run the packaged application.
 
     <img src="images/2/image15.png" width="454" height="120" />
 
-## Helloworld-Example 프로젝트를 GIT 저장소로 확인하기
+## Checking the Helloworld-Example Project into a GIT Repository
 
-다음 지침에 따라 Helloworld-Example 프로젝트를 저장하십시오. 
-로컬 GIT 저장소에 있습니다. 
+Use the following instructions to store the Helloworld-Example project
+in the local GIT repository.
 
-1. cloud / helloworld 디렉토리로 변경하십시오. 
+1.  Change into the cloud/helloworld directory.
 
-2.`git add -n .` 명령을 실행하여 파일 목록을 봅니다. 
+2.  Execute the `git add –n .` command to see the list of files that are
     ready to be added to the repository.
 
     <img src="images/2/image16.png" width="408" height="102" />
 
     **Note:** Please notice that there is **.** at the end of the command.
 
-3.`git add .` 명령을 실행하여 파일을 저장소에 추가하십시오. 
+3.  Execute the `git add .` command to add the files to the repository.
 
     <img src="images/2/image17.png" width="408" height="102" />
 
-4.`git status` 명령을 실행하여 추가 된 파일을 확인하십시오. 
+4.  Execute the `git status` command to check the files that are added.
 
     <img src="images/2/image18.png" width="408" height="106" />
 
-5. Helloworld를위한`git commit -m &#39;초기 커밋을 실행한다. 
+5.  Execute the `git commit –m "Initial Commit for Helloworld-Example
     Project"` to commit the files to the repository and begin
     version tracking.
 
     <img src="images/2/image19.png" width="415" height="108" />
 
-6. 이제 파일이 버전 추적을 위해 체크인됩니다. 
+6.  Your files are now checked in for version tracking.
 
-7.`git status 명령`을 실행하여 저장소의 상태를 확인하십시오. 
+7.  Check the status of the repository by executing the `git status command`.
 
     <img src="images/2/image20.png" width="415" height="84" />
 
     **Note:** You should get a response similar to the one in the
     screenshot.
 
-## 개발자 클라우드 서비스 프로젝트 만들기
+## Creating a Developer Cloud Service Project
 
-이 작업의 일부로 복제 정책을 선택합니다 (복제 정책을 선택하면 
-Identity Domain 관리자가 아직 수행하지 않은) 
-기본 데이터 센터는 또한 데이터가 있어야하는지 여부를 지정합니다. 
-지리적으로 멀리 떨어져있는 (보조) 데이터 센터에 복제됩니다. 
+As part of this activity, you will choose a replication policy (if it
+not already done by Identity Domain Administrator) to define your
+primary data center and also specifies whether your data should be
+replicated to a geographically distant (secondary) data center.
 
-개발자 클라우드 서비스를 활성화하여 빈 프로젝트 만들기 
-(HelloworldProject)와 푸시 할 저장소 (HelloworldProjectRepo) 
-Helloworld-Example**응용 프로그램**
-이전**활동**에서 개발자 클라우드 서비스. 
+Activate Developer Cloud Service to create an empty project
+(HelloworldProject) with a repository (HelloworldProjectRepo) to push
+the Helloworld-Example **application** that you have created in the
+previous **activity** to Developer Cloud Service.
 
-**참고 :**수행하려면 클라우드 로그인 자격 증명 및 링크가 필요합니다. 
-운동의이 부분. 전자 메일에서이 정보를 수집하십시오. 
-오라클에서 제공하여 편리하게 사용하십시오. 
+**Note:** The cloud login credentials and link are required to perform
+this part of the exercise. Gather this information from the email you
+have received from Oracle and keep it handy.
 
-## 저장소 복제 정책 구성
+## Configure Your Storage Replication Policy
 
-### Oracle Cloud 계정에 로그인하십시오.
+### Login to your Oracle Cloud Account
 
 1. From any browser, go to the URL: <https://cloud.oracle.com>
 
-2. 브라우저의 오른쪽 상단 모서리에있는**로그인**을 클릭하십시오. 
+2. Click **Sign In** in the upper right hand corner of the browser
 
     <img src="images/2/Picture100-1.png" width="429" height="119" />
 
-3.****중요**- 내 서비스에서 드롭 다운 목록에서 올바른 데이터 센터를 선택하고**내 서비스**를 클릭하십시오. 직접 선택해야하는 데이터 센터를 알지 못하는 경우 이것은 개인 훈련 이벤트입니다.***강사**에게**Region**에 드롭 다운 목록에서 선택하도록 요청하십시오. 오라클 평가판을 통해 계정을받은 경우 평가판 확인 이메일에 해당 지역을 사전 선택하는 URL이 제공되어야합니다. 
+3. **IMPORTANT** - Under my services, select from the drop down list the correct data center and click on **My Services**. If you are unsure of the data center you should select, and this is an in-person training event, ***ask your instructor*** which **Region** to select from the drop down list. If you received your account through an Oracle Trial, your Trial confirmation email should provide a URL that will pre-select the region for you.
 
     <img src="images/2/Picture100-2.png" />
 
-4. ID 도메인을 선택하고**이동**을 클릭하십시오. 
+4. Select your identity domain and click **Go**.
 
     **NOTE:** The **Identity Domain, User Name** and **Password** values will be given to you by the instructor or within your Trial confirmation email.
 
-5. 신원 도메인이 설정되면 사용자 이름과 암호를 입력하고**로그인**을 클릭하십시오. 
+5. Once your Identity Domain is set, enter your User Name and Password and click **Sign In**
 
     <img src="images/2/Picture100-3.5.png" />
 
-6.이 계정에서 사용할 수있는 다양한 클라우드 서비스가 표시된 대시 보드가 표시됩니다. 
+6. You will be presented with a Dashboard displaying the various cloud services available to this account.
 
     <img src="images/2/Picture100-4.png" />
 
-7. 모든**스토리지**클라우드 서비스가 보이지 않으면**대시 보드 사용자 정의**에서**를 클릭하고**보기를 클릭하여 대시 보드에 서비스를 추가 할 수 있습니다**이 워크샵의 경우**응용 프로그램 컨테이너, 개발자 및 저장소**클라우드 서비스를 최소한 표시하고 싶습니다. 특정 서비스를 보지 않으려면**숨기기**를 클릭하십시오. 
+7. If all your **Storage** cloud service is not visible, **click** on the **Customize Dashboard**, you can add services to the dashboard by clicking **Show.** For this workshop, you will want to ensure that you are showing at least the **Application Container, Developer and Storage** cloud services. If you do not want to see a specific service, click **Hide**
 
     <img src="images/2/Picture100-5.png" />
 
-### 저장소 복제 정책 확인 / 설정
+### Check/Set Storage Replication Policy
 
-클라우드 계정의 상태에 따라 이전에 복제 정책을 설정하지 않은 경우 복제 정책을 설정해야 할 수 있습니다. 이 단계에서는 Storage Cloud Service를 통해 복제 정책의 상태를 확인합니다. 
+Depending on the state of your Cloud Account, you may need to set the replication policy, if it has not been previously set. In this step you will got to the Storage Cloud Service to check on the status of the Replicaton Policy.
 
-1.**스토리지**클라우드 서비스를 클릭하십시오. 
+1. Click on the **Storage** Cloud Service
     <img src="images/2/Picture-01.png" />
 
-2. 화면 상단의**서비스 콘솔 열기**아이콘을 클릭하십시오. 
+2. Click on the **Open Service Console** icon at the top of the screen.
 
     <img src="images/2/Picture-01.5.png" />
 
-3. 다음 대화 상자가 표시되면 복제 정책을 변경할 때 변경할 수 없으므로 복제 정책을 설정할 때주의해야합니다. 기본값을 가져 와서**정책 설정**버튼을 클릭하십시오. 메시지가 표시되지 않으면 복제 정책이 이미 설정되고 클라우드 계정이 Workshop에 대한 준비가 된 것입니다. 
+3. If the follow dialog is displayed, care must be taking when setting your replication policy, because it cannot be changed. Take the default and click on the **Set Policy** button. If the message is not displayed, your replication policy has already been set, and your Cloud Account is ready for the Workshop.
 
     <img src="images/2/Picture-02.5.png" />
 
-4. 이제 복제 정책이 설정되고 브라우저 창을 닫을 수 있습니다. 
+4. Your replication policy is now set, and you can close your browser window.
 
 
 
-### 내 서비스 포털을 통해 서비스 인스턴스에 대해 선택된 복제 정책 확인
+### Verifying the Replication Policy Selected for Your Service Instance through the My Services Portal
 
-Oracle 용으로 선택된 복제 정책을 찾으려면 
-스토리지 클라우드 서비스 인스턴스에서**스토리지**링크를 클릭하십시오. 
-**대시 보드**페이지. 결과 페이지에서**서비스 세부 정보를 확장합니다. 
-Oracle Storage Cloud Service,**Oracle Storage Cloud의 세부 정보 
-서비스 인스턴스가 표시됩니다. 복제 정책 필드를 찾으십시오. 
-다음 스크린 샷에 강조 표시되어 있습니다. 
+To find out the replication policy that’s selected for your Oracle
+Storage Cloud Service instance, click the **Storage** link in the
+**Dashboard** page. On the resulting page, expand **Service Details:
+Oracle Storage Cloud Service,** the details of your Oracle Storage Cloud
+Service instance is displayed. Look for the Replication Policy field, as
+highlighted in the following screenshot.
 
 <img src="images/2/image30.png" width="348" height="116" />
 
-## 개발자 클라우드 서비스 활성화 및 새 프로젝트 만들기
+## Activating Developer Cloud Service and Creating a New Project
 
-이 액티비티에서는 개발자 클라우드 서비스를 활성화하고, 
-DevCS에서 새 프로젝트를 만들고, DevCS에서 GIT 저장소를 만들고, 복제합니다. 
-DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성 
-배치를위한 직업. 
+In this activity, you are going to activate Developer Cloud Service,
+create a new project in DevCS, create a GIT repository in DevCS, clone
+locally built project with DevCS GIT repository and the create a build
+job for deployment.
 
-다음 지시 사항을 사용하여 DevCS를 활성화하고 새로운 
-계획. 
+Use the following instructions to activate DevCS and create a new
+project.
 
-1. 귀하의 계정에 지정된 서비스가에 표시됩니다. 
+1.  Services that are assigned to your account will be visible on
     the Dashboard. If the **Developer** service is not visible, click
     the **Customize Dashboard** button and the **Show** button for
     **Application Container** to make it visible on the Dashboard.
 
     <img src="images/2/image31.png" width="378" height="237" />
 
-2. 대시 보드에서**개발자 클라우드 서비스**를 클릭하여 
+2.  Click **Developer Cloud Service** on the Dashboard to go to the
     **ServiceDetails:developer85599 (Oracle Developer
     Cloud Service)** page.
 
     <img src="images/2/image32.png" width="454" height="134" />
 
-3.**서비스 콘솔 열기**버튼을 클릭하십시오. 
+3.  Click the **Open Service Console** button.
 
     <img src="images/2/image33.png" width="399" height="195" />
 
-4.**새 프로젝트**를 클릭하십시오. 
+4.  Click **New Project**.
 
     <img src="images/2/image34.png" width="399" height="245" />
 
-5. 다음과 같이 프로젝트 이름과 설명을 입력하십시오 
+5.  Enter the Project Name and Description as shown in the following
     screenshot and click **Next**.
 
     <img src="images/2/image35.png" width="399" height="288" />
 
-6.**빈 프로젝트**템플릿을 클릭하고**다음을 클릭하십시오.**
+6.  Click the **Empty Project** template and **Next.**
 
     <img src="images/2/image36.png" width="378" height="271" />
 
-7. Wiki Markup 드롭 다운 목록에서**MARKDOWN**을 선택하고 
+7.  Select **MARKDOWN** from the Wiki Markup drop-down list and click
     **Finish**.
 
     <img src="images/2/image37.png" width="384" height="277" />
 
-8. 프로비저닝 HelloworldProject는 몇 분이 걸릴 수 있습니다. 기다릴 때까지 
+8.  Provisioning HelloworldProject may take several minutes. Wait until
     all the modules are provisioned and redirected to the
     HelloworldProject home screen.
 
     <img src="images/2/image38.png" width="388" height="141" />
 
-## 개발자 클라우드 서비스에서 GIT 저장소 만들기
+## Creating a GIT Repository in Developer Cloud Service
 
-다음 지시 사항에 따라 개발자에게 GIT 저장소를 만드십시오. 
-클라우드 서비스. 
+Use the following instructions to create a GIT repository on Developer
+Cloud Service.
 
-1.**REPOSITORIES**섹션에서**New Repository**버튼을 클릭하십시오. 
+1.  Click the **New Repository** button in the **REPOSITORIES** section.
 
     <img src="images/2/image39.png" width="360" height="130" />
 
-2. 새 저장소 창에서 저장소 이름을 입력하고 
+2.  In the New Repository window, enter the repository name and
     description as shown in the following screenshot and click **Create**.
 
     <img src="images/2/image40.png" width="351" height="282" />
 
-3. 저장소를 만드는 데 몇 분이 걸릴 수 있습니다. 때까지 기다리십시오. 
+3.  It may take a few minutes to create a repository. Wait until the
     HelloworldProjectRepo repository is created and redirected to the
     HelloworldProjectRepo home page.
 
     <img src="images/2/image41.png" width="384" height="103" />
 
-4. HelloworldProjectRepo 홈 페이지에서 HTTP 탭을 클릭하고 복사하십시오. 
+4.  Click the HTTP tab in the HelloworldProjectRepo home page and copy
     the URL.
 
     <img src="images/2/image42.png" width="384" height="106" />
 
-## GIT 저장소 복제
+## Cloning a GIT Repository
 
-다음 지침에 따라 Helloworld-Example 프로젝트를 복제하십시오 
-개발자 클라우드 서비스의 GIT 저장소로 이동합니다. 
+Use the following instructions to clone the Helloworld-Example project
+to a GIT repository on Developer Cloud Service.
 
-1. GIT 저장소를 복제하려면 먼저 cloud / helloworld로 변경하십시오 
+1.  To clone a GIT repository, first change to the cloud/helloworld
     directory that is the root directory for your repository.
 
-2.`git clone`을 실행하십시오. https : // ora1 @ developer.em2.oraclecloud.com / developer85599-ouopc084 / s / developer85599-ouopc084_helloworldproject_3753 / scm / HelloworldProjectRepo.git` 
+2.  Execute `git clone https://ora1@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084_helloworldproject_3753/scm/HelloworldProjectRepo.git`
 
     <img src="images/2/image43.png" width="427" height="111" />
 
@@ -509,10 +509,10 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
     -   The output of this command should be similar to the output in the
         above screenshot.
 
-3.**HelloworldProjectRepo**라는 새 디렉토리가 있습니다. 
+3.  Notice that there is a new directory named **HelloworldProjectRepo**
     created inside **cloud/helloworld** directory.
 
-4. Helloworld-Example**프로젝트 디렉토리를 복사하여 붙여 넣기하십시오. 
+4.  Copy and paste **Helloworld-Example** project directory from
     **cloud/helloworld** directory to **HelloworldProjectRepo**
     directory
 
@@ -521,30 +521,30 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
     <img src="images/2/image44.png" width="441" height="89" />
 
-5.**HelloworldProjectRepo**디렉토리로 변경하십시오. 
+5.  Change to the **HelloworldProjectRepo** directory
 
         cd HelloworldProjectRepo
 
-6. 프로젝트 루트 디렉토리에서 GIT에 소스 파일을 추가하십시오 
+6.  Add the source files to GIT from project root directory
 
         git add .
 
-7. 변경 사항 적용 
+7.  Commit the changes
 
         git commit –m "commiting changes to HelloworldProjectRepo repository"
 
-8. 개발자 클라우드 서비스의 저장소로 파일을 푸시합니다. 
+8.  Push the files to the repository on Developer Cloud Service
 
         git push origin master
 
-9. 개발자 클라우드 서비스로 전환하여 개발자 클라우드 서비스로 푸시 된 파일을 확인합니다. 
+9.  Switch to Developer Cloud Service to verify the files pushed to the
     repository
 
-10.**HelloworldProject**홈 페이지에서**HelloworldProjectRepo.git**를 클릭하십시오. 
+10. In the **HelloworldProject** home page, click on **HelloworldProjectRepo.git**
 
     <img src="images/2/image45.png" width="378" height="150" />
 
-11.**Helloworld-Example**프로젝트 디렉토리가 푸시되었습니다. 
+11. Notice that **Helloworld-Example** project directory has been pushed
     to repository on Developer Cloud Service. Click on it and verify
     its contents.
 
@@ -552,21 +552,21 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
     <img src="images/2/image47.png" width="385" height="158" />
 
-## 개발자 클라우드 서비스에 대한 프로젝트 빌드
+## Building a Project on Developer Cloud Service
 
-다음 지침에 따라 Helloworld-Example 프로젝트를 작성하십시오. 
-개발자 클라우드 서비스. 
+Use the following instructions to build Helloworld-Example project
+Developer Cloud Service.
 
-1. 왼쪽 탐색 창에서**빌드**를 클릭 한 다음**새 작업**을 클릭하십시오. 
+1.  In the left navigation pane, click on **Build** and then **New Job**
 
     <img src="images/2/image48.png" width="457" height="201" />
 
-2. 새 작업 창에서**HelloworldProjectBJ**작업 이름을 입력하십시오. 
+2.  In the New Job window, enter **HelloworldProjectBJ** the job name
     field and click on **Save**
 
     <img src="images/2/image49.png" width="457" height="167" />
 
-3.**주**탭에서 다음 값을 입력하십시오. 
+3.  In the **Main** tab, enter the following values:
 
     -   Edit the job name if it needs adjusting.
     -   Enter a description.
@@ -574,14 +574,14 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
     <img src="images/2/image50.png" width="433" height="204" />
 
-4.**소스 제어**탭을 클릭하십시오. 
+4.  Click the **Source Control** tab
 
     -   Select **Git** as your repository.
     -   For **URL**, select the URL to your Git repository.
 
     <img src="images/2/image51.png" width="433" height="211" />
 
-5.**빌드 단계**탭을 클릭하십시오. 
+5.  Click the **Build Steps** tab.
 
     -   Click Add Build Step and select Invoke Maven 3.
     -   Set the **Goals** to: clean package.
@@ -591,7 +591,7 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
     <img src="images/2/image53.png" width="441" height="235" />
 
-6.**Post Build**탭을 클릭하십시오. 
+6.  Click the **Post Build** tab.
 
     -   Select Archive the artifacts.
     -   Set **Files To Archive** to: Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar
@@ -599,7 +599,7 @@ DevCS GIT 저장소가있는 로컬 빌드 프로젝트 및 빌드 작성
 
     <img src="images/2/image54.png" width="443" height="184" />
 
-7.**저장**을 클릭 한 다음**지금 빌드를 클릭하십시오.**
+7.  Click **Save** and then click **Build Now.**
 
     If the build was successful, you'll see a file:
     Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar in
