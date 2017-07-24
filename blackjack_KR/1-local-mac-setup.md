@@ -106,7 +106,7 @@ JAVA \ _HOME 및 PATH 설정에 대한 다음 지시 사항을 사용하십시�
 
 ### JDK 설치 확인
 
-1. **Java 버전 확인 :**터미널 창을 열고 java 
+1. **Java 버전 확인 :** 터미널 창을 열고 java 
     -version` command. This verifies that a JRE is installed but does not
     verify that the JDK is installed. Verify that the output of the `java
     –version` command shows “1.8.0\_121” or higher.
