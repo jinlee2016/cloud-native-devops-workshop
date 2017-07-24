@@ -55,7 +55,7 @@ Oracle Application Container 클라우드 서비스. 이 정보 수집
 1. 브라우저를 열고 
     <http://www.oracle.com/technetwork/java/javase/overview/index.html>
 
-2. ** 다운로드 ** 탭을 클릭하고 최신 버전을 다운로드하십시오. 
+2. **다운로드** 탭을 클릭하고 최신 버전을 다운로드하십시오. 
     JDK available. In this case, we are downloading JDK-8U121.
 
     <img src="images/1m/image1.png" width="504" height="258" />
