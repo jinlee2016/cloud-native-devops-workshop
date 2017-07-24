@@ -9,7 +9,7 @@
 ### Netbeans의 Maven에 대한 프록시 설정
 
 
-1. C :\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 메모장 + +와 같은 텍스트 편집기로 엽니다. 
+1. C :\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 NotePad++과 같은 텍스트 편집기로 엽니다. 
 
 **참고 :** Mac의 경우 settings.xml 파일은 /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml에서 찾을 수 있습니다. 
 
@@ -36,7 +36,7 @@
 ### Maven의 프록시 설정
 
 
-1. 메모장 ++와 같은 텍스트 편집기로 C :\\Maven\\apache-maven-3.3.9\\conf\\settings.xml 파일을 엽니 다. 
+1. NotePad++와 같은 텍스트 편집기로 C :\\Maven\\apache-maven-3.3.9\\conf\\settings.xml 파일을 엽니 다. 
 
 **참고 :** Mac의 경우 settings.xml 파일은 /Applications/apache-maven-3.3.9/conf/settings.xml에서 찾을 수 있습니다. 
 
