@@ -265,12 +265,12 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
 
 20 . 사용 가능한 기본 클래스 목록에서**com.example.App**를 선택하고**주 클래스 선택**버튼을 클릭하십시오. 
 
-    <img src="images/2/image9.png" width="231" height="225" />
+<img src="images/2/image9.png" width="231" height="225" />
 
 
 21 . 당신은**Hello World!를보아야합니다!**BUILD SUCCESS 메시지를 출력하십시오. 
 
-    <img src="images/2/image10.png" width="406" height="152" />
+<img src="images/2/image10.png" width="406" height="152" />
 
 
 22 . Git Bash (Windows) 또는 터미널 창 (Mac)으로 전환하고 디렉토리를 Helloworld-Example로 변경합니다. 
@@ -278,22 +278,22 @@ Archetypes를 사용하여 Maven 프로젝트를 생성하려면 다음 지시 �
         cd Helloworld-Example
 
 
-    <img src="images/2/image11.png" width="395" height="100" />
+<img src="images/2/image11.png" width="395" height="100" />
 
 
 23 . mvn clean compile 명령을 실행하여 프로젝트를 정리하고 컴파일하십시오. 
 
-    <img src="images/2/image12.png" width="363" height="387" />
+<img src="images/2/image12.png" width="363" height="387" />
 
 
 24 . mvn exec : java` 명령을 실행하여 응용 프로그램을 실행합니다. 
 
-    <img src="images/2/image13.png" width="360" height="297" />
+<img src="images/2/image13.png" width="360" height="297" />
 
 
 25 . mvn 패키지 명령을 실행하여 응용 프로그램을 패키지화하십시오. 
 
-    <img src="images/2/image14.png" width="435" height="235" />
+<img src="images/2/image14.png" width="435" height="235" />
 
 
 **참고 :** **cloud / helloworld / Helloworld-Example / target**디렉토리 내에 생성 된**Helloworld-Example-1.0-SNAPSHOT.jar**파일을 검사하십시오. 
@@ -516,7 +516,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 **참고 :** HelloworldProjectRepo**디렉토리의 내용은 아래 스크린 샷과 일치해야합니다. 
 
-    <img src="images/2/image44.png" width="441" height="89" />
+<img src="images/2/image44.png" width="441" height="89" />
 
 
 5. **HelloworldProjectRepo**디렉토리로 변경하십시오. 
@@ -583,7 +583,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 -**Git**를 저장소로 선택하십시오. 
 -**URL**의 경우 Git 저장소의 URL을 선택하십시오. 
 
-    <img src="images/2/image51.png" width="433" height="211" />
+<img src="images/2/image51.png" width="433" height="211" />
 
 
 5. **빌드 단계**탭을 클릭하십시오. 
@@ -609,7 +609,7 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 7. **저장**을 클릭 한 다음**지금 빌드를 클릭하십시오.**
 
-빌드가 성공적으로 완료되면**성공적인 빌드의 인공물**섹션에 Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 파일이 표시됩니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
+빌드가 성공적으로 완료되면**성공적인 빌드의 Artifact **섹션에 Helloworld-Example / target / Helloworld-Example-1.0-SNAPSHOT.jar 파일이 표시됩니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
 
 빌드가 실패한 경우 다시 빌드 작업 구성을 확인하거나**길드 로그**를 클릭하여 오류에 대한 자세한 정보를 확인하십시오. 
 
