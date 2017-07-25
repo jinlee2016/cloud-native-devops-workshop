@@ -15,7 +15,7 @@ Oracle Container Cloud Service는 스택이라는 기능을 제공합니다. 스
 
 이 예제에서 stack은 Cassandra DB 컨테이너와 컨테이너 화 된 샘플 Node.js 애플리케이션을 포함합니다. 
 
-**아키텍처**
+**Architecture**
 ![](images/wercker.occs.png)
 
 

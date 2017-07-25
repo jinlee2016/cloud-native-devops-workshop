@@ -1,6 +1,6 @@
 ![](../../common/images/customer.logo.png)
 ---
-# 오라클 클라우드 - 네이티브 개발 작업반 #
+# 오라클 클라우드 - 네이티브 DevOps workshop #
 
 
 ## Wercker를 사용하여 Node.js-MongoDB 컨테이너 패키지 애플리케이션을 구축하고 Oracle Container Cloud Service에 배포하십시오 ##
@@ -15,7 +15,7 @@ Oracle Container Cloud Service는 스택이라는 기능을 제공합니다. 스
 
 이 예제에서 stack은 MongoDB 컨테이너와 컨테이너 화 된 샘플 Node.js 애플리케이션을 포함한다. 
 
-**건축물**
+**Architecture**
 ![](images/wercker.occs.png)
 
 
@@ -95,7 +95,7 @@ Oracle Container Cloud Service는 스택이라는 기능을 제공합니다. 스
 
 #### 포크 Node.js 소스를 github 저장소에 샘플로 만듭니다. 
 
-먼저 [https://github.com](https://github.com) using your account and than go to [https://github.com/nagypeter/nodejs-mongodb-crud](https://github.com/nagypeter/nodejs-mongodb-crud). In case you don't have Github account then please [sign up](https://github.com/join?source=header-home)에 로그인했는지 확인하십시오. 
+먼저 [https://github.com](https://github.com) 에 로그인을 하고, [https://github.com/nagypeter/node-cassandra-crud](https://github.com/nagypeter/node-cassandra-crud). 로 이동하십시오. Github계정이 없는 경우 계정을 생성하세요. [sign up](https://github.com/join?source=header-home)
 
 이제**Fork**을 클릭하십시오. 
 
