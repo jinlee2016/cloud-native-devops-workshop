@@ -15,9 +15,9 @@
 
 
 
-### 참가자 안내서를 사용하여 실습 랩 완료 :
+### Hands On Lab를 수행하기 위해서는 Participant-Guide를 참고하십시오
 
 
 [Prerequisites](Prerequisites.md)는 약 2 시간이 걸릴 것으로 예상되는 Hands On Lab 세션을 단계별로 안내합니다. 
 
-이 Hands on Lab (Hands on Lab)은 컨테이너 화의 기초를 통해 참가자를 데리고 이점을 탐구하고 엔트리 레벨 운동으로 Docker 기술을 소개합니다. 
+이 Hands on Lab은 컨테이너 기초를 배우고, 엔트리 레벨의 실습을 통해 Docker 기술과 장점을 알아볼 것입니다.
