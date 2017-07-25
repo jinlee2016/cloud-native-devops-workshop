@@ -216,13 +216,13 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
 - 이 명령의 출력은 다음 명령의 출력과 유사해야합니다.
 
 
-3. **cloud/BlackJack**디렉토리 내에****BlackJack-Part2Repo**라는 새 디렉토리가 생성됩니다. 
+3. **cloud/BlackJack**디렉토리 내에 **BlackJack-Part2Repo**라는 새 디렉토리가 생성됩니다. 
 
-4. **blackjack-part2**프로젝트 디렉토리를**cloud/BlackJack**디렉토리에서 **BlackJack-Part2Repo**디렉토리로 복사하여 붙여 넣습니다. 
+4. **blackjack-part2**프로젝트 디렉토리를 **cloud/BlackJack**디렉토리에서 **BlackJack-Part2Repo**디렉토리로 복사하여 붙여 넣습니다. 
 
 **참고 :** **BlackJack-Part2Repo**디렉토리의 내용은 아래 스크린 샷과 일치해야합니다. 
 
-    <img src="images/3/image24.png" width="535" height="94" />
+<img src="images/3/image24.png" width="535" height="94" />
 
 
 5. **BlackJack-Part2Repo**디렉토리로 변경하십시오. 
@@ -249,7 +249,7 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
 
 9. 개발자 클라우드 서비스로 전환하여 저장소에 푸시 된 파일을 확인합니다. 
 
-10. **BlackJack-Part2**홈 페이지에서 **BlackJack-Part2Repo.git**을 클릭하십시오. 
+10. **BlackJack-Part2** 홈 페이지에서 **BlackJack-Part2Repo.git**을 클릭하십시오. 
 
     <img src="images/3/image25.png" width="474" height="178" />
 
@@ -269,7 +269,7 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
     <img src="images/3/image27.png" width="421" height="190" />
 
 
-2. 새 작업 창에서 작업 이름 필드에**BlackJack-Part2BuildJob**을 입력하고**저장**을 클릭하십시오. 
+2. 새 작업 창에서 작업 이름 필드에 **BlackJack-Part2BuildJob**을 입력하고 **저장**을 클릭하십시오. 
 
     <img src="images/3/image28.png" width="421" height="147" />
 
@@ -320,7 +320,7 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
     <img src="images/3/image34.png" width="451" height="186" />
 
 
-8. **저장**을 클릭 한 다음**지금 빌드**를 클릭하십시오. 
+8. **저장**을 클릭 한 다음 **지금 빌드**를 클릭하십시오. 
 
 빌드가 성공적으로 완료되면**마지막 성공 빌드의 아티팩트**섹션에 두 개의 파일이 표시됩니다. 
     -   blackjack-part2/target/blackjack-part2-1.0.jar
@@ -328,9 +328,9 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
 
 파일 이름을 클릭하여 다운로드 할 수 있습니다. 
 
-빌드가 실패한 경우 다시 빌드 작업 구성을 확인하거나**길드 로그**를 클릭하여 오류에 대한 자세한 정보를 확인하십시오. 
+빌드가 실패한 경우 다시 빌드 작업 구성을 확인하거나 **build log**를 클릭하여 오류에 대한 자세한 정보를 확인하십시오. 
 
-    <img src="images/3/image35.png" width="451" height="181" />
+<img src="images/3/image35.png" width="451" height="181" />
 
 
 ## DevCS에서 ACCS로 프로젝트 배포
@@ -338,12 +338,12 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
 
 다음 지침에 따라 개발자 클라우드 서비스에서 BlackJack-Part2 - 응용 프로그램 컨테이너 클라우드 서비스를 배포하십시오. 
 
-1. 왼쪽 탐색 창에서**배포**를 클릭 한 다음**새 구성**을 클릭하십시오. 
+1. 왼쪽 탐색 창에서 **배포**를 클릭 한 다음 **새 구성**을 클릭하십시오. 
 
     <img src="images/3/image36.png" width="436" height="171" />
 
 
-2. **새 배포 구성**페이지에서 아래와 같이**구성 이름** 및 **응용 프로그램 이름**을 입력하십시오 
+2. **새 배포 구성**페이지에서 아래와 같이 **구성 이름** 및 **응용 프로그램 이름**을 입력하십시오 
 
     <img src="images/3/image37.png" width="436" height="173" />
 
