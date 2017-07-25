@@ -3,7 +3,17 @@
 
 이 Hands on Lab (Hands on Lab)은 참가자들에게 컨테이너 화의 기초를 배우고 그 장점을 탐색하며 초보 수준의 실습으로 Docker 기술을 소개합니다. 이 2 시간 세션에서 다룰 주제는 다음과 같습니다. 
 
-1. [Intro to Basic Container Concepts](Participant-Guide.md#intro-to-basic-container-concepts) 2. [Verify Docker Engine Hands on Lab Environment](Participant-Guide.md#verify-docker-engine-hands-on-lab-environment) 3. [Hello Helloworld](Participant-Guide.md#hello-helloworld) 5. [Create a Dockerfile and Docker Image](Participant-Guide.md#create-a-dockerfile-and-docker-image) 6. [Push an Image to your Docker Hub Account](Participant-Guide.md#push-an-image-to-your-docker-hub-account) 7. [Install Docker Compose](Participant-Guide.md#install-docker-compose) 8. [Create Wordpress "stack"](Participant-Guide.md#create-a-wordpress-stack) 9. [Basics of Persistent storage](Participant-Guide.md#basics-of-persistent-storage) 10. [Use Github and Docker Hub together to build an Image and Run the Container](Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container) 11. [Demo of Oracle Container Cloud Service Showing Participant's Containers](Participant-Guide.md#demo-of-oracle-container-cloud-service-showing-participants-containers) 
+1. [Intro to Basic Container Concepts](Participant-Guide.md#intro-to-basic-container-concepts) 
+2. [Verify Docker Engine Hands on Lab Environment](Participant-Guide.md#verify-docker-engine-hands-on-lab-environment) 
+3. [Hello Helloworld](Participant-Guide.md#hello-helloworld) 
+5. [Create a Dockerfile and Docker Image](Participant-Guide.md#create-a-dockerfile-and-docker-image) 
+6. [Push an Image to your Docker Hub Account](Participant-Guide.md#push-an-image-to-your-docker-hub-account) 
+7. [Install Docker Compose](Participant-Guide.md#install-docker-compose) 
+8. [Create Wordpress "stack"](Participant-Guide.md#create-a-wordpress-stack) 
+9. [Basics of Persistent storage](Participant-Guide.md#basics-of-persistent-storage) 
+10. [Use Github and Docker Hub together to build an Image and Run the Container](Participant-Guide.md#use-github-and-docker-hub-together-to-build-an-image-and-run-the-container) 
+11. [Demo of Oracle Container Cloud Service Showing Participant's Containers](Participant-Guide.md#demo-of-oracle-container-cloud-service-showing-participants-containers) 
+
 
 
 ### 이 HOL을 완료하기위한 요구 사항 :
@@ -542,7 +552,8 @@ $ ./docker-compose --version
 ```
 
 
->*참고 - 자세한 내용은 나중에 Docker 문서 ([https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)****)를 참조하십시오. 
+>*참고 - 자세한 내용은 나중에 Docker 문서를 참조하십시오 : [https://docs.docker.com/compose/install/](https://docs.docker.com/compose/install/)*
+***
 
 ## Wordpress &quot;스택&quot;만들기
 
@@ -658,7 +669,8 @@ Docker 볼륨에 대한 전체 소개는 다음 위치에 있습니다. [https:/
 
 가장 중요한 것은, Docker Compose YAML 파일에서 Wordpress와 DB를위한 두 개의 볼륨 문을 사용했습니다. 
 
-예를 들어, YAML for Wordpress에있는이 문은 이미지를 블로그 게시물에 보관할 수있게 해줍니다. 이 예에서는 호스트 볼륨에 데이터가 저장되는 위치를 명시하고 있습니다.```
+예를 들어, YAML for Wordpress에있는이 문은 이미지를 블로그 게시물에 보관할 수있게 해줍니다. 이 예에서는 호스트 볼륨에 데이터가 저장되는 위치를 명시하고 있습니다. 
+```
      volumes:
        - /var/www/html:/var/www/html:rw
 ```
@@ -990,3 +1002,21 @@ Oracle Container Cloud Service에서 컨테이너 실행 체크 아웃 :
 ***
 
 ## 추가 리소스에 대한 요약 / 요약 포인터
+
+
+*[Get Started for Free](https://cloud.oracle.com/tryit) 
+
+*[Oracle GitHub](https://github.com/oracle/docker-images) 
+
+*[Oracle Images on the Docker Store](https://store.docker.com/search?q=oracle&source=verified&type=image) 
+
+*[Oracle Container Registry](https://container-registry.oracle.com) 
+
+오라클 블로그 : 
+
+*[Oracle Container Cloud Service Docs](http://docs.oracle.com/en/cloud/iaas/container-cloud/index.html) 
+
+*[Containers, Docker and Microservices](https://community.oracle.com/community/cloud_computing/containers-docker-and-microservices) 
+
+**끝난**
+
