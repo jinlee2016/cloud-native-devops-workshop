@@ -10,7 +10,7 @@
 ## 첫째, Oracle Cloud 계정 가져 오기
 
 
-- 행사에 도착하기 전에 귀하의 Trial 계정에 대한 액세스 권한을 얻으십시오. 평가판 계정은 [Try it] (http://cloud.oracle.com/tryit) 에서 얻을 수 있습니다. 
+- 행사에 도착하기 전에 귀하의 Trial 계정에 대한 액세스 권한을 얻으십시오. 평가판 계정은 [Try it](http://cloud.oracle.com/tryit) 에서 얻을 수 있습니다. 
 
 ## 둘째, 클라이언트 환경 구성
 
