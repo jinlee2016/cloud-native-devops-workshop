@@ -1,7 +1,7 @@
-# Wercker로 루팅 라우터 Sticky 세션
+# Rolling router sticky sessions with Wercker
 
 
-## 롤링 라우터의 Sticky 세션 서비스 배포
+## 롤링 라우터 Sticky 세션 서비스의 배포
 
 
 ### 저장소 복제
