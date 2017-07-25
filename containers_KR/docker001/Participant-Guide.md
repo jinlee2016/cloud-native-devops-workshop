@@ -159,7 +159,7 @@ $ docker run hello-world
 
 모든 컨테이너를 나열하십시오 : 
 
->*참고 - &quot;- a&quot;옵션 = running**및**stopped*
+>*참고 - "- a" option = running **and** stopped*
 
 ```
 $ docker ps -a
