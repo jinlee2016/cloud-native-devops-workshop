@@ -1,18 +1,24 @@
-# Wercker로 라우터 롤링 세션
+# Rolling router sticky sessions with Wercker
 
-## 롤링 라우터의 끈적한 세션 서비스 배포
+## Deploy the rolling router sticky sessions service
 
-### 저장소 복제
+### Clone the repository
+
 <pre>
 mkdir docker-images
 git clone git@github.com:oracle/docker-images.git docker-images
 cd docker-images/ContainerCloud
 </pre>
 
-### Docker Hub에 로그인하십시오.
+### Login to Docker Hub
+You will be building Docker images and pushing them to Docker Hub. In order to push to Docker Hub, you will need to authenticate with Docker Hub. Open a terminal and login to Docker Hub with this command:
+
 <pre>
 docker login
 </pre>
+
+You will then be prompted for your username and password. Enter your Docker Hub account name (which is NOT your email address). You can find this by logging in to Docker Hub in a Web browser and finding the name next to your avatar in the top navigation of the Docker Hub Web site.
+
 <pre>
 Login with your Docker ID to push and pull images from Docker Hub. If you don't have a Docker ID, head over to https://hub.docker.com to create one.
 Username:
@@ -20,22 +26,31 @@ Password:
 Login Succeeded
 </pre>
 
-### Docker 허브 계정을 사용하도록 작성기 구성
+### Configure the Builder to Use Your Docker Hub Account
+
+Before you can build your first stack, open [images/build/vars.mk](images/build/vars.mk) and set the registry name variable as your Docker Hub account (usernames should be entered in lower case):
+
 <pre>
 REGISTRY_NAME ?= your_docker_hub_username
 </pre>
 
-### 이미지 빌드
+### Build the image
+
+Build the `rolling-router-sticky-sessions`image using make:
+
 <pre>
 cd images/rolling-router-sticky-sessions
 make
 </pre>
 
-이렇게하면 Docker-hub에 이미지가 업로드됩니다. 
+This will upload the image to your Docker-hub.
 
 ![Logo](images/docker-hub-rolling-router.png)
 
-### OCCS 서비스 만들기
+### Create the OCCS service
+
+Login to OCCS and create a new service `rolling-router-sticky` with the following YML where the image repository refers to your Docker-hub account (bolded):
+
 <pre>
 version: 2
 services:
@@ -57,19 +72,62 @@ If you haven't build the image of your own, you can use the YML above as is.
 
 Deploy the service.
 
-## GUI를 사용하여 롤링 라우터 고정 세션 키 값 배포
+## Deploy the rolling router sticky sessions keyvalues with the GUI
+
+Check the worker host `public_ip` from the OCCS admin:
+
 ![Logo](images/occs-host-ip.png)
+
+Check also the `API token` a.k.a Bearer from Settings/My Profile:
+
 ![Logo](images/occs-bearer.png)
+
+From your browser open the URL pointing to the worker host public_ip address e.g. `http://140.86.1.96:8080`.
+
+The rolling router sticky sessions GUI should show up with a setup screen.
+
+Enter the OCCS admin host ip, API Token (Bearer), Application name `docker-hello-world` and the preferred `host port` of the Docker application e.g. 3000:
+
 ![Logo](images/rolling-router-ss-login.png)
+
+Press OK. The following screen should show up if the login with the given OCCS admin IP and API token was succesful:
+
 ![Logo](images/rolling-router-ss-create-keyvalues.png)
+
+If the login was unsuccesful the following error should show up:
+
 ![Logo](images/rolling-router-ss-login-error.png)
+
+Create the initial keyvalues for the hello world application deployment by selecting the following values from the dropdowns:
+
 ![Logo](images/rolling-router-ss-set-keyvalues.png)
+
+Set the values like this:
+
 ![Logo](images/rolling-router-ss-keyvalues-set.png)
+
+This will store the values in OCCS keyvalues for the hello world application in host port 3000:
+
 ![Logo](images/occs-keyvalues.png)
-### 기존 애플리케이션의 GUI 로그인 및 키 값
-## Wercker CI / CD 설정하기
-### Wercker 용 Hello World 애플리케이션 기본 이미지 빌드하기
+
+### GUI login and keyvalues for an existing application
+
+If you have already created the keyvalues either manually or using the rolling router sticky sessions GUI, you don't have to specify the port in the login. Then, after clicking the login/setup OK button the GUI will find the keyvalues automatically (given the login was succesful). The port discovered will be shown along with application name on the page.
+
+Also, if the keyvalues are changed in the OCCS using the admin or the REST API the GUI will detect the changes automatically after a short delay of max. 10 seconds.
+
+## Setting up Wercker CI/CD
+
+### Building the Hello world application base box image for Wercker
+
+Since the rolling router sticky sessions Wercker CI/CD script for OCCS uses utilities like `jq`, `recode` and `curl` we have selected `Ubuntu`as the base image for our Hello world `Node.js` application.
+
+#### Build Ubuntu with Node.js and required utilities
+
+First build Ubuntu image with the utilities included from `scratch` and then using the built Ubuntu image build the actual Hello world application image for the rolling router sticky sessions deployment.
+
 Here's the <a href="https://github.com/mikarinneoracle/docker-brew-ubuntu-core/blob/dist/trusty/Dockerfile#L50">Dockerfile</a> for the forked Ubuntu project with the following additions to enable the utilities along with Node.js in the Ubuntu image:
+
 <pre>
 RUN sudo apt-get -y install libc-dev-bin libc6 libc6-dev
 RUN sudo apt-get install -y recode
@@ -79,6 +137,9 @@ RUN sudo curl -sL https://deb.nodesource.com/setup_7.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 RUN sudo apt-get install -y build-essential
 </pre>
+
+You can clone the project and build the image and push it Docker hub (change the repository bolded to match your Docker hub account) using the branch `dist` and the version `trusty`:
+
 <pre>
 mkdir ubuntu
 git clone git@github.com:mikarinneoracle/docker-brew-ubuntu-core.git ubuntu
@@ -87,33 +148,67 @@ git checkout dist
 cd trusty
 export tag=$(docker build -t ubuntu . | grep 'Successfully built' | tail -c 13)
 docker tag $tag <b>mikarinneoracle</b>/ubuntu:trusty
+docker push mikarinneoracle/ubuntu
 </pre>
 
 ![Logo](images/docker-hub-ubuntu-trusty.png)
+
+#### Build the Hello world application image
+
+Using the custom built Ubuntu image build the Node.js Hello world application.
 The <a href="https://github.com/mikarinneoracle/hello-world">source code</a> includes a Dockerfile with the following:
+
 <pre>
 FROM mikarinneoracle/ubuntu:trusty
 
-# 앱 디렉토리를 만듭니다. 베커 기본값과 동일
-# 앱 의존성 설치
-# 번들 앱 소스
+# Create app directory; same as Wercker default
+RUN mkdir -p /pipeline/source
+WORKDIR /pipeline/source
+
+# Install app dependencies
+COPY package.json /pipeline/source/
+RUN npm install
+
+# Bundle app source
+COPY . /pipeline/source/
+
+EXPOSE 3000
+CMD [ "npm", "start" ]
 </pre>
 
 You can clone the project and then build and push the image to Docker hub (change the repository bolded to match your Docker hub account):
 
 <pre>
-mkdir 안녕하세요. 세계 
-git clone git@github.com : mikarinneoracle / hello-world.git hello-world 
-cd hello-world 
-내보내기 태그 = $ (docker 빌드 -t hello-world. | grep &#39;Successfully built&#39;| tail -c 13) 
+mkdir hello-world
+git clone git@github.com:mikarinneoracle/hello-world.git hello-world
+cd hello-world
+export tag=$(docker build -t hello-world . | grep 'Successfully built' | tail -c 13)
 docker tag $tag <b>mikarinneoracle</b>/hello-world:latest
+docker push mikarinneoracle/hello-world
 </pre>
 
 ![Logo](images/docker-hub-hello-world.png)
-### Wercker 워크 플로 만들기
+
+### Creating the Wercker workflow
+
+Login to your Wercker account and create a Wercker `application` Hello world for the Node.js application that we just built.
+
+Then create a Wercker `workflow` with two steps `build` (the default) and `deploy`.
+
+Add a new `step` deploy:
+
 ![Logo](images/Wercker-workflow-add-deploy.png)
+
+Add it to the workflow after the build step:
+
 ![Logo](images/Wercker-workflow.png)
-### 워크 플로우에 대한 Wercker 응용 프로그램 환경 값 작성
+
+The YML pipeline names are identical to pipeline names.
+
+### Creating Wercker application environment values for the Workflow
+
+Create the following application environment values for the Wercker workflow:
+
 <pre>
   SERVICE_MANAGER:    OCCS admin url e.g. https://140.86.1.162
   API_TOKEN:          OCCS API token (bearer)
@@ -132,107 +227,110 @@ docker tag $tag <b>mikarinneoracle</b>/hello-world:latest
 
 ![Logo](images/Wercker-app-env-variables.png)
 
-### 워크 플로로 첫 번째 빌드 시작
+### Launch the first build with the workflow
 
-응용 프로그램 환경 변수를 설정 한 후에 아래와 같이 &#39;지금 빌드 실행&#39;링크를 클릭하여 첫 번째 빌드를 시작할 수 있습니다 : 
+After setting the application environment variables you can start the first build by clicking the ` trigger a build now` link as below:
 
 ![Logo](images/Wercker-initial-build.png)
 
-워크 플로가 시작되고 워크 플로가 실행됩니다. 
+Workflow starts and runs the workflow:
 
 ![Logo](images/Wercker-deploy.png)
 
 ![Logo](images/Wercker-deploy-details.png)
 
-`timestamp` 태그가있는 Hello world 어플리케이션 후보 이미지 (즉, 배포 스크립트의 Wercker 환경 변수`$ WERCKER_MAIN_PIPELINE_STARTED`)가 작성되어 Docker 허브에 푸시되었습니다. 
+Hello world application candidate image with a `timestamp` tag (i.e. the Wercker environment variable `$WERCKER_MAIN_PIPELINE_STARTED` in the deploy script) was created and pushed to Docker hub:
 
 ![Logo](images/docker-hub-candidate-built.png)
 
-새 이미지도 OCCS에 배포되었으며 Hello World 응용 프로그램의 후보 이미지가 실행 중이어야합니다. 
+The new image was also deployed to OCCS and the candidate image of the Hello world application should be running:
 
 ![Logo](images/occs-candidate-deployed.png)
 
-롤링 라우터 고정 세션 GUI가 응용 프로그램 후보의 OCCS에서 키 값 변경을 반영하도록 업데이트되었습니다. 
+The Rolling router sticky sessions GUI was updated to reflect the keyvalue change in OCCS for the application candidate:
 
 ![Logo](images/rolling-router-ss-candidate-deployed.png)
 
-### 후보 이미지 홍보 및 브라우저에서 안정적인 애플리케이션 호출
+### Promoting the candidate image and calling the stable application from browser
 
-롤링 라우터 고정 세션 GUI에서 승격 버튼을 클릭하여 후보를 &#39;안정적으로&#39;승격시킵니다. 결과는 안정 버전이 지금 Wercker에 의해 작성된 이미지이고 후보가 롤링 / 널인 것입니다. 
+Promote the candidate to `stable`by clicking promote button in the Rolling router sticky sessions GUI. The result should be that the stable version is now the image that was just built by Wercker and the candidate is rolling/null:
 
 ![Logo](images/rolling-router-ss-candidate-promoted.png)
 
-이제 브라우저에 새 탭을 열고 작업자 호스트 public_ip 주소 (예 :`http : // 140.86.1.96`)를 가리키는 URL을 열어 응용 프로그램의 안정 버전을 호출 할 수 있습니다. 
+Now you can open a new tab to your browser and call the stable version of application by opening the URL pointing to the worker host public_ip address e.g. `http://140.86.1.96`.
 
 ![Logo](images/rolling-router-ss-stable-running.png)
 
-(배경색과 텍스트가 약간 다를 수 있음) 
+(The backgroud color and text can be slightly different)
 
-페이지를 몇 번 새로 고침하여 응답하는지 확인할 수 있습니다. 
+You can reload the page few times to see it is responding.
 
-### 새로운 후보자 구성
+### Building a new candidate
+
+Make a chance to the Hello world `index.html` with a an editor like changing the background color to green and version to 1.0.1. Commit the change and push the change to the repository:
+
 <pre>
 git add index.html
 git commit -m 'v.1.0.1'
 git push origin master
 </pre>
 
-Wercker는이 변경 사항을 자동으로 선택해야하며 Hello world의 새로운 후보 버전에 대한 워크 플로가 시작됩니다. 
+Wercker should pick up this change automatically and the workflow starts for a new candidate version of Hello world.
 
 ![Logo](images/Wercker-candidate-build.png)
 
-새 태그가있는 후보 이미지를 Docker 허브에 업로드해야합니다. 
+A new candidate image with a new tag should be uploaded to Docker hub:
 
 ![Logo](images/docker-hub-new-candidate.png)
 
-그것은 OCCS에서 전개되고 시작되어야하며 이제는 안정적이고 후보자가 모두 실행되어야합니다. 
+It should be also deployed and started in OCCS now both the stable and candidate running:
 
 ![Logo](images/occs-stable-and-candidate-deployed.png)
 
-이제 롤링 라우터 고정 세션 GUI가 후보와 함께 업데이트되어 애플리케이션 후보에 대한 OCCS 키 값의 변경 사항을 반영해야합니다. 
+The rolling router sticky sessions GUI should now be updated with the candidate to reflect the change in the OCCS keyvalue for the application candidate:
 
 ![Logo](images/rolling-router-ss-stable-and-candidate-running-blend-0.png)
 
-### 후보 버전으로로드 보내기
+### Sending load to the candidate version
 
-두 버전이 모두 실행 중이기 때문에 후보 버전을로드하여 테스트 할 수 있습니다. 
-이렇게하려면 블렌드 비율을 50 %로 조정하십시오. 
+Since both versions are now running we can test the candidate version by sending load to it.
+To do this adjust the blend % to 50:  
 
 ![Logo](images/rolling-router-ss-stable-and-candidate-running-blend-50.png)
 
-이제 근로자 호스트 public_ip 주소에 대한 다른 요청 (예 :http://140.86.1.96)은 후보 버전으로 가야합니다. 
+Now every other request to the worker host public_ip address e.g. http://140.86.1.96 should go to the candidate version:
 
 ![Logo](images/rolling-router-ss-candidate-running.png)
 
-문제를 보려면 페이지를 다시로드하십시오. 예를 들어 혼합 비율을 100으로 설정하면 모든 요청이 후보자에게 전달됩니다. 
+Keep on reloading the page to see the behaviour. You can also try setting the blend percent to 100 for example, then all requests should go to the candidate.
 
-#### 새로운 후보 버전 재구성 
+#### Rebuilding a new candidate version
 
-CI / CD 파이프 라인이 현재 작동하고 있으므로 새로운 버전의 후보를 쉽게 구축 할 수 있습니다. 배경색을 주황색으로 설정 한 다음 index.html을 변경하고 변경 사항을 커밋하고 푸시하면됩니다. 
+Since the CI/CD pipeline is now working it is easy to build new versions of the candidate. Just make another change to the index.html like setting the background color to orange and then commit and push your change.
 
-다시 말하지만 새로운 Hello world 응용 프로그램 이미지가 만들어져 태그가있는 Docker 허브에 업로드됩니다. 기존 후보자는 OCCS의 새로운 후보자로 대체되어야합니다. 
+Again, the new Hello world application image gets built and uploaded to Docker hub with a tag. The existing candidate should be replaced by the new candidate in the OCCS:
 
 ![Logo](images/occs-candidate-rebuild-deployed.png)
 
-그리고 새로운 후보는 롤링 라우터 sticky 세션 GUI에서 blend % zero로 업데이트되어야합니다 : 
+And the new candidate should also be updated in the rolling router sticky sessions GUI with the blend % zero:
 
 ![Logo](images/rolling-router-ss-stable-and-candidate-rebuild-running-blend-0.png)
 
-이제 블렌드 %를 늘리고 블렌드 %에 따라 응용 프로그램 페이지를 몇 번 리얼로드 할 수 있습니다. 결국 새 버전이 나타납니다. 
+You can now increase the blend % and realod your application page a few times depending on blend %. A new version should show up eventually:
 
 ![Logo](images/occs-candidate-rebuild-running.png)
 
-#### 새로운 후보를 안정적으로 홍보하기 
+#### Promoting a new candidate as stable
 
-언제든지 후보자를 안정적으로 승격시킬 수 있습니다. 그런 다음 블렌드가 0이되고 롤링 라우터의 고정 세션은 안정적인 버전으로 요청을 보냅니다. 그런 다음 변경 사항을 작성한 새 후보자를 배치하고 리포지토리에 밀어 넣으면 후보자 프로세스가 앞에서와 같이 다시 시작됩니다. 
+At any point you can promote the candidate as stable. Then the blend goes to zero and the rolling router sticky sessions send only requests to the stable version. Then, you can deploy a new candidate making a change and pushing it to the repository and the process for the candidate starts again as seen earlier.
 
-또한 응용 프로그램 페이지를 다시로드 할 때 효과를 보려면 GUI의 드롭 다운에서 안정된 값과 후보 값을 선택하여 재생하십시오. 값을 변경 한 후 롤링 라우터의 고정 세션 구성이로드되는 동안 잠시 지연됩니다. 응용 프로그램 페이지를 너무 빨리 다시로드하면 게이트웨이 오류가 발생할 수 있습니다. 이 경우 페이지를 새로 고침하십시오. 
+You also play with the stable and candidate values by selecting them from the dropdows of the GUI to see the effect when reloading the application page. There a short delay while the rolling router sticky sessions configuration is loaded after changing the values. If reloading the application page too fast you might experience a gateway error. In that case just reload the page.
 
-### 안정과 후보 사이의 세션 끈적 함
+### Session stickyness between stable and candidate
 
-지금까지는 세션 끈적임 (일명 유사성)을 사용하지 않았습니다. 
+So far you have not played with the session stickiness (a.k.a affinity) yet.
 
-stickyness를 true로 설정하기 만하면됩니다. 
+This is easy to do just setting the stickyness to true:
 
 ![Logo](images/rolling-router-ss-stable-set-stickiness-true.png)
 
@@ -240,15 +338,18 @@ stickyness를 true로 설정하기 만하면됩니다.
 
 Now every subsequent request from the <i>same</i> client i.e. browser should go to the same application version, either stable or candidate, depending on which one it reached initially (based on the blend %). This means it should keep the session affinity and the user should experince the same version of the application all the time.
 
-세션 stickyness가 false로 설정되면 클라이언트는 stable 또는 candidate의 응용 프로그램 버전에서 순수하게 혼합 %를 기반으로 제공되며 세션 선호도는 적용되지 않습니다. 
+When the session stickyness is set to false, the client will be served from the application version, either stable or candidate, purely based on the blend % and no session affinity will be in place.
 
-부하 테스트 응용 프로그램을 사용하지 않고 테스트하는 것이 더 어려울 수 있으므로이 동작을 경험하기 위해 세션 고정이 true로 설정된 경우 응용 프로그램에 요청을하기 위해 여러 브라우저를 열어 볼 수 있습니다. 
+As this may be a bit harder to test without a load testing application you can still try opening multiple browsers to make requests to the application when session stickiness is set to true to experience this behaviour.
 
-실생활 애플리케이션 테스트에서 세션 끈적 함은 웹 애플리케이션의 경우 사용자가 일관된 사용자 경험을 볼 수 있도록 중요합니다. 그러나 마이크로 서비스 테스트에서 세션 연관 관계는 더 적은 값을 가지며 false로 설정할 수 있습니다. 
+In real life application testing the session stickyness is important for the users to see a consistent user experience in case of web applications. In microservices testing, however, the session affinity has less value and can be set to false.
 
-## Wercker.yaml 및 Wercker 레지스트리 단계
+## Wercker.yaml and the Wercker registry step
 
 The <a href="https://github.com/mikarinneoracle/hello-world/blob/master/wercker.yml">Wercker.yml</a> is included in the Hello world application. It consists of the box definition and then two pipelines named as `build` and `deploy`.
+
+The box definition is based on our Node.js application image that was built on top of Ubuntu:
+
 <pre>
 box:
     id: $DOCKER_REGISTRY/$IMAGE_NAME
@@ -259,16 +360,16 @@ box:
 The build pipeline is very simple consisting only of one step:
 
 <pre>
-짓다: 
-단계 : 
+build:
+  steps:
     - npm-install
 </pre>
 
 The deploy pipeline that is executed after a succesful build pipeline is a bit more complex having three steps:
 
 <pre>
-배포 : 
-단계 : 
+deploy:
+  steps:
     - script:
         name: check
         code: |
@@ -292,5 +393,7 @@ The second step `internal/docker-push` pushes the built image to Docker-hub repo
 
 The final step of deploy pipeline, and the whole workflow, is the actual deploy to Oracle Container Cloud service.
 This is done as a `registry step`that is found in the <a href="https://app.wercker.com/search/steps/oracle">Wercker registry</a> with a name `mikarinneoracle/ORACLE-OCCS-rolling-router-deploy@1.0.0`:
+
 ![Logo](images/Wercker-registry-step-OCCS.png)
+
 The source code for it can be found here: <a href="https://github.com/mikarinneoracle/ORACLE-OCCS-rolling-router-deploy">github.com/mikarinneoracle/ORACLE-OCCS-rolling-router-deploy</a> and contains the `run.sh`and the `Wercker-step.yml` definition file.
