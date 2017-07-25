@@ -304,13 +304,13 @@ Wercker는이 변경 사항을 자동으로 선택해야하며 Hello world의 �
 ![Logo](images/rolling-router-ss-candidate-running.png)
 
 
-문제를 보려면 페이지를 다시로드하십시오. 예를 들어 혼합 비율을 100으로 설정하면 모든 요청이 candidate자에게 전달됩니다. 
+문제를 보려면 페이지를 다시로드하십시오. 예를 들어 혼합 비율을 100으로 설정하면 모든 요청이 candidate에게 전달됩니다. 
 
 #### 새로운 candidate 버전 재구성 
 
 CI / CD 파이프 라인이 현재 작동하고 있으므로 새로운 버전의 candidate를 쉽게 구축 할 수 있습니다. 배경색을 주황색으로 설정 한 다음 변경 사항을 커밋하고 밀어 넣는 것처럼 index.html을 다시 변경하십시오. 
 
-다시 말하지만 새로운 Hello world 응용 프로그램 이미지가 작성되어 태그가있는 Docker 허브에 업로드됩니다. 기존 candidate자는 OCCS의 새로운 candidate자로 대체되어야합니다. 
+다시 말하지만 새로운 Hello world 응용 프로그램 이미지가 작성되어 태그가있는 Docker 허브에 업로드됩니다. 기존 candidate는 OCCS의 새로운 candidate로 대체되어야합니다. 
 
 ![Logo](images/occs-candidate-rebuild-deployed.png)
 
@@ -327,7 +327,7 @@ CI / CD 파이프 라인이 현재 작동하고 있으므로 새로운 버전의
 
 #### 새로운 candidate를 Stable로 승격하기 
 
-언제든지 candidate를 Stable로 승격시킬 수 있습니다. 그런 다음 블렌드가 0이되고 롤링 라우터 고정 세션은 stable 버전으로 요청 만 보냅니다. 그런 다음 변경 사항을 작성한 새 candidate를 배치하고 이를 저장소로 밀어 넣고 candidate자 프로세스를 이전과 같이 다시 시작합니다. 
+언제든지 candidate를 Stable로 승격시킬 수 있습니다. 그런 다음 블렌드가 0이되고 롤링 라우터 고정 세션은 stable 버전으로 요청 만 보냅니다. 그런 다음 변경 사항을 작성한 새 candidate를 배치하고 이를 저장소로 밀어 넣고 candidate 프로세스를 이전과 같이 다시 시작합니다. 
 
 또한 GUI의 드롭 다운에서 해당 값을 선택하여 stable 값과 candidate 값으로 재생하여 응용 프로그램 페이지를 다시로드 할 때의 효과를 확인합니다. 롤링 라우터의 고정 세션 구성이 값을 변경 한 후로드되는 동안 잠시 지연됩니다. 응용 프로그램 페이지를 너무 빨리 다시 로드하면 게이트웨이 오류가 발생할 수 있습니다. 이 경우 페이지를 새로 고침하십시오. 
 
