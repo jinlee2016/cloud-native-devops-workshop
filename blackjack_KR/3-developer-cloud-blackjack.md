@@ -100,7 +100,7 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
 
 **이 예제에서 manifest.json 파일의 내용**: 
 
-    ```json
+```json
     {
       "runtime": {
         "majorVersion": "8"
@@ -113,7 +113,7 @@ Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 
       },
       "notes": "Blackjack Web Service"
     }
-    ```
+```
 
 
 4. Netbeans로 전환하고 프로젝트를 마우스 오른쪽 단추로 클릭 한 다음**Build를 클릭하십시오.**
