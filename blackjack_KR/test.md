@@ -1,1 +1,2 @@
-19. Right-click the **Helloworld-Example** project and click **Run.**
+3.  Unzip the **BlackJack.zip** file to the **cloud** **>**
+    **BlackJack** directory.
