@@ -149,7 +149,7 @@ GIT 저장소는 전자 메일 주소를 변경하여 저장자를 식별 할 �
 
 Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니다. 
 
-1. Windows 시작 메뉴에서 Git Bash를 열거 나 Mac을 사용하여 터미널 창을 엽니 다. 
+1. Windows 시작 메뉴에서 Git Bash를 열거나 Mac을 사용하여 터미널 창을 엽니다. 
 
 2. 데이터 저장 공간을 변경합니다. 
 
@@ -157,13 +157,13 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-3. 헬로 월드를 만들면서 작성합니다. 
+3. "helloworld" 디렉터리를 만듭니다. 
 
         mkdir helloworld
 
 
 
-4. Helloworld 디렉토리로 변경하기. 
+4. "helloworld" 디렉토리로  
 
         cd helloworld
 
