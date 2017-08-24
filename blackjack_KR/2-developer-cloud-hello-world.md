@@ -13,7 +13,7 @@
 
 **참고 :** Mac 설정 파일. /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml. 
 
-2.  Add the following lines under the <proxies> tag:
+2.  <proxies> 태그 안에 아래 <proxy> 태그를 추가하세요:
 
 
 
@@ -40,7 +40,7 @@ and then put it back in to C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\ 
 
 ### Maven의 프록시 설정
 
-1. NotePad ++와 같은 텍스트 편집기 C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml 
+1. NotePad ++와 같은 텍스트 편집기로 C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml을 Open합니다.
 
 **참고 :** Mac 설정 파일. /Applications/apache-maven-3.3.9/conf/settings.xml. 
 
