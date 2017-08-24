@@ -321,84 +321,82 @@ Archetypes을 사용하는 Maven 프로젝트를 생성하기 위해 아래 지�
 
 
 
-23. 프로젝트를 clean and compile하는 `mvn clean compile` 명령을 실행하십시오. 
+23. 프로젝트를 clean and compile하는 `mvn clean compile` 명령어를 실행하십시오. 
 
 <img src="images/2/image12.png" width="363" height="387" />
 
 
 
-24. 애플리케이션을 실행하는 `mvn exec:java` 명령을 실행합니다. 
+24. 애플리케이션을 실행하는 `mvn exec:java` 명령어를 실행합니다. 
 
 <img src="images/2/image13.png" width="360" height="297" />
 
 
 
-25. 애플리케이션을 패키지하는 `mvn package command`를 실행합니다. 
+25. 애플리케이션을 패키지하는 `mvn package` 명령어를 실행합니다. 
 
 <img src="images/2/image14.png" width="435" height="235" />
 
 **Helloworld-Example-1.0-SNAPSHOT.jar** 파일이 **cloud/helloworld/Helloworld-Example/target** 디렉터리 내에 생성되었는지 확인해 보세요.
 
-26. 패키지된 애플리케이션을 실행하는 `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하십시오. 
+26. 패키지된 애플리케이션을 실행하는 `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령어을 실행하십시오. 
 
     <img src="images/2/image15.png" width="454" height="120" />
 
 
 
 
-## GIT 저장소를 사용하는 Helloworld-Example 프로젝트
+## GIT 저장소를 사용하는 Helloworld-Example 프로젝트 확인
 
 
 
-다음 Helloworld-Example 프로젝트에 GIT 저장하기 
+로컬 GIT 저장소에 Helloworld-Example 프로젝트를 저장하기 위해 아래 지시사항에 따르십시요.
 
-1. cloud/helloworld 디렉토리로 바꾸기. 
+1. cloud/helloworld 디렉토리로 이동합니다. 
 
-2. `git add -n .` 명령을 실행하여 추가 준비가 된 파일의 목록을보십시오. 
+2. 저장소에 추가될 준비가 되어있는 파일들의 리스트를 보기위해 `git add -n .` 명령어을 실행합니다. 
 
     <img src="images/2/image16.png" width="408" height="102" />
 
 
 
-**참고 사항** :마지막에 **.** 가 포함되어 있는 것에 주의하십시오.
+**참고 사항** :명령어 끝에 **.** 가 포함되어 있는 것에 주의하십시오.
 
-3. &#39; git add&#39; . 명령을 실행하고 파일을 추가하십시오. 
+3. 저장소에 파일을 추가하기 위해 `git add .` 명령어을 실행하십시오. 
 
     <img src="images/2/image17.png" width="408" height="102" />
 
 
 
-4. `git status` 명령을 실행하여 추가 파일을 확인하십시오. 
+4. 파일들이 추가되었는지 확인하기 위해 `git status` 명령어을 실행하십시오. 
 
     <img src="images/2/image18.png" width="408" height="106" />
 
 
 
-5. Helloworld-Example Project &quot;에 대한 명령을 실행하고 파일을 저장하고 버전 추적을 시작하십시오. 
+5. 파일들을 저장소에 commit하고 버전관리를 시작하기 위해 `git commit -m "Initial Commit for Helloworld-Example Project"` 명령어를 실행하십시오.
 
     <img src="images/2/image19.png" width="415" height="108" />
 
 
 
-6. 지금은 파일이 없습니다. 
+6. 이제 여러분의 파일들은 버전관리를 위해 체크되었습니다.
 
-7. `git status 명령 &#39; 을 실행하여 상태를 확인하십시오. 
+7. `git status` 명령어를 실행해서 저장소의 상태를 확인하십시오. 
 
     <img src="images/2/image20.png" width="415" height="84" />
 
 
 
-**참고 :** 스크린 샷에 대해서도 대등 한 응답을 받아 들일 수 있습니다. 
+**참고 :** 여러분은 스크린샷과 비슷한 응답을 받으실 수 있습니다. 
 
-## 개발자 클라우드 서비스 프로젝트 만들기
+## 개발자 클라우드 서비스(Oracle Developer Cloud Service, 이하 Dev CS) 프로젝트 만들기
 
-이 작업의 일부로 복제 정책을 선택합니다 (복제 정책을 선택하면 Identity Domain 관리자가 아직 수행하지 않은)
-기본 데이터 센터는 또한 데이터가 있어야하는지 여부를 지정합니다.
-지리적으로 멀리 떨어져있는 (보조) 데이터 센터에 복제됩니다.
+이번 실습에서는 여러분은 여러분의 주(primary) 데이터센터를 지정하고 여러분의 데이터를 지리적으로 멀리 떨어져 있는 보조(secondary) 데이터센터 내에 복제할 것인지를 지정하는 복제 정책(replication policy)을 선택할 것입니다. (Identity Domain 관리자가 아직 수행하지 않았다고 가정 시)
 
-이전 Step에서 개발자 클라우드 서비스에 생성한 application Helloworld-Example을 push하기 위한, (HelloworldProjectRepo)의 repository를 포함한 빈 (HelloworldProject) 프로젝트 만드십시오.
+이전 실습에서 생성했던 **Helloworld-Example** 애플리케이션을 Dev CS에 푸쉬하기 위해 저장소(HelloworldProjectRepo)와 함께 프로젝트(HelloworldProject)을 생성하기 위한 Dev CS를 활성화(Activate)하십시요.
 
-** 참고 : ** 이 실습 부분을 수행하려면 클라우드 로그인 자격 증명 및 링크가 필요합니다. 오라클로부터 받은 이메일에서 이 정보를 수집하고 편리하게 보관하십시오.
+** 참고 : ** 이 실습을 수행하려면 클라우드 로그인 자격증명 및 링크가 필요합니다. 오라클로부터 받은 이메일에서 이 정보를 수집하고 편리하게 보관하십시오.
 
 ## 저장소 복제 정책 구성
 
@@ -410,39 +408,39 @@ Archetypes을 사용하는 Maven 프로젝트를 생성하기 위해 아래 지�
 
 
 
-1. From any browser, go to the URL: <https://cloud.oracle.com>
+1. 브라우져에서, 해당 URL로 이동하십시요: <https://cloud.oracle.com>
 
 
 
-2. 브라우저의 오른쪽 상단 모서리에**로그인**을 클릭하십시오. 
+2. 브라우져의 오른쪽 상단 모서리에 **로그인(Sign In)**을 클릭하십시오. 
 
     <img src="images/2/Picture100-1.png" width="429" height="119" />
 
 
 
-3. ** 중요 ** - 내 서비스에서 올바른 데이터 센터를 드롭 다운 목록에서 선택하고 ** 내 서비스 **를 클릭하십시오. 직접 선택해야하는 데이터 센터를 알지 못하는 경우 이것은 개인 훈련 이벤트입니다. *** 강사 **에게 ** Region **에 드롭 다운 목록에서 선택하도록 요청하십시오. 오라클 평가판을 통해 계정을받은 경우 평가판 확인 이메일에 해당 지역을 사전 선택하는 URL이 제공되어야합니다.
+3. **중요** - 내 서비스에서 여러분의 데이터센터를 드롭 다운 목록에서 선택하고 **내 서비스**를 클릭하십시오. 직접 선택해야 하는 데이터 센터를 알지 못하는 경우 **실습강사**에게 드롭다운 목록에서 **Region**을 선택하도록 요청하십시오. 오라클 평가판을 통해 계정을 받은 경우 평가판 확인 이메일에 해당 지역이 이미 선택되어 있는 URL이 제공됩니다.
 
     <img src="images/2/Picture100-2.png" />
 
 
 
-4. ID 도메인을 선택하고**이동**을 클릭하십시오. 
+4. ID 도메인을 선택하고 **이동(Go)**을 클릭하십시오. 
 
-** 참고 : ** ** ID 도메인, 사용자 이름 ** 및 ** 비밀번호 ** 값은 강사 또는 시험판 확인 이메일에서 제공됩니다.
+**참고:** **ID 도메인, 사용자 이름** 및 **비밀번호** 는 실습강사 또는 시험판 확인 이메일을 통해서 확인이 가능합니다.
 
-5. 로그인을 클릭하고 로그인하십시오. 
+5. ID 도메인을 설정하면, 사용자 이름과 비밀번호를 입력하고 로그인(Sign In)을 클릭하십시오. 
 
     <img src="images/2/Picture100-3.5.png" />
 
 
 
-6. 고객 서비스는 대용량이됩니다. 
+6. 로그인이 성공하면 여러분의 계정에서 사용가능한 다양한 클라우드 서비스들이 보이는 대시보드가 보일 것입니다.
 
     <img src="images/2/Picture100-4.png" />
 
 
 
-7. 모든 ** 스토리지 ** 클라우드 서비스가 보이지 않으면 ** 대시 보드 사용자 정의 **에서 **를 클릭하고 **보기를 클릭하여 대시 보드에 서비스를 추가 할 수 있습니다 **이 워크샵의 경우 적어도 ** 응용 프로그램 컨테이너, 개발자 및 저장소 ** 클라우드 서비스를 표시하고 있는지 확인하십시오. 특정 서비스를 보지 않으려면 ** 숨기기 **를 클릭하십시오.
+7. 모든 **스토리지** 클라우드 서비스가 보이지 않으면 **대시보드 사용자 정의**를 클릭하고 **보기(Show)** 를 클릭하여 대시보드에 서비스를 추가 할 수 있습니다. 이 실습에서는 **Application Container, Developer and Storage** 클라우드 서비스들만 사용합니다. 특정 서비스를 보지 않으려면 **숨기기(Hide)** 를 클릭하십시오.
 
     <img src="images/2/Picture100-5.png" />
 
@@ -455,18 +453,18 @@ Archetypes을 사용하는 Maven 프로젝트를 생성하기 위해 아래 지�
 
 클라우드 계정의 상태에 따라 이전에 복제 정책을 설정하지 않은 경우 복제 정책을 설정해야 할 수 있습니다. 이 단계에서는 Storage Cloud Service를 통해 복제 정책의 상태를 확인합니다.
 
-1. **스토리지**클라우드 서비스를 클릭하십시오.    
+1. **스토리지** 클라우드 서비스를 클릭하십시오.    
 <img src="images/2/Picture-01.png" />
 
 
 
-2. 아이콘 상단의**아이콘을 클릭하십시오. 
+2. 스크린 상단의 **서비스 콘솔 열기** 아이콘을 클릭하십시오. 
 
     <img src="images/2/Picture-01.5.png" />
 
 
 
-3. 후속 대화 상자가 표시되면 복제 정책을 변경할 때 변경할 수 없으므로 복제 정책을 설정할 때주의해야합니다. 기본값을 가져 와서 ** 정책 설정 ** 버튼을 클릭하십시오. 메시지가 표시되지 않으면 복제 정책이 이미 설정되고 클라우드 계정이 Workshop에 대한 준비가되었습니다. 
+3. 아래 대화 상자가 표시되면 복제 정책을 변경할 때 변경할 수 없으므로 복제 정책을 설정할 때 주의해야 합니다. 기본값을 가져 와서 **정책 설정** 버튼을 클릭하십시오. 메시지가 표시되지 않으면 복제 정책이 이미 설정되었고 클라우드 계정이 이 단계에 대한 준비가 된 것입니다. 
 
     <img src="images/2/Picture-02.5.png" />
 
@@ -480,58 +478,58 @@ Archetypes을 사용하는 Maven 프로젝트를 생성하기 위해 아래 지�
 
 
 
-Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 확인하려면 ** 대시 보드 ** 페이지에서 ** 스토리지 ** 링크를 클릭하십시오. 결과 페이지에서 ** 서비스 세부 사항 : Oracle Storage Cloud Service를 확장하십시오. ** Oracle Storage Cloud Service 인스턴스의 세부 사항이 표시됩니다. 다음 스크린 샷에 강조 표시된 복제 정책 필드를 찾으십시오.
+Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 확인하려면 **대시보드** 페이지에서 **스토리지** 링크를 클릭하십시오. 결과 페이지에서 **서비스 세부 사항: Oracle Storage Cloud Service**를 확장(expand)하십시오. Oracle Storage Cloud Service 인스턴스의 세부 사항이 표시됩니다. 아래 스크린샷에 강조표시된 복제 정책 필드를 찾으십시오.
 
 <img src="images/2/image30.png" width="348" height="116" />
 
 
 
 
-## 개발자 클라우드 서비스 활성화 및 새 프로젝트 만들기
+## 개발자 클라우드 서비스(Dev CS) 활성화 및 새 프로젝트 만들기
 
 
 
-이번 활동에서는 개발자 클라우드 서비스를 활성화하고, DevCS에서 새 프로젝트를 만들고, DevCS에서 GIT 저장소를 만들고, DevCS GIT 저장소를 사용하여 로컬로 빌드 된 프로젝트를 복제하고 배포를위한 빌드 작업을 생성 할 것입니다.
+이번 활동에서는 개발자 클라우드 서비스를 활성화하고, DevCS에서 새 프로젝트를 만들고, DevCS에서 GIT 저장소를 만들고, DevCS GIT 저장소를 사용하여 로컬에 빌드된 프로젝트를 복제하고 배포를 위한 빌드 작업을 생성할 것입니다.
 
-다음 지시 사항에 따라 DevCS를 활성화하고 새 프로젝트를 수행하십시오. 
+아래 지시사항에 따라 DevCS를 활성화하고 새 프로젝트를 수행하십시오. 
 
-1. 계정에 할당 된 서비스는 대시 보드에 표시됩니다. ** 개발자 ** 서비스가 보이지 않으면 ** 대시 보드 사용자 정의 ** 버튼을 클릭하고 ** 애플리케이션 컨테이너** 에 대한 **표시** 버튼을 클릭하여 대시 보드에 표시하십시오.
+1. 계정에 할당된 서비스는 대시보드에 표시됩니다. **개발자** 서비스가 보이지 않으면 **대시보드 사용자 정의** 버튼을 클릭하고 **애플리케이션 컨테이너**가 보이도록 하기위해 **표시** 버튼을 클릭하여 대시보드에 표시하십시오.
 
     <img src="images/2/image31.png" width="378" height="237" />
 
 
 
-2. 대시 보드에서**개발자 클라우드 서비스**를 클릭하면**ServiceDetails : developer85599  (Oracle Developer Cloud Service)**페이지로 이동하십시오. 
+2. 대시보드에서 **개발자 클라우드 서비스**를 클릭하고 **ServiceDetails:developer85599 (Oracle Developer Cloud Service)** 페이지로 이동하십시오. 
 
     <img src="images/2/image32.png" width="454" height="134" />
 
 
 
-3. ** 서비스 콘솔 열기 ** 버튼을 클릭하십시오.
+3. **서비스 콘솔 열기** 버튼을 클릭하십시오.
 
     <img src="images/2/image33.png" width="399" height="195" />
 
 
 
-4. **새 프로젝트**를 클릭하십시오. 
+4. **새 프로젝트** 를 클릭하십시오. 
 
     <img src="images/2/image34.png" width="399" height="245" />
 
 
 
-5. 다음 스크린 샷과 같이 프로젝트 이름 및 설명을 입력하고 ** 다음 **을 클릭하십시오.
+5. 아래 스크린샷과 같이 프로젝트 이름 및 설명을 입력하고 **다음**을 클릭하십시오.
 
     <img src="images/2/image35.png" width="399" height="288" />
 
 
 
-6. ** 빈 프로젝트 ** 템플릿을 클릭하고 ** 다음** 을 클릭하십시오.
+6. **빈(empty) 프로젝트** 템플릿을 클릭하고 **다음**을 클릭하십시오.
 
     <img src="images/2/image36.png" width="378" height="271" />
 
 
 
-7. Wiki Markup 토론 목록에서**MARKDOWN**을 선택하고**Finish**를 클릭하십시오. 
+7. Wiki Markup 토론 목록에서 **MARKDOWN**을 선택하고 **Finish** 을 클릭하십시오. 
 
     <img src="images/2/image37.png" width="384" height="277" />
 
@@ -548,15 +546,15 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 
 
-다음 길라잡이 안내 서비스에 GIT 저장소가 있습니다. 
+Dev CS에 GIT 저장소를 생성하기 위해 아래 지시사항에 따르십시오. 
 
-1. **REPOSITORIES**섹션에서**New Repository**버튼을 클릭하십시오. 
+1. **REPOSITORIES** 섹션에서 **New Repository** 버튼을 클릭하십시오. 
 
     <img src="images/2/image39.png" width="360" height="130" />
 
 
 
-2. New Repository 창에서 다음 스크린 샷과 같이 저장소 이름과 설명을 입력하고 ** Create **를 클릭하십시오.
+2. New Repository 창에서 아래 스크린샷과 같이 저장소 이름과 설명을 입력하고 **Create**를 클릭하십시오.
 
     <img src="images/2/image40.png" width="351" height="282" />
 
@@ -579,43 +577,43 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 
 
-다음 지침에 따라 Hello World-Example 프로젝트를 개발자 클라우드 서비스의 GIT 저장소에 복제하십시오.
-1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리 인 cloud/helloworld 디렉토리로 변경하십시오.
+아래 지시사항에 따라 Helloworld-Example 프로젝트를 개발자 클라우드 서비스의 GIT 저장소에 복제하십시오.
+1. GIT 저장소를 복제하려면 먼저 저장소의 루트 디렉토리인 cloud/helloworld 디렉토리로 이동하십시오.
 
-2. git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git` 실행
+2. `git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git` 명령어를 실행하십시오.
 
     <img src="images/2/image43.png" width="427" height="111" />
 
 
 
 **참고 :** 
-- 메시지가 표시되면 클라우드 계정 사용자 이름과 암호를 입력하십시오.
-- 사용자 이름과 암호를 입력하라는 메시지가 표시되지 않고 이 명령이 403 오류로 실패하면 암호를 명시적으로 넣으십시오. For example: `git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git`
+- 프롬프트가 표시되면 클라우드 계정의 사용자 이름과 암호를 입력하십시오.
+- 사용자 이름과 암호를 입력하라는 메시지가 표시되지 않고 이 명령이 403 오류로 실패하면 암호를 명시적으로 넣으십시오. 예를 들어: `git clone https://ora1:e1Car030@developer.em2.oraclecloud.com/developer85599-ouopc084/s/developer85599-ouopc084\_helloworlsprojectrepo\_4070/scm/HelloworldProjectRepo.git`
 
 
-3. ** helloworldProjectRepo **라는 이름의 새 디렉토리가 ** cloud/helloworld ** 디렉토리에 생성됩니다.
+3. **HelloworldProjectRepo**라는 이름의 새 디렉토리가 **cloud/helloworld** 디렉토리 내에 생성된 것을 확인하십시오.
 
-4. Helloworld-Example ** 프로젝트 디렉토리를 ** cloud/helloworld ** 디렉토리에서 ** HelloworldProjectRepo ** 디렉토리로 복사하여 붙여 넣습니다.
+4. **Helloworld-Example** 프로젝트 디렉토리를 **cloud/helloworld** 디렉토리에서 **HelloworldProjectRepo** 디렉토리로 복사하여 붙여 넣습니다.
 
-** 참고 : ** HelloworldProjectRepo ** 디렉토리의 내용은 아래 스크린 샷과 일치해야합니다.
+**참고: HelloworldProjectRepo** 디렉토리의 내용은 아래 스크린 샷과 일치해야합니다.
 
 <img src="images/2/image44.png" width="441" height="89" />
 
 
 
-5. **HelloworldProjectRepo**디렉토리로 변경하십시오. 
+5. **HelloworldProjectRepo** 디렉토리로 이동하십시오. 
 
         cd HelloworldProjectRepo
 
 
 
-6. 프로젝트 디렉토리에서 GIT에 소스 파일을 추가하십시오 
+6. 프로젝트 루트 디렉토리에서 GIT에 소스 파일들을 추가하십시오 
 
         git add .
 
 
 
-7. 변경 사항 적용 
+7. 변경사항들을 commit합니다. 
 
         git commit –m "commiting changes to HelloworldProjectRepo repository"
 
@@ -627,15 +625,15 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 
 
-9. 개발자 클라우드 서비스로 전환하여 저장소에 푸시 된 파일을 확인합니다.
+9. 웹브라우져에서 개발자 클라우드 서비스로 이동해서 저장소에 푸시된 파일들을 확인합니다.
 
-10. **HelloworldProject**홈 페이지에서**HelloworldProjectRepo.git**를 클릭하십시오. 
+10. **HelloworldProject** 홈 페이지에서 **HelloworldProjectRepo.git**를 클릭하십시오. 
 
     <img src="images/2/image45.png" width="378" height="150" />
 
 
 
-11. **Helloworld-Example** 프로젝트 디렉토리가 개발자 클라우드 서비스의 저장소로 푸시되었습니다. 그것을 클릭하고 내용을 확인하십시오.
+11. **Helloworld-Example** 프로젝트 디렉토리가 개발자 클라우드 서비스의 저장소로 푸시되었습니다. 클릭하고 내용을 확인하십시오.
 
     <img src="images/2/image46.png" width="385" height="153" />
 
@@ -647,27 +645,27 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 
 
-## 개발자 클라우드 서비스에 대한 프로젝트 빌드
+## 개발자 클라우드 서비스에서 프로젝트 빌드
 
 
 
-다음 지침 Helloworld-Example project 개발자 Cloud Service를 빌드합니다. 
+Helloworld-Example 프로젝트를 개발자 클라우드 서비스에서 빌드하기 위해 아래 지시사항을 따르십시오. 
 
-1. 왼쪽 탐색 창에서 다음을 클릭하십시오**새 작업**을 클릭하십시오. 
+1. 왼쪽 탐색 패널에서 **빌드**을 클릭하고, **새 작업(New Job)**을 클릭하십시오. 
 
     <img src="images/2/image48.png" width="457" height="201" />
 
 
 
-2. 새 작업 창에서**HelloworldProjectBJ**작업 이름 입력 및 저장**을 클릭하십시오. 
+2. 새 작업 창에서 **HelloworldProjectBJ** 작업 이름 필드를 입력하고 및 저장을 클릭하십시오. 
 
     <img src="images/2/image49.png" width="457" height="167" />
 
 
 
-3. **Main**탭에서 다음 값을 입력하십시오. 
+3. **Main** 탭에서 아래 값을 입력하십시오. 
 
-- 조정이 필요한 경우 작업 이름을 편집하십시오.
+- 수정이 필요한 경우 작업 이름을 편집하십시오.
 - 설명을 입력하십시오. 
 - **JDK**를**JDK 8로 설정하십시오.**
 
@@ -678,17 +676,17 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 4. **소스 제어**탭을 클릭하십시오. 
 
 - Repository로 **Git**을 선택합니다.
-- **URL**은 Git Reposityr에서 URL을 선택합니다. 
+- **URL**은 Git Repository에서 URL을 선택합니다. 
 
 <img src="images/2/image51.png" width="433" height="211" />
 
 
 
-5. **설치 단계**탭을 클릭하십시오. 
+5. **빌드 단계**탭을 클릭하십시오. 
 
-- Maven 3를 선택하고 빌드를 선택하십시오. 
-- **목표**를 clean package으로 설정하십시오. 
-- **POM 파일**위치 Helloworld-Example/pom.xml로 설정하십시오. 
+- *Add Build Step*을 클릭하고 Invoke Maven 3를 선택하십시오. 
+- **목표**를 *clean package*으로 설정하십시오. 
+- **POM 파일**위치를 Helloworld-Example/pom.xml로 설정하십시오. 
 
     <img src="images/2/image52.png" width="441" height="189" />
 
@@ -699,22 +697,22 @@ Oracle Storage Cloud Service 인스턴스에 대해 선택된 복제 정책을 �
 
 
 
-6. **게시물 작성**탭을 클릭하십시오. 
+6. **Post Build**탭을 클릭하십시오. 
 
-- 아티팩트 아크를 선택하십시오. 
-- Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar 
+- Archive the artifacts를 선택하십시오. 
+- Set **Files To Archive** to: Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar 
 - Set Compression Type to NONE. 
 
     <img src="images/2/image54.png" width="443" height="184" />
 
 
 
-7. 저장**다음을 클릭하십시오**지금 클릭하십시오.**
+7. 저장하고 **Build Now**를 클릭하십시오.
 
-빌드가 성공적으로 완료되면 파일이 표시됩니다.
-Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar은 ** 마지막으로 성공한 빌드의 인공물 ** 섹션에 있습니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다.
+빌드가 성공적으로 완료되면 아래 파일이 표시됩니다.
+Helloworld-Example/target/Helloworld-Example-1.0-SNAPSHOT.jar은 **Artifacts of Last Successful Build** 섹션에 있습니다. 파일 이름을 클릭하여 다운로드 할 수 있습니다.
 
-빌드가 실패한 경우 다시 빌드 작업 구성을 확인하십시오. 또는 ** Git Logs **를 클릭하여 오류에 대한 추가 정보를 확인하십시오.
+빌드가 실패한 경우 다시 빌드 작업 구성을 확인하십시오. 또는 **Git Logs**를 클릭하여 오류에 대한 추가 정보를 확인하십시오.
 <img src="images/2/image55.png" width="453" height="183" />
 
-이를 통해 로컬 GIT 저장소 생성, Maven 프로젝트 생성, 로컬 GIT 저장소에 Maven 프로젝트 저장, DevCS 활성화, DevCS에서 프로젝트 및 GIT 저장소 생성, 프로젝트를 DevCS로 복제 한 다음 배포를 위해 빌드 작업을 성공적으로 완료했습니다.
+이번 Lab을 통해 로컬 GIT 저장소 생성, Maven 프로젝트 생성, 로컬 GIT 저장소에 Maven 프로젝트 저장, DevCS 활성화, DevCS에서 프로젝트 및 GIT 저장소 생성, 프로젝트를 DevCS로 복제 한 다음 배포를 위해 빌드 작업을 성공적으로 완료했습니다.
