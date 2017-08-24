@@ -72,7 +72,7 @@ and then put it back in to C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\ 
 
 이 활동의 ​​일환으로 사용자의 홈디렉터리 안에 있는 로컬 GIT 저장소를 초기화하십시오. 
 
-1. Windows **시작**메뉴 또는 Mac의 터미널 창을 Open해서 Git Bash를 Open합니다. 
+1. Windows 시작 메뉴에서 Git Bash를 열거나 Mac을 사용하여 터미널 창을 엽니다. 
 
 2. 홈디렉토리에서 **cloud**디렉토리를 만드십시오. 
 
@@ -143,31 +143,32 @@ GIT 저장소에 변경내역(changes)을 commit하기 전에 저장소 내의
 
 
 
-**Hello World! Example**Hello world! Example &quot;Hello World!&quot;를 인쇄하십시오. message to display. 이 프로그램은 GIT 저장소에 저장하고, DevCS에서 프로젝트를 만들고, DevCS의 GIT 저장소에서 다음 작업을 생성합니다. 
+**Hello World! Example** IDE 콘솔창에 "Hello World!"라는 메세지를 출력하는 Helloworld-Example이라는 간단한 Maven 애플리케이션을 개발합니다. 
+이 애플리케이션은 이후에 로컬 GIT 저장소에 저장할 것이고, DevCS에서 프로젝트를 만들고, DevCS의 GIT 저장소로 clone하고 배포(deployment)를 위한 빌드(Build) Job을 생성합니다. 
 
-Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니다. 
+Archetypes을 사용하는 Maven 프로젝트를 생성하기 위해 아래 지시사항을 따르십시오. 
 
 1. Windows 시작 메뉴에서 Git Bash를 열거나 Mac을 사용하여 터미널 창을 엽니다. 
 
-2. 데이터 저장 공간을 변경합니다. 
+2. 여러분의 Git 저장소가 있는 cloud 디렉터리로 이동합니다. 
 
         cd cloud
 
 
 
-3. 헬로 월드를 만들면서 작성합니다. 
+3. hellowworld라는 이름의 디렉터리를 생성합니다. 
 
         mkdir helloworld
 
 
 
-4. Helloworld 디렉토리로 변경하기. 
+4. helloworld 디렉토리로 이동합니다. 
 
         cd helloworld
 
 
 
-5. Maven-archetype-quickstart Maven 프로젝트에서 빈을 사용하십시오. 다음 명령어를 입력하십시오. 
+5. maven-archetype-quickstart 아키타입을 사용하는 비어있는(emtpy) Maven 프로젝트를 생성하세요. 아래 명령어를 입력하십시오. 
 
         mvn archetype:generate -DgroupId=com.example -DartifactId=Helloworld-Example -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 
@@ -179,29 +180,29 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-6. Helloworld-Example**은 Maven 프로젝트를 실행합니다. 디렉토리 구조에서 검사 클래스를 com.example.App에 설치하십시오. 이제 pom.xml 파일을 사용하여 플러그인을 구성하십시오. 
+6. 위 명령어는 **Helloworld-Example**이라는 이름의 Maven 프로젝트를 생성합니다. 디렉토리 구조를 확인하고 실행가능한 클래스가 com.example.App에 위치하고 있는지 확인하십시요. 이제 플러그인을 위한 pom.xml 파일을 설정합니다. 
 
-7. 넷빈즈를 사용 하시려면 여기를 클릭하십시오. 
+7. 바탕화면의 바로가기를 사용해서 넷빈즈를 실행하세요. 
 
-8. Netbeans의**cloud/helloworld**헬프 월드 - 예**Maven 프로젝트를위한 연습. 
+8. Netbeans의 **cloud/helloworld** 디렉터리 내에 생성된 **Helloworld-Example** Maven 프로젝트를 Open하세요. 
 
     <img src="images/2/image4.png" width="374" height="193" />
 
 
 
-9. 프로젝트의 디렉토리 구조를 검사하고**com.example.App**실행 가능 클래스를 사용하여 전파를 조사하십시오. 
+9. 프로젝트의 디렉토리 구조를 확인하고 **com.example.App** 실행가능 클래스를 Open하고 코드를 리뷰합니다. 
 
     <img src="images/2/image5.png" width="384" height="181" />
 
 
 
-10. **Project Files> pom.xml**을 클릭하고 클릭하십시오. 
+10. **Project Files> pom.xml**을 마우스 오른쪽 클릭하고 Open을 클릭하십시오. 
 
     <img src="images/2/image6.png" width="242" height="242" />
 
 
 
-11 . dependency section in configuration. 프로젝트의 자바 버전을 설정합니다. 
+11. dependencies 섹션 앞에 아래의 프로퍼티 설정들을 파일에 추가하세요. 아래 설정은 프로젝트의 자바 버전과 인코딩을 설정합니다. 
 
 ```xml
     <properties>
@@ -212,7 +213,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-12 . 의존성은 추가 구성 요소를 추가합니다. 
+12. dependencies 엘리먼트 뒤에 빌드와 플러그인 엘리먼트들을 추가합니다. 
 
 ```xml
     <build>
@@ -224,7 +225,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-13 . 플러그인의 구성을 추가하십시오. 
+13. 컴파일러 플러그인 설정을 플러그인들 세션에 추가하십시오. 
 
 ```xml
     <plugin>
@@ -240,7 +241,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-14 . pom.xml 파일에 임원 플러그인을 추가하십시오. 
+14. pom.xml 파일에 exec 플러그인을 추가하십시오. 
 
 ```xml
     <plugin>
@@ -262,7 +263,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-15 . pom.xml 파일에 JAR 플러그인을 추가하십시오. 
+15. pom.xml 파일에 JAR 플러그인을 추가하십시오. 
 
 ```xml
     <plugin>
@@ -281,7 +282,7 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-16 . 소스 창에서**파일을 클릭하고 파일을 선택하여 파일을 복사하십시오. 
+16 . 소스 창에서 **pom.xml** 파일을 마우스 오른쪽 클릭하고 파일의 들여쓰기를 위해 **Format**을 선택하십시오. 
 
 <img src="images/2/image7.png" width="276" height="227" />
 
@@ -289,27 +290,27 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 17. **pom.xml**파일을 저장합니다. 
 
-18. **Helloworld-Example** 프로젝트를 클릭하고 **Clean and Build.**를 클릭하십시오.**
+18. **Helloworld-Example** 프로젝트에서 마우스 오른쪽 클릭하고 **Clean and Build**를 클릭하십시오.
 
-19. **Helloworld-Example**실행을 클릭하고**실행**을 클릭하십시오.**
+19. **Helloworld-Example** 프로젝트에서 마우스 오른쪽 클릭하고 **Run**을 클릭하십시오.**
 
     <img src="images/2/image8.png" width="231" height="196" />
 
 
 
-20. 사용 가능한 기본 클래스 목록에서 **com.example.App**선택하고 **Select Main Class** 버튼을 클릭하십시오. 
+20. 사용가능한 메인 클래스들 목록에서 **com.example.App**을 선택하고 **Select Main Class** 버튼을 클릭하십시오. 
 
 <img src="images/2/image9.png" width="231" height="225" />
 
 
 
-21. 성공하기 메시지로 **Hello World!**가 나와야 합니다. 
+21. 여러분은 Build SUCCESS 메시지와 함께 **Hello World!** 메세지를 볼 수 있습니다. 
 
 <img src="images/2/image10.png" width="406" height="152" />
 
 
 
-22. Git Bash (Windows) 또는 Terminal 창 (Mac)과 Helloworld-Example로 변경하십시오. 
+22. Git Bash(Windows) 또는 터미널 창(Mac)으로 이동한 후 Helloworld-Example 디렉터리로 이동하십시오. 
 
         cd Helloworld-Example
 
@@ -320,25 +321,25 @@ Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니�
 
 
 
-23. mvn clean 컴파일 명령을 실행하고 프로젝트를 완성하십시오. 
+23. 프로젝트를 clean and compile하는 `mvn clean compile` 명령을 실행하십시오. 
 
 <img src="images/2/image12.png" width="363" height="387" />
 
 
 
-24. `mvn exec:java` 명령을 실행하고 응용 프로그램을 실행합니다. 
+24. 애플리케이션을 실행하는 `mvn exec:java` 명령을 실행합니다. 
 
 <img src="images/2/image13.png" width="360" height="297" />
 
 
 
-25. `mvn package command`를 실행하고 응용 프로그램을 패키지화합니다. 
+25. 애플리케이션을 패키지하는 `mvn package command`를 실행합니다. 
 
 <img src="images/2/image14.png" width="435" height="235" />
 
-Examine the **Helloworld-Example-1.0-SNAPSHOT.jar** file created inside **cloud/helloworld/Helloworld-Example/target** directory.
+**Helloworld-Example-1.0-SNAPSHOT.jar** 파일이 **cloud/helloworld/Helloworld-Example/target** 디렉터리 내에 생성되었는지 확인해 보세요.
 
-26. `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하여 응용 프로그램을 실행하십시오. 
+26. 패키지된 애플리케이션을 실행하는 `java -jar target/Helloworld-Example-1.0-SNAPSHOT.jar` 명령을 실행하십시오. 
 
     <img src="images/2/image15.png" width="454" height="120" />
 
