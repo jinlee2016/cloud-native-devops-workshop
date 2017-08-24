@@ -13,7 +13,7 @@
 
 **참고 :** Mac 설정 파일. /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml. 
 
-2.  <proxies> 태그 안에 아래 <proxy> 태그를 추가하세요:
+2.  태그 아래에 아래 <proxy> 태그를 추가하세요:
 
 
 
@@ -42,9 +42,9 @@ and then put it back in to C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\ 
 
 1. NotePad ++와 같은 텍스트 편집기로 C:\\Maven\\apache-maven-3.3.9\\conf\\settings.xml을 Open합니다.
 
-**참고 :** Mac 설정 파일. /Applications/apache-maven-3.3.9/conf/settings.xml. 
+**참고 :** Mac의 setting.xml 파일은 /Applications/apache-maven-3.3.9/conf/settings.xml 에서 찾을 수 있습니다.
 
-2.  Add the following lines under the <proxies> tag:
+2.  <proxies> 태그 안에 아래 <proxy> 태그를 추가하세요:
 
 
 
@@ -147,7 +147,7 @@ GIT 저장소에 변경내역(changes)을 commit하기 전에 저장소 내의
 
 Archetypes가 Maven 프로젝트를 사용하여 지시 사항을 생성합니다. 
 
-1. Windows 시작 메뉴에서 Git Bash를 열거 나 Mac을 사용하여 터미널 창을 엽니 다. 
+1. Windows 시작 메뉴에서 Git Bash를 열거나 Mac을 사용하여 터미널 창을 엽니다. 
 
 2. 데이터 저장 공간을 변경합니다. 
 
