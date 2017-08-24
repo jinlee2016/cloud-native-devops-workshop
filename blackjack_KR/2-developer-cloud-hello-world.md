@@ -4,12 +4,12 @@
 
 
 
-**중요 사항 : ** Secured 네트워크를 사용하시거나 방화벽 뒤에 있는 경우에만 해당합니다. 이 경우 Maven에 대한 프록시 설정을 위해 다음 지침을 따르십시오. 그 이외에는 이 부분을 건너 뛰고 **GIT 저장소 **을 수행하시기 바랍니다.
+**중요 사항 : ** Secured 네트워크를 사용하시거나 방화벽 뒤에 있는 경우에만 해당합니다. 이 경우 Maven에 대한 프록시 설정을 위해 다음 지침을 따르십시오. 그 이외에는 이 부분을 건너뛰고 ** GIT 저장소 만들기**로 이동하시기 바랍니다.
 
 ### Proxy Settings for Maven in Netbeans
 
 
-1. C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 메모장에 놓습니다. 
+1. C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\settings.xml 파일을 Notepad++ 같은 텍스트 편집기로 Open합니다.
 
 **참고 :** Mac 설정 파일. /Applications/NetBeans/NetBeans 8.1.app/Contents/Resources/Netbeans/java/maven/conf/settings.xml. 
 
@@ -66,47 +66,45 @@ and then put it back in to C:\\Program Files\\NetBeans 8.1\\java\\maven\\conf\\ 
 3.  Replace **ENTER YOUR PROXY ADDRESS** within the <host> tag
 임시 저장하고 파일을 저장합니다. 
 
-## GIT Repository 만들기
+## GIT 저장소 만들기
 
 
 
-이 활동의 ​​일환으로 사용자의 홈 아래에있는 GIT 저장소를 초기화하십시오. 
+이 활동의 ​​일환으로 사용자의 홈디렉터리 안에 있는 로컬 GIT 저장소를 초기화하십시오. 
 
-1. Windows **시작**메뉴에서 열심히 Mac을 사용하여 터미널 창을 사용하십시오. 
+1. Windows **시작**메뉴 또는 Mac의 터미널 창을 Open해서 Git Bash를 Open합니다. 
 
-2. 홈 디렉토리에서 **cloud**디렉토리를 작성하십시오. 
+2. 홈디렉토리에서 **cloud**디렉토리를 만드십시오. 
 
         mkdir cloud
 
 
 
-3. **cloud**디렉토리로 변경하십시오. 
+3. **cloud**디렉토리로 이동하십시오. 
 
         cd cloud
 
 
 
-4. 주어진 유형을 선택하십시오. 
+4. 아래 명령어를 실행하십시오. (Git 저장소 타입 생성)
 
         git init
 
 
 
-5. 많은 사람들이 Git 저장소에 있습니다. `ls -a` 명령을 실행하면 당신이 확인해보세요. `ls -a` 명령의 출력은 스크린 샷의 결과와 일치합니다 : 
+5. 현재 cloud 디렉터리가 Git 저장소입니다. `ls -a` 명령을 실행해서 확인해 보세요. `ls -a` 명령의 출력은 스크린 샷 내용과 일치합니다 : 
 
     <img src="images/2/image1.png" width="497" height="124" />
 
 
 
-**참고 :** 지금은 .git 디렉토리가 생성 목록을 준비합니다. 
+**참고 :** cloud 디렉터리 내에 .git 디렉토리가 생성되어 있고 저장소가 준비되어 있는지 확인해 보십시요. 
 
 ## GIT 저장소 구성
 
+GIT 저장소에 변경내역(changes)을 commit하기 전에 저장소 내의 여러분의 commit을 식별할 이름과 이메일 주소를 설정해야 합니다. 
 
-
-GIT 저장소는 전자 메일 주소를 변경하여 저장자를 식별 할 수 있습니다. 
-
-1. 다음 명령을 실행하여 구성하십시오. 
+1. 이름을 설정하기 위해 아래 명령어을 실행하십시오.
 
         git config --global user.name "Your Name"
 
@@ -114,7 +112,7 @@ GIT 저장소는 전자 메일 주소를 변경하여 저장자를 식별 할 �
 
 **예 :** `git config -global user.name &quot;John Doe&quot;` 
 
-2. 다음 명령어를 전자 메일 주소로 구성하십시오. 
+2. 이메일 주소을 설정하기 위해 아래 명령어을 실행하십시오. 
 
         git config --global user.email your-email@address
 
@@ -125,21 +123,21 @@ GIT 저장소는 전자 메일 주소를 변경하여 저장자를 식별 할 �
 
 
 
-3. 다음 명령을 실행하십시오. 
+3. 설정값들이 설정되어 있는지 확인하기 위해 아래 명령어을 실행하십시오. 
 
         git config --global –l
 
 
 
-이 명령의 출력은 스크린 샷의 출력과 유사합니다. 
+이 명령어의 출력은 스크린 샷의 출력과 유사합니다. 
 
 <img src="images/2/image2.png" width="420" height="219" />
 
 
 
 **참고 :** 
-- 모든 GIT 프로젝트의 이름과 이메일 주소를 설정하십시오. 
-- - 글로벌 옵션을 사용하여 프로젝트 레벨에서 전자 메일 주소를 설정할 수 있습니다. 
+- 모든 GIT 프로젝트를 위한 이름과 이메일 주소를 설정하십시오. 
+- 개별 프로젝트 레벨의 이름과 이메일 주소를 설정하기 위한 --global 옵션을 사용하지 마세요. 
 
 ## Maven 프로젝트 유형을 사용하여 프로젝트 만들기
 
