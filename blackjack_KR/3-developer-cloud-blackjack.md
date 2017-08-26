@@ -259,7 +259,7 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
     <img src="images/3/image26.png" width="478" height="154" />
 
 
-## DevCS에서 프로젝트 빌드(Build)하기
+## DevCS에서 프로젝트 빌드(Build)
 
 
 아래 지시사항에 따라 DevCS에서 BlackJack-Part2 프로젝트를 빌드하십시오. 
