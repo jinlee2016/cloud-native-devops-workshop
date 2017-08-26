@@ -1,10 +1,10 @@
-# IV 부 : Oracle Application Container Cloud에 BlackJack WebService 응용 프로그램 직접 배포
+# IV 부 : Oracle Application Container Cloud에 BlackJack WebService 애플리케이션 직접 배포
 
 
-## Oracle Application Container 클라우드 서비스 (OACCS) 활성화
+## Oracle Application Container 클라우드 서비스(이하 OACCS) 활성화
 
 
-**중요 사항 :** 클라우드 로그인 자격 증명 및 링크는 랩을 수행하는 데 필요합니다. 오라클로부터 받은 이메일에서 확인하실 수 있습니다.
+**중요:** 클라우드 로그인 자격증명(credentials) 및 링크(links)는 Lab을 수행함에 있어 반드시 필요합니다. 오라클로부터 받은 이메일에서 확인하실 수 있습니다.
 
 이 문서를 작성하기 위해 EMEA Local 데이터 센터의 클라우드 인스턴스가 사용되었습니다. NAMER Local 데이터 센터에서 클라우드 인스턴스를 얻을 수 있습니다. 이에 따라 데이터 센터를 선택하십시오. 
 
