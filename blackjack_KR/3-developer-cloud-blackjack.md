@@ -173,7 +173,7 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
 ## Developer Cloud Service에서 GIT 저장소 만들기
 
 
-아래 지시사항에 따라 Dev CS에 빈 GIT 저장소를 만듭니다. 
+아래 지시사항에 따라 DevCS에 빈 GIT 저장소를 만듭니다. 
 
 1. **REPOSITORIES** 섹션에서 **New Repository** 버튼을 클릭하십시오. 
 
@@ -198,7 +198,7 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
 ## GIT 저장소 복제(Clone)
 
 
-아래 지시사항에 따라 Dev CS의 GIT 저장소에 BlackJack-Part2 프로젝트를 복제(clone)하십시오. 
+아래 지시사항에 따라 DevCS의 GIT 저장소에 BlackJack-Part2 프로젝트를 복제(clone)하십시오. 
 
 1. GIT 저장소를 복제(clone)하려면 먼저 저장소의 루트 디렉토리인 cloud/BlackJack 디렉토리로 이동(Change)하십시오. 
 
@@ -240,7 +240,7 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
         git commit –m "commiting changes to BlackJack-Part2Repo repository"
 
 
-8. Dev CS의 저장소로 파일을 푸시(push)합니다. 
+8. DevCS의 저장소로 파일을 푸시(push)합니다. 
 
         git push origin master
 
@@ -262,7 +262,7 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
 ## DevCS에서 프로젝트 빌드(Build)하기
 
 
-아래 지시사항에 따라 Dev CS에서 BlackJack-Part2 프로젝트를 빌드하십시오. 
+아래 지시사항에 따라 DevCS에서 BlackJack-Part2 프로젝트를 빌드하십시오. 
 
 1. 왼쪽 탐색 패널 창에서 **빌드(Build)** 를 누른 다음 **새 작업(New Job)** 을 누르십시오. 
 
