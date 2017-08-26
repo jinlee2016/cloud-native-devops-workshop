@@ -6,20 +6,20 @@
 
 **중요:** 클라우드 로그인 자격증명(credentials) 및 링크(links)는 Lab을 수행함에 있어 반드시 필요합니다. 오라클로부터 받은 이메일에서 확인하실 수 있습니다.
 
-이 문서를 작성하기 위해 EMEA Local 데이터 센터의 클라우드 인스턴스가 사용되었습니다. NAMER Local 데이터 센터에서 클라우드 인스턴스를 얻을 수 있습니다. 이에 따라 데이터 센터를 선택하십시오. 
+이 문서의 설명에는 EMEA에 있는 오라클 클라우드 서비스 인스턴스를 이용하였으며, 여러분은 실습환경에 주어진 데이터 센터를 선택하십시오. 
 
-Oracle Application Container Cloud Service는 Java Platform, Standard Edition (Java SE) 및 Node.js 애플리케이션을 배포 및 실행할 수 있습니다. 이 액티비티에서는 이전 활동에서 작성한 애플리케이션 아카이브 파일을 사용하여 ACJ에 BlackJack 애플리케이션을 배포하는 방법을 배우게됩니다. 
+Oracle Application Container Cloud Service는 Java Platform, Standard Edition (Java SE) 및 Node.js 애플리케이션을 배포 및 실행할 수 있습니다. 이 Lab에서는 이전 Lab에서 생성한 애플리케이션 아카이브 파일들을 사용하여 ACCS에 BlackJack 애플리케이션을 배포하는 방법을 배우게 됩니다. 
 
-다음 지침에 따라 BlackJack 응용 프로그램을 사용자 인터페이스에서 ACCS에 배포하십시오. 
+아래 지침에 따라 BlackJack 애플리케이션을 웹 사용자 인터페이스(Web UI)를 이용해서 ACCS에 배포하십시오. 
 
-1. Oracle Cloud 계정에 로그인하십시오 (로그인 방법에 대한 자세한 내용은 **개발자 클라우드 서비스 활성화**활동 참조) 
+1. Oracle Cloud 계정에 로그인하십시오 (로그인 방법에 대한 자세한 내용은 **개발자 클라우드 서비스 활성화** 참조) 
 
-2. 로그인이 성공하면 시작 페이지에서**ID 도메인 이름** 및 **사용자 이름**을 볼 수 있습니다. 
+2. 로그인이 성공하면 시작 페이지에서 **ID 도메인 이름** 및 **사용자 이름** 을 볼 수 있습니다. 
 
     <img src="images/4/image1.png" width="360" height="145" />
 
 
-3. 계정에 지정된 서비스가 대시 보드에 표시됩니다.**Application Container**서비스가 보이지 않으면 대시 보드에 **Application Container**의 **Show**버튼을 표시하여 **대시 보드 사용자 정의 **버튼과 **Show**버튼을 표시하십시오. 
+3. 사용자 계정에 할당되어 사용할 수 있는 오라클 클라우드 서비스가 대시보드에 표시됩니다.**Application Container** 서비스가 대시보드에서 보이지 않으면 **Application Container**의 **Show**버튼을 표시해서 **대시 보드 사용자 정의 **버튼과 **Show** 버튼을 표시하십시오. 
 
     <img src="images/4/image2.png" width="360" height="174" />
 
