@@ -335,7 +335,7 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
 ## DevCS에서 ACCS로 프로젝트 배포
 
 
-아래 지시사항에 따라 BlackJack-Part2 프로젝트를 Dev CS에서 Oracle Application Container Cloud Service(이하 ACCS)를 배포하십시오. 
+아래 지시사항에 따라 BlackJack-Part2 프로젝트를 DevCS에서 Oracle Application Container Cloud Service(이하 OACCS)를 배포하십시오. 
 
 1. 왼쪽 탐색 패널에서 **배포** 를 클릭한 다음 **새 구성** 을 클릭하십시오. 
 
