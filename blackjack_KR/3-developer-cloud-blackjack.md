@@ -11,7 +11,7 @@
 
 아래 지침에 따라 프로젝트와 함께 제공(bundle)되는 Apache Tomcat Server에 BlackJack 애플리케이션을 배포하십시오. 
 
-1. 윈도우 파일 탐색기를 열고 **cloud** 디렉토리로 이동하십시오. 
+1. 윈도우 파일탐색기를 열고 **cloud** 디렉토리로 이동하십시오. 
 
 2. **cloud** 디렉토리 내에 **BlackJack** 디렉토리를 만들고 이전 Lab에서 다운로드한 **BlackJack.zip** 파일을 복사하십시오. 
 
@@ -46,7 +46,7 @@
     <img src="images/3/image5.png" width="490" height="280" />
 
 
-**참고 :** 포트 충돌 문제로 인해 프로젝트를 실행할 때 문제가 발생할 수 있습니다. 이 애플리케이션은 Apache Tomcat Server에 배포되며 클라이언트 요청을 수신하기 위한  **8080**로컬 포트 ​​번호가 필요합니다.**8080**로컬 포트 ​​번호에서 실행중인 서비스를 중지하십시오. 
+**참고 :** 포트 충돌 문제로 인해 프로젝트를 실행할 때 문제가 발생할 수 있습니다. 이 애플리케이션은 Apache Tomcat Server에 배포되며 클라이언트 요청을 수신하기 위한  **8080** 로컬 포트 ​​번호가 필요합니다.**8080** 로컬 포트 ​​번호에서 실행중인 서비스를 중지하십시오. 
 
 **TCPView**도구는 이 포트 번호를 사용하여 프로세스를 식별하고 종료하는 데 사용할 수 있습니다. 
 
@@ -55,48 +55,48 @@
 ## 로컬에 배포된 BlackJack 애플리케이션 테스트
 
 
-HTML-5 클라이언트 프로그램이 BlackJack 애플리케이션과 함께 제공되며 로컬/원격서버에 배포되면 기능을 테스트합니다. 
+로컬/원격서버에 배포된 후 기능을 테스트하기 위한 HTML-5 클라이언트 프로그램이 이미 BlackJack 애플리케이션과 함께 제공되었습니다.
 
-다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
+아래 지시사항에 따라 BlackJack 애플리케이션을 테스트하십시오. 
 
-1. 그래픽 파일 탐색기를 열고 **cloud> BlackJack> html5-client**디렉토리로 이동하십시오. 
+1. 윈도우 파일탐색기를 열고 **cloud> BlackJack> html5-client** 디렉토리로 이동하십시오. 
 
-2. 브라우저로 index.html 파일을 엽니 다. 
+2. 브라우져를 실행해서 index.html 파일을 엽니다. 
 
-3. 첫번째 필드 인 **Service**가 채워져 있는지 확인하십시오.    **<http://127.0.0.1:8080/>** 두 번째 필드에 1~9의 값을 입력 한 다음 연결을 클릭하십시오. 
+3. 첫번째 필드인 **Service**가 **<http://127.0.0.1:8080/>** 로 값이 입력되어 있는지 확인하십시오. 두 번째 필드에 1에서 9 사이의 값을 입력한 다음 연결(connect)을 클릭하십시오. 
 
     <img src="images/3/image6.png" width="528" height="229" />
 
 
-4. 게임 콘솔에 연결되면**디버그 켜기 / 끄기**버튼을 클릭하여 디버그 콘솔을 표시합니다. 
+4. 게이밍 콘솔에 연결되면 오른쪽 상단의 **디버그 켜기/끄기** 버튼을 클릭하여 디버그 콘솔을 볼 수 있습니다. 
 
     <img src="images/3/image7.png" width="535" height="251" />
 
 
-UI에서**Hit**및**Stand**버튼을 사용하여 게임을 할 수 있습니다. 
+UI에서 **Hit** 및 **Stand** 버튼을 사용하여 게임을 할 수 있습니다. 
 
-이 HTML5 클라이언트 응용 프로그램은 컴퓨터에서 로컬로 실행되는 Tomcat Server에 배포 된 BlackJack 게임 응용 프로그램과 상호 작용합니다. 완료되면이 HTML5 클라이언트 애플리케이션을 닫습니다. 
+이 HTML5 클라이언트 프로그램은 컴퓨터에서 로컬로 실행되는 Tomcat Server에 배포된 BlackJack 게이밍 애플리케이션과 상호동작합니다. 테스트가 완료되면 이 HTML5 클라이언트 프로그램을 닫습니다. 
 
-## BlackJack 응용 프로그램을위한 응용 프로그램 아카이브 파일 생성
+## BlackJack 애플리케이션을 위한 애플리케이션 아카이브 파일들 생성
 
 
-Oracle Application Container Cloud는 Java Platform, Standard Edition (Java SE) 및 Node.js 애플리케이션을 배포 및 실행할 수 있습니다. 먼저 응용 프로그램을 배포하기 위해 필수 구성 정보가 포함 된**ZIP**또는**Gzipped Tar (TGZ)**아카이브 파일로 응용 프로그램을 압축합니다. 
+Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Edition (Java SE) 및 Node.js 애플리케이션을 배포 및 실행할 수 있습니다. 먼저 애플리케이션을 배포하기 위해 필수 구성정보가 포함된 **ZIP** 또는 **Gzipped Tar (TGZ)** 아카이브 파일로 애플리케이션을 압축(compress)합니다. 
 
-다음 지시 사항에 따라 응용 프로그램 아카이브를 작성하십시오. 
+아래 지시사항에 따라 애플리케이션 아카이브를 생성하십시오. 
 
-1. Netbeans에서 blackjack-part2 응용 프로그램을 아직 열지 않은 경우 엽니 다. 
+1. Netbeans에서 blackjack-part2 애플리케이션을 아직 Open하지 않았으면 Open합니다. 
 
-2. 프로젝트를 오른쪽 클릭하고**Clean**을 클릭하십시오. 
+2. 프로젝트에서 마우스 오른쪽 클릭하고 **Clean** 을 클릭하십시오. 
 
     <img src="images/3/image8.png" width="165" height="192" />
 
 
-3. 그래픽 파일 탐색기를 열고**cloud> BlackJack> blackjack-part2**로 이동하여 디렉토리 구조와 그 내용을 적어 두십시오. 
+3. 윈도우 파일탐색기를 열고 **cloud> BlackJack> blackjack-part2** 디렉토리로 이동하여 디렉토리 구조와 그 내용을 확인하십시오. 
 
     <img src="images/3/image9.png" width="444" height="102" />
 
 
-**참고 :** manifest.json 파일은 Oracle Application Container Cloud Service에 배포 된 모든 응용 프로그램에 필요합니다. 이 파일이 .zip, .tar 또는 .tar.gz 파일의 루트 디렉토리에 없으면 배포가 실패합니다. 이 파일은 최소한 런타임 환경의 주 버전과 실행 명령을 지정합니다. 
+**참고 :** manifest.json 파일은 Oracle Application Container Cloud Service에 배포되는 모든 애플리케이션에 필요합니다. 이 파일이 .zip, .tar 또는 .tar.gz 파일의 루트 디렉토리에 없으면 배포(deploy)가 실패(fail)합니다. 이 파일에 최소한 런타임 환경의 주(Major) 버전과 실행(launch) 명령어을 지정해야 합니다.
 
 **이 예제에서 manifest.json 파일의 내용**: 
 
