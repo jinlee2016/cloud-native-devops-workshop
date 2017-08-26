@@ -408,4 +408,4 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
 
 **참고 :** UI에서 사용 가능한 **Hit** 및 **Stand** 버튼을 사용하여 게임을 플레이할 수 있습니다. 
 
-이 HTML5 클라이언트 프로그램은 클라우드의 OACCS에 배포 된 BlackJack 게임 애플리케이션과 상호 작용합니다.
+이 HTML5 클라이언트 프로그램은 클라우드의 OACCS에 배포된 BlackJack 게임 애플리케이션과 상호 작용합니다.
