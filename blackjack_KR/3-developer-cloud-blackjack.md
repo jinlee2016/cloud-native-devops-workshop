@@ -1,61 +1,61 @@
 # PART III : BlackJack 웹 서비스 응용 프로그램 테스트, 빌드 및 배포
 
 
-## 리포지토리에서 BlackJack Project 다운로드
+## 저장소(Repository)에서 BlackJack 프로젝트 다운로드
 
 
 로컬 컴퓨터에 [blackjack.zip](BlackJack.zip) 파일 다운로드 
 
-## 로컬 서버에 BlackJack 응용 프로그램 배포
+## 로컬 서버에 BlackJack 애플리케이션 배포
 
 
-다음 지침에 따라 프로젝트와 함께 제공되는 Apache Tomcat Server에 BlackJack 응용 프로그램을 배포하십시오. 
+아래 지침에 따라 프로젝트와 함께 제공(bundle)되는 Apache Tomcat Server에 BlackJack 애플리케이션을 배포하십시오. 
 
-1. 그래픽 파일 탐색기를 열고 **cloud**디렉토리로 이동하십시오. 
+1. 윈도우 파일 탐색기를 열고 **cloud** 디렉토리로 이동하십시오. 
 
-2. **cloud**디렉토리에서 **BlackJack**디렉토리를 만들고 이전 연습에서 다운로드 한**BlackJack.zip**파일을 복사하십시오. 
+2. **cloud** 디렉토리 내에 **BlackJack** 디렉토리를 만들고 이전 Lab에서 다운로드한 **BlackJack.zip** 파일을 복사하십시오. 
 
-3. **BlackJack.zip** 파일을 **cloud** > **BlackJack** 디렉토리에 압축을 풉니 다. 
+3. **BlackJack.zip** 파일을 **cloud** > **BlackJack** 디렉토리에 압축을 풉니다. 
 
-4. 바탕 화면의 바로 가기를 사용하여 넷빈을 실행합니다. 
+4. 바탕화면의 바로가기를 사용하여 Netbeans를 실행합니다. 
 
-5. Netbeans에서 **blackjack-part2** 프로젝트를 엽니 다. 
+5. Netbeans에서 **blackjack-part2** 프로젝트를 엽니다. 
 
     <img src="images/3/image1.png" width="314" height="163" />
 
 
-**참고 :** 프로젝트 이름에 대해 \[Unloaded] 태그가 표시되면 프로젝트를 마우스 오른쪽 단추로 클릭하고**프로젝트 문제 해결**을 선택한 다음 해결 단추를 클릭하십시오. Netbeans이 Maven 관련 파일을 다운로드 할 때까지 기다렸다가 닫기 버튼을 클릭하십시오. 
+**참고 :** 프로젝트 이름에 \[Unloaded] 태그가 표시되면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **프로젝트 문제 해결**을 선택한 다음 해결 버튼을 클릭하십시오. Netbeans가 Maven 관련 파일을 다운로드 할 때까지 기다렸다가 닫기 버튼을 클릭하십시오. 
 
-6. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Clean and**옵션을 선택하십시오. 
+6. 프로젝트에서 마우스 오른쪽 클릭하고 **Clean and Build** 옵션을 선택하십시오. 
 
     <img src="images/3/image2.png" width="132" height="167" />
 
 
-7. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **실행**을 선택하여 Tomcat 서버에 프로젝트를 배포합니다. 
+7. 프로젝트에서 마우스 오른쪽 클릭하고 **Run**을 선택하여 Tomcat 서버에 프로젝트를 배포합니다. 
 
     <img src="images/3/image3.png" width="138" height="173" />
 
 
-8. 사용 가능한 기본 클래스 목록에서 **com.example.blackjack.rest.Application**을 선택하고 **Select Main Class**버튼을 클릭하십시오. 
+8. 사용가능한 메인 클래스 목록에서 **com.example.blackjack.rest.Application**을 선택하고 **Select Main Class** 버튼을 클릭하십시오. 
 
     <img src="images/3/image4.png" width="252" height="245" />
 
 
-9. 출력 창에 &quot;초 단위로 시작된 응용 프로그램 (초당 5.19)*&quot;메시지가 나타납니다. 
+9. 출력창에 “Started Application in <<seconds>> seconds (JVM running for 5.19)” 과 같은 메시지가 나타납니다. 
 
     <img src="images/3/image5.png" width="490" height="280" />
 
 
-**참고 :** 포트 충돌 문제로 인해이 프로젝트를 실행할 때 문제가 발생할 수 있습니다. 이 응용 프로그램은 Apache Tomcat Server에 배포되며 클라이언트 요청을 수신하려면**8080**로컬 포트 ​​번호가 필요합니다.**8080**로컬 포트 ​​번호에서 실행중인 서비스를 중지하십시오. 
+**참고 :** 포트 충돌 문제로 인해 프로젝트를 실행할 때 문제가 발생할 수 있습니다. 이 애플리케이션은 Apache Tomcat Server에 배포되며 클라이언트 요청을 수신하기 위한  **8080**로컬 포트 ​​번호가 필요합니다.**8080**로컬 포트 ​​번호에서 실행중인 서비스를 중지하십시오. 
 
-**TCPView**도구는이 포트 번호를 사용하여 프로세스를 식별하고 종료하는 데 사용할 수 있습니다. 
+**TCPView**도구는 이 포트 번호를 사용하여 프로세스를 식별하고 종료하는 데 사용할 수 있습니다. 
 
 [**Download Link**](https://technet.microsoft.com/en-us/sysinternals/bb897437) 
 
-## 로컬에 배포 된 BlackJack 응용 프로그램 테스트
+## 로컬에 배포된 BlackJack 애플리케이션 테스트
 
 
-HTML-5 클라이언트 응용 프로그램이 개발되어 BlackJack 응용 프로그램과 함께 제공되면 로컬 / 원격 서버에 배포 된 기능을 테스트합니다. 
+HTML-5 클라이언트 프로그램이 BlackJack 애플리케이션과 함께 제공되며 로컬/원격서버에 배포되면 기능을 테스트합니다. 
 
 다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
 
