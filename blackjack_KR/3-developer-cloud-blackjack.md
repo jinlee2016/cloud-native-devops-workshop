@@ -1,4 +1,4 @@
-# PART III : BlackJack 웹 서비스 응용 프로그램 테스트, 빌드 및 배포
+# PART III : BlackJack 웹서비스 애플리케이션 테스트, 빌드 및 배포
 
 
 ## 저장소(Repository)에서 BlackJack 프로젝트 다운로드
@@ -128,10 +128,10 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
     <img src="images/3/image11.png" width="466" height="178" />
 
 
-## 개발자 클라우드 서비스(이하 Dev CS)에서 새 프로젝트 만들기
+## 개발자 클라우드 서비스(이하 DevCS)에서 새 프로젝트 만들기
 
 
-아래 지시사항에 따라 Developer Cloud Service(Dev CS)에서 빈(empty) 프로젝트를 생성합니다. 
+아래 지시사항에 따라 Developer Cloud Service(DevCS)에서 빈(empty) 프로젝트를 생성합니다. 
 
 1. Oracle 클라우드 계정에 로그인하십시오. 
 
@@ -247,19 +247,19 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
 
 **참고 :** 모든 파일이 저장소로 푸시될 때까지 기다리십시오. 
 
-9. Dev CS로 전환하여 저장소에 푸시된 파일들을 확인합니다. 
+9. DevCS로 전환하여 저장소에 푸시된 파일들을 확인합니다. 
 
 10. **BlackJack-Part2** 홈 페이지에서 **BlackJack-Part2Repo.git** 을 클릭하십시오. 
 
     <img src="images/3/image25.png" width="474" height="178" />
 
 
-11. **blackjack-part2** 프로젝트 디렉토리가 Dev CS의 저장소로 푸시되었음을 알 수 있습니다. 이것을 클릭하고 내용을 확인하십시오. 
+11. **blackjack-part2** 프로젝트 디렉토리가 DevCS의 저장소로 푸시되었음을 알 수 있습니다. 이것을 클릭하고 내용을 확인하십시오. 
 
     <img src="images/3/image26.png" width="478" height="154" />
 
 
-## Dev CS에서 프로젝트 빌드(Build)하기
+## DevCS에서 프로젝트 빌드(Build)하기
 
 
 아래 지시사항에 따라 Dev CS에서 BlackJack-Part2 프로젝트를 빌드하십시오. 
@@ -367,47 +367,45 @@ Oracle Application Container Cloud(이하 ACCS)는 Java Platform, Standard Editi
     <img src="images/3/image40.png" width="273" height="131" />
 
 
-6. 아래 값들을 입력하고 **저장**을 클릭하십시오. 
+6. 아래 값들을 입력하고 **저장** 을 클릭하십시오. 
 
-- **유형**: 자동 (선택 : 안정된 빌드 만 배포) 
-- **Job :** BlackJack - Part2BuildJob 
-- **런타임**: Java 
-- **구독 :** 월간 
-- **아티팩트 :** 블랙 잭 - 파트 2 / 타겟 / 블랙 잭 - 파트 2 - 1.0-리스트 .zip 
+- **Type:** 자동 (선택: Deploy stable build only) 
+- **Job:** BlackJack-Part2BuildJob 
+- **Runtime:** Java 
+- **Subscription:** Monthly 
+- **Artifact:** blackjack-part2/target/blackjack-part2-1.0-dist.zip
 
     <img src="images/3/image41.png" width="393" height="137" />
 
 
-7.  Click the gear icon <img src="images/3/image42.png" width="51" height="28" />
-**시작**을 선택하여 Oracle Application Container Cloud Service에 애플리케이션을 배포하십시오. 
+7.  기어 아이콘<img src="images/3/image42.png" width="51" height="28" />을 클릭하고 **시작**을 선택하여 Oracle Application Container Cloud Service에 애플리케이션을 배포하십시오. 
 
-8. 배포가 성공적으로 완료되면 Blackjack-Part2 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 URL을 복사합니다 
+8. 배포가 성공적으로 완료되면 Blackjack-Part2 프로젝트 이름에서 마우스 오른쪽 클릭하고 URL을 복사합니다 
 
     <img src="images/3/image43.png" width="393" height="130" />
 
 
-## DevCS에서 OACCS에 배포 된 BlackJack 응용 프로그램 테스트
+## DevCS에서 OACCS에 배포된 BlackJack 애플리케이션 테스트
 
 
-HTML-5 클라이언트 응용 프로그램이 개발되어 BlackJack 응용 프로그램과 함께 제공되면 로컬 / 원격 서버에 배포 된 기능을 테스트합니다. 
+로컬/원격서버에 배포된 후 기능을 테스트하기 위한 HTML-5 클라이언트 프로그램이 이미 BlackJack 애플리케이션과 함께 제공되었습니다. 
 
-다음 지시 사항에 따라 BlackJack 응용 프로그램을 테스트하십시오. 
+아래 지시사항에 따라 BlackJack 애플리케이션을 테스트하십시오. 
 
-1. 그래픽 파일 탐색기를 열고**cloud> BlackJack> html5-client**디렉토리로 이동하십시오. 
+1. 윈도우 파일탐색기를 열고 **cloud > BlackJack > html5-client** 디렉토리로 이동하십시오. 
 
-2. 브라우저로 index.html 파일을 엽니 다. 
+2. 브라우저로 index.html 파일을 엽니다. 
 
-3. 첫 번째 필드**Service**에 이전 연습에서 복사 한 URL이 채워져 있는지 확인하고,    <https://blackjack-part2-ouopc084.apaas.em2.oraclecloud.com/>. 
-두 번째 필드에서 1과 9 사이의 숫자를 입력 한 다음 연결을 클릭하십시오. 
+3. 첫번째 필드인 **Service** 에 이전 Lab에서 복사한 URL - <https://blackjack-part2-ouopc084.apaas.em2.oraclecloud.com/> - 이 입력되어 있는지 확인하고, 두번째 필드에서 1 과 9 사이의 숫자를 입력한 다음 연결을 클릭하십시오. 
 
     <img src="images/3/image44.png" width="513" height="230" />
 
 
-4. 게임 콘솔에 연결되면**Debug on/off**버튼을 클릭하여 디버그 콘솔을 표시합니다. 
+4. 게이밍 콘솔에 연결되면 **Debug on/off** 버튼을 클릭하여 디버그 콘솔을 표시합니다. 
 
     <img src="images/3/image45.png" width="513" height="247" />
 
 
-**참고 :** UI에서 사용 가능한**Hit**및**Stand**버튼을 사용하여 게임을 할 수 있습니다. 
+**참고 :** UI에서 사용 가능한 **Hit** 및 **Stand** 버튼을 사용하여 게임을 플레이할 수 있습니다. 
 
-이 HTML5 클라이언트 애플리케이션은 클라우드의 OACCS에 배포 된 BlackJack 게임 애플리케이션과 상호 작용합니다.
+이 HTML5 클라이언트 프로그램은 클라우드의 OACCS에 배포 된 BlackJack 게임 애플리케이션과 상호 작용합니다.
